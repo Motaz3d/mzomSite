@@ -16,4 +16,4 @@
 - **Structure:** `index.html` (homepage), `CNAME` (custom domain, pending), `AGENTS.md`, `PLAN.md`
 - **Commands:** no build step — edit files, `git push` to deploy (Pages auto-deploys from `main`)
 - **Libraries:** none (plain HTML/CSS)
-- **Domain/DNS:** domain registered at Regery but uses **Virtono nameservers** (ns1-3.virtono.com) — DNS changes must be made at Virtono, not Regery. Mail: Zoho (MX/SPF/DKIM records must be preserved).
+- **Domain/DNS:** custom domain `motazomarien.com` (CNAME file in repo). Registered at Regery but uses **Virtono nameservers** — DNS changes must be made at Virtono, not Regery. Mail: **cPanel mail** on the Virtono server (146.70.56.163) — MX points at the apex, so an A record `mail` + MX → `mail.motazomarien.com` is required before repointing the apex to GitHub. User does NOT use Zoho.
