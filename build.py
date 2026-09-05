@@ -25,7 +25,7 @@ CONTENT = ROOT / "content"
 TEMPLATE = (ROOT / "templates" / "base.html").read_text(encoding="utf-8")
 PIECES_DIR = ROOT / "pieces"
 
-SITE_NAME = "معتز العمريّن"
+SITE_NAME = "معتز عمرين"
 INTRO = (
     "هنا تُنشر تباعًا أجزاء من رواية بلا عنوان عن الاغتراب: "
     "تفتتحها سلسلة «رسائل إلى مارينا»، وتلحق بها مشاهد ونصوص من المسار نفسه. "
