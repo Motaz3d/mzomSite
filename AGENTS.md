@@ -10,7 +10,9 @@
 
 ## Project map
 
-- **Type:** website project (mzomSite)
-- **Structure:** (to be filled as the project grows)
-- **Commands:** (to be filled)
-- **Libraries:** (to be filled)
+- **Type:** static website hosted on **GitHub Pages** (repo: Motaz3d/mzomSite, branch `main`, path `/`)
+- **Live URL:** https://motaz3d.github.io/mzomSite/ (custom domain pending — see PLAN.md)
+- **Structure:** `index.html` (homepage), `CNAME` (custom domain, pending), `AGENTS.md`, `PLAN.md`
+- **Commands:** no build step — edit files, `git push` to deploy (Pages auto-deploys from `main`)
+- **Libraries:** none (plain HTML/CSS)
+- **Domain/DNS:** domain registered at Regery but uses **Virtono nameservers** (ns1-3.virtono.com) — DNS changes must be made at Virtono, not Regery. Mail: Zoho (MX/SPF/DKIM records must be preserved).
