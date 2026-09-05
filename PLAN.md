@@ -21,6 +21,6 @@
 - First piece published: خ-031 «رسائل إلى مارينا — 1: اللسان» — **then unpublished the same evening at the author's request** (not satisfied with it). Site currently shows an empty state ("قريبًا"); build.py handles zero pieces.
 
 ## Next
-- Enable "Enforce HTTPS" — GitHub is still issuing the Let's Encrypt certificate (404 "certificate does not exist yet"). One-shot cron scheduled at 21:50 to retry automatically (cron id 01M1SF720QN3Y6C5QK1DCJPHRJ).
+- Enable "Enforce HTTPS" — GitHub's Let's Encrypt certificate still pending after 3 retries at 21:50 (404 "certificate does not exist yet"); everything else verified correct (status built, DNS → GitHub IPs, domain verified). Issuance can take up to 24h from the ~21:00 NS switch. Second auto-attempt scheduled at 23:47 (cron id pending in session); if it also fails, run the single command manually tomorrow: `gh api repos/Motaz3d/mzomSite/pages -X PUT -F https_enforced=true`.
 - User: cancel all active services in the Virtono client area (hosting/cPanel/VPS) — safe now that DNS is off Virtono; back up anything needed first.
 - Build the real site content.
