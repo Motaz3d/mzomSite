@@ -95,8 +95,6 @@ def main() -> None:
         key=lambda m: m["date"],
         reverse=True,
     )
-    if not pieces:
-        raise SystemExit("لا توجد نصوص في content/")
 
     PIECES_DIR.mkdir(exist_ok=True)
     for piece in pieces:
@@ -138,11 +136,14 @@ def main() -> None:
             + f'<span class="date">{ar_date(piece["date"])}</span>'
             + "</li>"
         )
-    index_body = (
-        f'<p class="intro">{INTRO}</p>\n<ul class="pieces">\n'
-        + "\n".join(items)
-        + "\n</ul>"
-    )
+    if items:
+        index_body = (
+            f'<p class="intro">{INTRO}</p>\n<ul class="pieces">\n'
+            + "\n".join(items)
+            + "\n</ul>"
+        )
+    else:
+        index_body = f'<p class="intro">{INTRO}</p>\n<p class="intro">لا منشور حاليًا — قريبًا.</p>'
     index = render(
         title="الرئيسية",
         description="رواية بلا عنوان عن الاغتراب — تُنشر أجزاؤها تباعًا",
