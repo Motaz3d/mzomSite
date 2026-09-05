@@ -20,5 +20,5 @@
   - `pieces/*.html` + `index.html` — مخرجات مولّدة (لا تُحرَّر يدويًا، أعد البناء)
 - **Commands:** بعد إضافة/تعديل ملف في `content/`: `python3 build.py && git add -A && git commit && git push`
 - **Libraries:** none (plain HTML/CSS, Python stdlib build)
-- **Content source:** النصوص من ورشة الكتابة `/Users/digital-inclusion/Documents/work/wr` — يُنشر فقط ما يوافق عليه الكاتب، وحاليًا مسار **الاغتراب** فقط (رواية بلا عنوان، تفتتحها سلسلة «رسائل إلى مارينا»). المنشور حتى الآن: خ-031 (pieces/marina-1-lissan.html).
+- **Content source:** النصوص من ورشة الكتابة `/Users/digital-inclusion/Documents/work/wr` — يُنشر فقط ما يوافق عليه الكاتب، وحاليًا مسار **الاغتراب** فقط (رواية بلا عنوان، تفتتحها سلسلة «رسائل إلى مارينا»). **لا منشور حاليًا:** خ-031 نُشرت ثم حذفها الكاتب (2026-09-05) — غير راضٍ عنها. `build.py` يتعامل مع موقع بلا نصوص (رسالة «قريبًا»).
 - **Domain/DNS:** custom domain `motazomarien.com` (CNAME file in repo). Registrar + DNS: **Regery** (الهجرة من Virtono اكتملت 2026-09-05؛ لم يعد لـ Virtono أي صلة بالنطاق). Zone keeps only GitHub A records + www CNAME. Mail: user's personal Gmail — no MX records. User does NOT use Zoho.

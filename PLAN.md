@@ -18,7 +18,7 @@
 
 ## Done (additions)
 - Literary site built: `build.py` (stdlib) renders `content/*.md` → `index.html` + `pieces/*.html`, paper-style Arabic RTL design.
-- First piece published: خ-031 «رسائل إلى مارينا — 1: اللسان» (edited version from wr/تطوير/نماذج), live at /pieces/marina-1-lissan.html.
+- First piece published: خ-031 «رسائل إلى مارينا — 1: اللسان» — **then unpublished the same evening at the author's request** (not satisfied with it). Site currently shows an empty state ("قريبًا"); build.py handles zero pieces.
 
 ## Next
 - Enable "Enforce HTTPS" — GitHub is still issuing the Let's Encrypt certificate (404 "certificate does not exist yet"). One-shot cron scheduled at 21:50 to retry automatically (cron id 01M1SF720QN3Y6C5QK1DCJPHRJ).
