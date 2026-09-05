@@ -16,6 +16,10 @@
 - Stale records (old server A/AAAA, all Zoho records) deleted from Regery zone by the user; only GitHub records remain.
 - Domain verified live: apex → 4 GitHub IPs, www → motaz3d.github.io; http://motazomarien.com serves the site (200).
 
+## Done (additions)
+- Literary site built: `build.py` (stdlib) renders `content/*.md` → `index.html` + `pieces/*.html`, paper-style Arabic RTL design.
+- First piece published: خ-031 «رسائل إلى مارينا — 1: اللسان» (edited version from wr/تطوير/نماذج), live at /pieces/marina-1-lissan.html.
+
 ## Next
 - Enable "Enforce HTTPS" — GitHub is still issuing the Let's Encrypt certificate (404 "certificate does not exist yet"). One-shot cron scheduled at 21:50 to retry automatically (cron id 01M1SF720QN3Y6C5QK1DCJPHRJ).
 - User: cancel all active services in the Virtono client area (hosting/cPanel/VPS) — safe now that DNS is off Virtono; back up anything needed first.
