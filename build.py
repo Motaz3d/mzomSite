@@ -4,6 +4,11 @@
 الاستخدام:
     python3 build.py
 
+البنية الناتجة:
+    index.html   — يعرض أحدث نص منشور كاملًا مباشرة + زر «تصفّح الكتاب كاملًا»
+    book.html    — فهرس الكتاب: كل النصوص المنشورة بتواريخها
+    pieces/*.html — صفحة كل نص، مع أزرار تنقّل (السابق/الكتاب/التالي)
+
 كل ملف في content/ يبدأ بترويسة بصيغة:
     ---
     title: ...
@@ -25,11 +30,10 @@ CONTENT = ROOT / "content"
 TEMPLATE = (ROOT / "templates" / "base.html").read_text(encoding="utf-8")
 PIECES_DIR = ROOT / "pieces"
 
-SITE_NAME = "معتز عمرين"
-INTRO = (
-    "هنا تُنشر تباعًا أجزاء من رواية بلا عنوان عن الاغتراب: "
-    "تفتتحها سلسلة «رسائل إلى مارينا»، وتلحق بها مشاهد ونصوص من المسار نفسه. "
-    "كل يوم قصة."
+BOOK_TITLE = "المهاجر — لقطات ومرايا"
+BOOK_INTRO = (
+    "قصص قصيرة جدًا تعبّر عن الوجع — من الحي اليهودي في دمشق "
+    "إلى مقاهي لوكسمبورغ. يُنشر الكتاب هنا لقطة لقطة، نصًا جديدًا كل يوم."
 )
 
 AR_MONTHS = [
@@ -89,34 +93,68 @@ def render(title: str, description: str, content_html: str, root: str) -> str:
     )
 
 
+def series_line(piece: dict) -> str:
+    series = piece.get("series", "")
+    number = piece.get("number", "")
+    return series + (f" — {number}" if number else "")
+
+
+def piece_url(piece: dict) -> str:
+    return f"pieces/{piece['slug']}.html"
+
+
+def piece_header(piece: dict) -> str:
+    parts = ['<header class="piece-header">']
+    line = series_line(piece)
+    if line:
+        parts.append(f'<p class="series">{html.escape(line)}</p>')
+    parts.append(f"<h1>{html.escape(piece['title'])}</h1>")
+    parts.append(
+        f'<p class="meta">{ar_date(piece["date"])} — المقطع {html.escape(piece["kh"])}</p>'
+    )
+    parts.append("</header>")
+    return "\n".join(parts)
+
+
+def hero() -> str:
+    return (
+        '<section class="hero">'
+        f'<h1 class="book-title">{BOOK_TITLE}</h1>'
+        f'<p class="intro">{BOOK_INTRO}</p>'
+        "</section>"
+    )
+
+
 def main() -> None:
     pieces = sorted(
         (parse_piece(p) for p in CONTENT.glob("*.md")),
         key=lambda m: m["date"],
-        reverse=True,
     )
 
     PIECES_DIR.mkdir(exist_ok=True)
-    for piece in pieces:
-        series = piece.get("series", "")
-        number = piece.get("number", "")
-        series_line = series + (f" — {number}" if number else "")
-        header = ['<header class="piece-header">']
-        if series_line:
-            header.append(f'<p class="series">{html.escape(series_line)}</p>')
-        header.append(f"<h1>{html.escape(piece['title'])}</h1>")
-        header.append(
-            f'<p class="meta">{ar_date(piece["date"])} — المقطع {html.escape(piece["kh"])}</p>'
-        )
-        header.append("</header>")
+
+    for i, piece in enumerate(pieces):
+        nav = ['<nav class="piece-nav">']
+        if i > 0:
+            nav.append(
+                f'<a class="big-button" href="{piece_url(pieces[i - 1])}">→ النص السابق</a>'
+            )
+        nav.append('<a class="big-button secondary" href="../book.html">الكتاب كاملًا</a>')
+        if i < len(pieces) - 1:
+            nav.append(
+                f'<a class="big-button" href="{piece_url(pieces[i + 1])}">النص التالي ←</a>'
+            )
+        nav.append("</nav>")
+
         body_html = (
-            "\n".join(header)
-            + f'\n<article class="piece-body">\n{md_to_html(piece["body"])}\n</article>'
-            + f'\n<a class="back-link" href="../index.html">→ كل المنشور</a>'
+            piece_header(piece)
+            + f'\n<article class="piece-body">\n{md_to_html(piece["body"])}\n</article>\n'
+            + "\n".join(nav)
         )
+        line = series_line(piece)
         page = render(
             title=piece["title"],
-            description=f"{series_line + ' — ' if series_line else ''}{piece['title']} — نص من رواية بلا عنوان",
+            description=f"{line + ' — ' if line else ''}{piece['title']} — من كتاب «{BOOK_TITLE}»",
             content_html=body_html,
             root="../",
         )
@@ -124,34 +162,57 @@ def main() -> None:
         out.write_text(page, encoding="utf-8")
         print(f"بُني: pieces/{piece['slug']}.html")
 
-    items = []
-    for piece in pieces:
-        series = piece.get("series", "")
-        number = piece.get("number", "")
-        series_line = series + (f" — رسالة {number}" if number else "")
-        items.append(
-            "<li>"
-            + (f'<span class="series">{html.escape(series_line)}</span>' if series_line else "")
-            + f'<a class="piece-title" href="pieces/{piece["slug"]}.html">{html.escape(piece["title"])}</a>'
-            + f'<span class="date">{ar_date(piece["date"])}</span>'
-            + "</li>"
+    if pieces:
+        latest = pieces[-1]
+        latest_html = (
+            piece_header(latest)
+            + f'\n<article class="piece-body">\n{md_to_html(latest["body"])}\n</article>'
         )
-    if items:
         index_body = (
-            f'<p class="intro">{INTRO}</p>\n<ul class="pieces">\n'
-            + "\n".join(items)
-            + "\n</ul>"
+            hero()
+            + "\n"
+            + latest_html
+            + '\n<div class="center"><a class="big-button" href="book.html">تصفّح الكتاب كاملًا ←</a></div>'
         )
     else:
-        index_body = f'<p class="intro">{INTRO}</p>\n<p class="intro">لا منشور حاليًا — قريبًا.</p>'
+        index_body = (
+            hero()
+            + '\n<p class="intro center-text">النص الأول قريبًا — يُعرض هنا كاملًا فور نشره، قبل أي مكان آخر.</p>'
+        )
     index = render(
-        title="الرئيسية",
-        description="رواية بلا عنوان عن الاغتراب — تُنشر أجزاؤها تباعًا",
+        title=BOOK_TITLE,
+        description=f"كتاب «{BOOK_TITLE}» — يُنشر لقطة لقطة على موقع معتز عمرين",
         content_html=index_body,
         root="",
     )
     (ROOT / "index.html").write_text(index, encoding="utf-8")
     print("بُني: index.html")
+
+    items = []
+    for piece in reversed(pieces):
+        line = series_line(piece)
+        items.append(
+            "<li>"
+            + (f'<span class="series">{html.escape(line)}</span>' if line else "")
+            + f'<a class="piece-title" href="{piece_url(piece)}">{html.escape(piece["title"])}</a>'
+            + f'<span class="date">{ar_date(piece["date"])}</span>'
+            + "</li>"
+        )
+    if items:
+        book_body = hero() + '\n<ul class="pieces">\n' + "\n".join(items) + "\n</ul>"
+    else:
+        book_body = (
+            hero()
+            + '\n<p class="intro center-text">لا نصوص منشورة بعد — أول لقطة في الطريق.</p>'
+        )
+    book = render(
+        title=f"الكتاب كاملًا — {BOOK_TITLE}",
+        description=f"فهرس نصوص كتاب «{BOOK_TITLE}» المنشورة حتى الآن",
+        content_html=book_body,
+        root="",
+    )
+    (ROOT / "book.html").write_text(book, encoding="utf-8")
+    print("بُني: book.html")
 
 
 if __name__ == "__main__":
