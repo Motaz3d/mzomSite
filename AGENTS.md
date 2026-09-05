@@ -11,7 +11,8 @@
 ## Project map
 
 - **Type:** static website hosted on **GitHub Pages** (repo: Motaz3d/mzomSite, branch `main`, path `/`)
-- **Live URL:** https://motaz3d.github.io/mzomSite/ (custom domain pending — see PLAN.md)
+- **Live URL:** https://motaz3d.github.io/mzomSite/ — **working (status: built)** (custom domain pending — see PLAN.md)
+- **Repo visibility:** **public** (required for Pages on the free plan)
 - **Structure:** `index.html` (homepage), `CNAME` (custom domain, pending), `AGENTS.md`, `PLAN.md`
 - **Commands:** no build step — edit files, `git push` to deploy (Pages auto-deploys from `main`)
 - **Libraries:** none (plain HTML/CSS)
