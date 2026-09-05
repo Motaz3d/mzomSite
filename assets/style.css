@@ -1,0 +1,132 @@
+:root {
+  --paper: #f6f1e7;
+  --ink: #262019;
+  --ink-soft: #5c5347;
+  --accent: #7a4a21;
+  --rule: #d8cdb8;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { font-size: 18px; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Amiri", "Noto Naskh Arabic", serif;
+  line-height: 2;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  width: 100%;
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 1rem 1.25rem 3rem;
+  flex: 1;
+}
+
+/* الترويسة */
+.site-header {
+  text-align: center;
+  padding: 2.5rem 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 2.5rem;
+}
+
+.site-name {
+  font-family: "Aref Ruqaa", "Amiri", serif;
+  font-size: 1.9rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.site-tagline {
+  color: var(--ink-soft);
+  font-size: 1rem;
+  margin-top: 0.25rem;
+}
+
+/* الصفحة الرئيسية */
+.intro {
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+  margin-bottom: 2.5rem;
+}
+
+.pieces { list-style: none; }
+
+.pieces li {
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.pieces .series {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--accent);
+}
+
+.pieces a.piece-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.pieces a.piece-title:hover { color: var(--accent); }
+
+.pieces .date {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin-top: 0.15rem;
+}
+
+/* صفحة النص */
+.piece-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.piece-header .series {
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+.piece-header h1 {
+  font-family: "Aref Ruqaa", "Amiri", serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.piece-header .meta {
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+
+.piece-body { font-size: 1.3rem; }
+
+.piece-body p { margin-bottom: 1.4rem; }
+
+.back-link {
+  display: inline-block;
+  margin-top: 2rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.back-link:hover { text-decoration: underline; }
+
+/* التذييل */
+.site-footer {
+  border-top: 1px solid var(--rule);
+  text-align: center;
+  padding: 1.25rem;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
