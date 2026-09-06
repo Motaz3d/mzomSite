@@ -9,10 +9,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   {{fonts}}
   {{alternates}}
+  <link rel="icon" type="image/png" href="{{root}}assets/brand/monogram.png">
+  <link rel="apple-touch-icon" href="{{root}}assets/brand/monogram.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{title}} — {{sitename}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:image" content="https://motazomarien.com/assets/brand/og.png">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="{{root}}assets/style.css">
 </head>
 <body>
   <header class="site-header">
+    <img class="site-logo" src="{{root}}assets/brand/monogram.png" alt="{{sitename}}">
     <a class="site-name" href="{{home}}">{{sitename}}</a>
     <p class="site-tagline">{{tagline}}</p>
     <nav class="langs">{{langs}}</nav>

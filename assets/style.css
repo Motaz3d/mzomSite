@@ -36,6 +36,13 @@ main {
   margin-bottom: 2.5rem;
 }
 
+.site-logo {
+  display: block;
+  width: 5rem;
+  height: auto;
+  margin: 0 auto 1rem;
+}
+
 .site-name {
   font-family: "Aref Ruqaa", "Amiri", serif;
   font-size: 1.9rem;
