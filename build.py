@@ -9,6 +9,7 @@
 الناتج:
     index.html, book.html, pieces/*.html                          — العربية (الجذر)
     <lang>/index.html, <lang>/book.html, <lang>/pieces/*.html     — الترجمات
+    sitemap.xml                                                   — خريطة الموقع بكل اللغات (hreflang)
 
 كل ملف يبدأ بترويسة بصيغة:
     ---
@@ -428,6 +429,51 @@ def main() -> None:
     build_lang("ar", ar_pieces, published)
     for lang in LANG_ORDER[1:]:
         build_lang(lang, translated[lang], published)
+
+    build_sitemap(ar_pieces, published)
+
+
+def sitemap_url(canonical: str, alt: dict, lastmod: str) -> str:
+    lines = [
+        "  <url>",
+        f"    <loc>{SITE_URL}/{html.escape(canonical)}</loc>",
+    ]
+    for code, path in alt.items():
+        lines.append(
+            f'    <xhtml:link rel="alternate" hreflang="{code}" '
+            f'href="{SITE_URL}/{lang_prefix(code)}{html.escape(path)}"/>'
+        )
+    lines.append(
+        f'    <xhtml:link rel="alternate" hreflang="x-default" '
+        f'href="{SITE_URL}/{html.escape(alt["ar"])}"/>'
+    )
+    lines.append(f"    <lastmod>{lastmod}</lastmod>")
+    lines.append("  </url>")
+    return "\n".join(lines)
+
+
+def build_sitemap(ar_pieces: list, published: dict) -> None:
+    today = max((p["date"] for p in ar_pieces), default="2026-01-01")
+    entries = []
+    for canonical in ("index.html", "book.html"):
+        alt = {code: canonical for code in LANG_ORDER}
+        entries.append(sitemap_url(canonical, alt, today))
+    for piece in ar_pieces:
+        canonical = piece_path(piece)
+        alt = {}
+        for code in LANG_ORDER:
+            if code == "ar" or piece["slug"] in published.get(code, set()):
+                alt[code] = canonical
+        entries.append(sitemap_url(canonical, alt, piece["date"]))
+    sitemap = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n'
+        '        xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
+        + "\n".join(entries)
+        + "\n</urlset>\n"
+    )
+    (ROOT / "sitemap.xml").write_text(sitemap, encoding="utf-8")
+    print("بُني: sitemap.xml")
 
 
 if __name__ == "__main__":
