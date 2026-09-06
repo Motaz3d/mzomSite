@@ -128,7 +128,7 @@ def hero() -> str:
 def main() -> None:
     pieces = sorted(
         (parse_piece(p) for p in CONTENT.glob("*.md")),
-        key=lambda m: m["date"],
+        key=lambda m: (m["date"], int(re.search(r"\d+", m["kh"]).group())),
     )
 
     PIECES_DIR.mkdir(exist_ok=True)
