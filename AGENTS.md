@@ -14,16 +14,18 @@
 - **Live URL:** **http://motazomarien.com** (يعمل؛ HTTPS قيد إصدار الشهادة — يُفعَّل تلقائيًا، انظر PLAN.md)
 - **Repo visibility:** **public** (required for Pages on the free plan)
 - **Structure:**
-  - `content/*.md` — النصوص المنشورة حاليًا على الموقع
-  - `queue/*.md` — **طابور النشر المجدول**: نصوص معتمدة تنتظر يومها (بقرار الكاتب 2026-09-06: الاعتماد هنا، والنشر نصًا واحدًا يوميًا بجدول — لا فور الاعتماد)
-  - `build.py` — يبني الموقع من `content/` فقط: `python3 build.py` (Python stdlib فقط)
-  - `templates/base.html` + `assets/style.css` — القالب والتصميم (ورقي، Amiri/Aref Ruqaa، RTL)
+  - `content/*.md` — النصوص المنشورة حاليًا على الموقع (الأصل العربي)
+  - `translations/{en,es,zh}/*.md` — **ترجمات النصوص المنشورة** (إنكليزي/إسباني/صيني)، بنفس تنسيق الترويسة ونفس `slug`. لا تُعرض ترجمة إلا إذا كان أصلها منشورًا في `content/`.
+  - `queue/*.md` — **طابور النشر المجدول**: نصوص معتمدة تنتظر يومها (بقرار الكاتب 2026-09-06: الاعتماد هنا، والنشر نصًا واحدًا يوميًا بجدول — لا فور الاعتماد). **الطابور عربي فقط ولا يُترجم قبل النشر.**
+  - `build.py` — يبني الموقع من `content/` + `translations/`: `python3 build.py` (Python stdlib فقط). كل اللغات تُبنى معًا دائمًا.
+  - `templates/base.html` + `assets/style.css` — القالب والتصميم (ورقي؛ Amiri/Aref Ruqaa للعربية، EB Garamond للإنكليزية/الإسبانية، Noto Serif SC للصينية؛ RTL للعربية فقط)
   - `index.html` — **واجهة الكتاب: يعرض أحدث نص كاملًا مباشرة + زر كبير «تصفّح الكتاب»**
   - `book.html` — فهرس الكتاب (كل النصوص بتواريخها)
   - `pieces/*.html` — صفحات النصوص مع أزرار تنقل كبيرة (السابق/الكتاب/التالي)
+  - `en/ es/ zh/` — نفس البنية مولّدة لكل لغة (index + book + pieces)، مع محوّل لغات في الترويسة ووسوم hreflang
   - المخرجات مولّدة — لا تُحرَّر يدويًا، أعد البناء
-- **Publishing queue:** النشر من الطابور يوميًا بجدولة cron: خ-103 «لي صديق» يوم 2026-09-07، خ-150 «علاء» يوم 2026-09-08، خ-142 «نزار طه حاج أحمد» يوم 2026-09-09، خ-096 «سراب بسراب بسراب» يوم 2026-09-10، خ-091 «طيرة حيفا» يوم 2026-09-11. عند النشر: `git mv queue/… content/…` + تحديث date + build + push.
-- **HTTPS cert:** pending at GitHub (diagnosed 2026-09-06: everything our side correct; retriggered via cname remove/re-add; auto-retry cron 01M1T2JJ28MPZZEKN7QBGE957R every ~40min self-deletes on success).
+- **Publishing queue:** النشر من الطابور يوميًا بجدولة cron: خ-103 «لي صديق» يوم 2026-09-07، خ-150 «علاء» يوم 2026-09-08، خ-142 «نزار طه حاج أحمد» يوم 2026-09-09، خ-096 «سراب بسراب بسراب» يوم 2026-09-10، خ-091 «طيرة حيفا» يوم 2026-09-11. عند النشر: `git mv queue/… content/…` + تحديث date + **إضافة ترجماته الثلاث إلى `translations/{en,es,zh}/<slug>.md` بجودة أدبية عالية** + build + push. (نص بلا ترجمات يظهر عربيًا فقط حتى تُضاف.)
+- **HTTPS cert:** pending at GitHub (diagnosed 2026-09-06: everything our side correct; retriggered via cname remove/re-add; auto-retry cron checks every ~40min and self-deletes on success — session-scoped, re-created 2026-09-06 morning session).
 - **Book being serialized:** «المهاجر — لقطات ومرايا» (الكتاب الأول، خطة `wr/تطوير/خطة-كتاب-المهاجر.md`) — بقرار الكاتب 2026-09-06. قرارات الشكل: النص الأخير على الرئيسية، أزرار كبيرة واضحة، التبحر داخل الكتاب عبر book.html. إيقاع النشر: **طابور مجدول — نص واحد يوميًا** (انظر Publishing queue). الكتب التالية موثقة في `wr/تطوير/الخطة-المتكاملة.md` (رسائل بين، لبن، مقالات) — نبدأ بها بعد انتهاج «المهاجر».
 - **Commands:** بعد إضافة/تعديل ملف في `content/`: `python3 build.py && git add -A && git commit && git push`
 - **Libraries:** none (plain HTML/CSS, Python stdlib build)

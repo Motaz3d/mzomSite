@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="{{lang}}" dir="{{dir}}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{title}} — معتز عمرين</title>
+  <title>{{title}} — {{sitename}}</title>
   <meta name="description" content="{{description}}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+  {{fonts}}
+  {{alternates}}
   <link rel="stylesheet" href="{{root}}assets/style.css">
 </head>
 <body>
   <header class="site-header">
-    <a class="site-name" href="{{root}}index.html">معتز عمرين</a>
-    <p class="site-tagline">رواية بلا عنوان — عن الاغتراب</p>
+    <a class="site-name" href="{{home}}">{{sitename}}</a>
+    <p class="site-tagline">{{tagline}}</p>
+    <nav class="langs">{{langs}}</nav>
   </header>
   <main>
     {{content}}
   </main>
   <footer class="site-footer">
-    <p>motazomarien.com — تُنشر النصوص تباعًا، كل يوم قصة</p>
+    <p>{{footer}}</p>
   </footer>
 </body>
 </html>
