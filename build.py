@@ -62,7 +62,7 @@ LANGS = {
         "book_full": "الكتاب كاملًا",
         "next": "النص التالي ←",
         "browse": "تصفّح الكتاب كاملًا ←",
-        "piece_word": "المقطع",
+        "piece_word": "لقطة",
         "index_desc": "كتاب «{book}» — يُنشر لقطة لقطة على موقع {name}",
         "book_desc": "فهرس نصوص كتاب «{book}» المنشورة حتى الآن",
         "piece_desc": "{title} — من كتاب «{book}»",
@@ -76,7 +76,7 @@ LANGS = {
         "comment_email": "البريد الإلكتروني",
         "comment_msg": "تعليقك…",
         "comment_send": "أرسل",
-        "comment_subject": "تعليق على: {title} ({kh})",
+        "comment_subject": "تعليق على: {title}",
         "news_title": "يصلك نص اليوم",
         "news_note": "اشترك ببريدك ليصلك كل نص جديد يوم نشره، أو تابع قناة واتساب.",
         "news_button": "اشترك",
@@ -104,7 +104,7 @@ LANGS = {
         "book_full": "The full book",
         "next": "Next piece →",
         "browse": "Browse the full book →",
-        "piece_word": "Piece",
+        "piece_word": "Snapshot",
         "index_desc": "The book “{book}” — serialized snapshot by snapshot on the site of {name}",
         "book_desc": "Index of the texts published so far from “{book}”",
         "piece_desc": "{title} — from the book “{book}”",
@@ -118,7 +118,7 @@ LANGS = {
         "comment_email": "Email",
         "comment_msg": "Your comment…",
         "comment_send": "Send",
-        "comment_subject": "Comment on: {title} ({kh})",
+        "comment_subject": "Comment on: {title}",
         "news_title": "Get the day's text",
         "news_note": "Subscribe with your email to receive each new text on publication day, or follow the WhatsApp channel.",
         "news_button": "Subscribe",
@@ -145,7 +145,7 @@ LANGS = {
         "book_full": "El libro completo",
         "next": "Texto siguiente →",
         "browse": "Explorar el libro completo →",
-        "piece_word": "Fragmento",
+        "piece_word": "Instantánea",
         "index_desc": "El libro «{book}» — publicación por entregas en el sitio de {name}",
         "book_desc": "Índice de los textos publicados hasta ahora de «{book}»",
         "piece_desc": "{title} — del libro «{book}»",
@@ -159,7 +159,7 @@ LANGS = {
         "comment_email": "Correo electrónico",
         "comment_msg": "Tu comentario…",
         "comment_send": "Enviar",
-        "comment_subject": "Comentario sobre: {title} ({kh})",
+        "comment_subject": "Comentario sobre: {title}",
         "news_title": "Recibe el texto del día",
         "news_note": "Suscríbete con tu correo para recibir cada texto nuevo el día de su publicación, o sigue el canal de WhatsApp.",
         "news_button": "Suscribirme",
@@ -185,7 +185,7 @@ LANGS = {
         "book_full": "全书目录",
         "next": "下一篇 →",
         "browse": "浏览全书 →",
-        "piece_word": "片段",
+        "piece_word": "剪影",
         "index_desc": "《{book}》——在{name}的网站上逐篇连载",
         "book_desc": "《{book}》已发表作品目录",
         "piece_desc": "{title}——选自《{book}》",
@@ -199,7 +199,7 @@ LANGS = {
         "comment_email": "电子邮箱",
         "comment_msg": "您的评论…",
         "comment_send": "发送",
-        "comment_subject": "评论：{title}（{kh}）",
+        "comment_subject": "评论：{title}",
         "news_title": "每天接收新文章",
         "news_note": "留下邮箱订阅，发表当天即可收到新文章；或关注 WhatsApp 频道。",
         "news_button": "订阅",
@@ -270,10 +270,6 @@ def fmt_date(lang: str, iso: str) -> str:
     return f"{year}年{month}月{day}日"
 
 
-def fmt_kh(lang: str, kh: str) -> str:
-    return kh if lang == "ar" else kh.replace("خ", "kh")
-
-
 def series_line(piece: dict) -> str:
     series = piece.get("series", "")
     number = piece.get("number", "")
@@ -330,7 +326,7 @@ def render(lang: str, title: str, description: str, content_html: str,
     )
 
 
-def piece_header(lang: str, piece: dict) -> str:
+def piece_header(lang: str, piece: dict, num: int) -> str:
     strings = LANGS[lang]
     parts = ['<header class="piece-header">']
     line = series_line(piece)
@@ -339,7 +335,7 @@ def piece_header(lang: str, piece: dict) -> str:
     parts.append(f"<h1>{html.escape(piece['title'])}</h1>")
     parts.append(
         f'<p class="meta">{fmt_date(lang, piece["date"])} — '
-        f'{strings["piece_word"]} {fmt_kh(lang, piece["kh"])}</p>'
+        f'{strings["piece_word"]} {num}</p>'
     )
     parts.append("</header>")
     return "\n".join(parts)
@@ -370,7 +366,7 @@ def interact_section(lang: str, piece: dict) -> str:
         f'{strings["share_wa"]}</a></p>'
     )
     if WEB3FORMS_ACCESS_KEY:
-        subject = strings["comment_subject"].format(title=piece["title"], kh=piece["kh"])
+        subject = strings["comment_subject"].format(title=piece["title"])
         parts.append(
             f'<h2 class="interact-title">{strings["comment_title"]}</h2>\n'
             f'<p class="interact-note">{strings["comment_note"]}</p>\n'
@@ -438,7 +434,7 @@ def build_lang(lang: str, pieces: list, published_slugs: set) -> None:
         nav.append("</nav>")
 
         body_html = (
-            piece_header(lang, piece)
+            piece_header(lang, piece, i + 1)
             + f'\n<article class="piece-body" lang="{lang}">\n{md_to_html(piece["body"])}\n</article>\n'
             + "\n".join(nav)
             + "\n"
@@ -476,7 +472,7 @@ def build_lang(lang: str, pieces: list, published_slugs: set) -> None:
         index_body = (
             hero(lang)
             + "\n"
-            + piece_header(lang, latest)
+            + piece_header(lang, latest, len(pieces))
             + f'\n<article class="piece-body" lang="{lang}">\n{md_to_html(latest["body"])}\n</article>'
             + f'\n<div class="center"><a class="big-button" href="book.html">{strings["browse"]}</a></div>'
             + "\n"
