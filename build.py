@@ -29,6 +29,7 @@
 import html
 import re
 from pathlib import Path
+from urllib.parse import quote
 
 ROOT = Path(__file__).parent
 CONTENT = ROOT / "content"
@@ -36,6 +37,12 @@ TRANSLATIONS = ROOT / "translations"
 TEMPLATE = (ROOT / "templates" / "base.html").read_text(encoding="utf-8")
 
 SITE_URL = "https://motazomarien.com"
+
+# خدمات التفاعل الخارجية — تُفعَّل بلصق القيمة هنا ثم إعادة البناء (python3 build.py).
+# القسم المقابل يظهر في الموقع فقط بعد لصق قيمته:
+WEB3FORMS_ACCESS_KEY = ""    # تعليقات القراء → بريد الكاتب — المفتاح من web3forms.com (تدخل بريدك فيصلك المفتاح فورًا)
+NEWSLETTER_FORM_ACTION = ""  # نموذج الاشتراك البريدي — رابط النموذج المضمّن من Mailchimp (Audience → Signup forms → Embedded forms)
+WHATSAPP_CHANNEL_URL = ""    # رابط قناة واتساب — تُنشأ من تطبيق واتساب (التحديثات ← القنوات ← إنشاء قناة)
 
 LANG_ORDER = ["ar", "en", "es", "zh"]
 
@@ -62,6 +69,19 @@ LANGS = {
         "book_page_title": "الكتاب كاملًا — {book}",
         "empty_index": "النص الأول قريبًا — يُعرض هنا كاملًا فور نشره، قبل أي مكان آخر.",
         "empty_book": "لا نصوص منشورة بعد — أول لقطة في الطريق.",
+        "share_wa": "شارك النص عبر واتساب",
+        "comment_title": "تعليقك يصل إلى الكاتب",
+        "comment_note": "اترك اسمك وبريدك وتعليقك — يصل مباشرة إلى بريد الكاتب، ولا يُنشر علنًا.",
+        "comment_name": "الاسم",
+        "comment_email": "البريد الإلكتروني",
+        "comment_msg": "تعليقك…",
+        "comment_send": "أرسل",
+        "comment_subject": "تعليق على: {title} ({kh})",
+        "news_title": "يصلك نص اليوم",
+        "news_note": "اشترك ببريدك ليصلك كل نص جديد يوم نشره، أو تابع قناة واتساب.",
+        "news_button": "اشترك",
+        "news_email": "بريدك الإلكتروني",
+        "wa_channel": "تابع قناة واتساب ←",
         "fonts": (
             '<link href="https://fonts.googleapis.com/css2?'
             "family=Amiri:ital,wght@0,400;0,700;1,400&"
@@ -91,6 +111,19 @@ LANGS = {
         "book_page_title": "The full book — {book}",
         "empty_index": "The first text is coming soon — it will appear here in full the moment it is published, before anywhere else.",
         "empty_book": "No texts published yet — the first snapshot is on its way.",
+        "share_wa": "Share this piece on WhatsApp",
+        "comment_title": "Your comment reaches the author",
+        "comment_note": "Leave your name, email, and comment — it goes straight to the author's inbox; nothing is published publicly.",
+        "comment_name": "Name",
+        "comment_email": "Email",
+        "comment_msg": "Your comment…",
+        "comment_send": "Send",
+        "comment_subject": "Comment on: {title} ({kh})",
+        "news_title": "Get the day's text",
+        "news_note": "Subscribe with your email to receive each new text on publication day, or follow the WhatsApp channel.",
+        "news_button": "Subscribe",
+        "news_email": "Your email",
+        "wa_channel": "Follow the WhatsApp channel →",
         "fonts": (
             '<link href="https://fonts.googleapis.com/css2?'
             'family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">'
@@ -119,6 +152,19 @@ LANGS = {
         "book_page_title": "El libro completo — {book}",
         "empty_index": "El primer texto llegará pronto — aparecerá aquí completo en cuanto se publique, antes que en ningún otro lugar.",
         "empty_book": "Aún no hay textos publicados — la primera instantánea está en camino.",
+        "share_wa": "Compartir este texto por WhatsApp",
+        "comment_title": "Tu comentario llega al autor",
+        "comment_note": "Deja tu nombre, correo y comentario — llega directamente al buzón del autor; nada se publica en abierto.",
+        "comment_name": "Nombre",
+        "comment_email": "Correo electrónico",
+        "comment_msg": "Tu comentario…",
+        "comment_send": "Enviar",
+        "comment_subject": "Comentario sobre: {title} ({kh})",
+        "news_title": "Recibe el texto del día",
+        "news_note": "Suscríbete con tu correo para recibir cada texto nuevo el día de su publicación, o sigue el canal de WhatsApp.",
+        "news_button": "Suscribirme",
+        "news_email": "Tu correo electrónico",
+        "wa_channel": "Seguir el canal de WhatsApp →",
         "fonts": (
             '<link href="https://fonts.googleapis.com/css2?'
             'family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">'
@@ -146,6 +192,19 @@ LANGS = {
         "book_page_title": "全书目录——《{book}》",
         "empty_index": "第一篇即将发布——将在发表当天第一时间完整呈现于此。",
         "empty_book": "尚未发表任何作品——第一幅剪影正在路上。",
+        "share_wa": "通过 WhatsApp 分享本文",
+        "comment_title": "您的评论将直达作者",
+        "comment_note": "留下您的姓名、邮箱和评论——评论直接发送到作者邮箱，不会公开发布。",
+        "comment_name": "姓名",
+        "comment_email": "电子邮箱",
+        "comment_msg": "您的评论…",
+        "comment_send": "发送",
+        "comment_subject": "评论：{title}（{kh}）",
+        "news_title": "每天接收新文章",
+        "news_note": "留下邮箱订阅，发表当天即可收到新文章；或关注 WhatsApp 频道。",
+        "news_button": "订阅",
+        "news_email": "您的邮箱",
+        "wa_channel": "关注 WhatsApp 频道 →",
         "fonts": (
             '<link href="https://fonts.googleapis.com/css2?'
             'family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">'
@@ -296,6 +355,64 @@ def hero(lang: str) -> str:
     )
 
 
+def share_url(lang: str, piece: dict) -> str:
+    # http مؤقتًا حتى تصدر شهادة HTTPS — يتحوّل الرابط تلقائيًا بعد تفعيلها
+    url = f"http://motazomarien.com/{lang_prefix(lang)}{piece_path(piece)}"
+    return f"https://wa.me/?text={quote(piece['title'] + ' — ' + url)}"
+
+
+def interact_section(lang: str, piece: dict) -> str:
+    strings = LANGS[lang]
+    parts = ['<section class="interact">']
+    parts.append(
+        f'<p class="center"><a class="big-button secondary" '
+        f'href="{share_url(lang, piece)}" target="_blank" rel="noopener">'
+        f'{strings["share_wa"]}</a></p>'
+    )
+    if WEB3FORMS_ACCESS_KEY:
+        subject = strings["comment_subject"].format(title=piece["title"], kh=piece["kh"])
+        parts.append(
+            f'<h2 class="interact-title">{strings["comment_title"]}</h2>\n'
+            f'<p class="interact-note">{strings["comment_note"]}</p>\n'
+            '<form class="comment-form" action="https://api.web3forms.com/submit" method="POST">\n'
+            f'  <input type="hidden" name="access_key" value="{WEB3FORMS_ACCESS_KEY}">\n'
+            f'  <input type="hidden" name="subject" value="{html.escape(subject)}">\n'
+            f'  <input type="text" name="name" placeholder="{strings["comment_name"]}" required>\n'
+            f'  <input type="email" name="email" placeholder="{strings["comment_email"]}" required>\n'
+            f'  <textarea name="message" rows="4" placeholder="{strings["comment_msg"]}" required></textarea>\n'
+            '  <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off">\n'
+            f'  <button type="submit" class="big-button">{strings["comment_send"]}</button>\n'
+            "</form>"
+        )
+    parts.append("</section>")
+    return "\n".join(parts)
+
+
+def subscribe_section(lang: str) -> str:
+    if not NEWSLETTER_FORM_ACTION and not WHATSAPP_CHANNEL_URL:
+        return ""
+    strings = LANGS[lang]
+    parts = [
+        '<section class="subscribe">',
+        f'<h2 class="interact-title">{strings["news_title"]}</h2>',
+        f'<p class="interact-note">{strings["news_note"]}</p>',
+    ]
+    if NEWSLETTER_FORM_ACTION:
+        parts.append(
+            f'<form class="subscribe-form" action="{NEWSLETTER_FORM_ACTION}" method="post" target="_blank">\n'
+            f'  <input type="email" name="EMAIL" placeholder="{strings["news_email"]}" required>\n'
+            f'  <button type="submit" class="big-button">{strings["news_button"]}</button>\n'
+            "</form>"
+        )
+    if WHATSAPP_CHANNEL_URL:
+        parts.append(
+            f'<p class="center"><a class="big-button secondary" href="{WHATSAPP_CHANNEL_URL}" '
+            f'target="_blank" rel="noopener">{strings["wa_channel"]}</a></p>'
+        )
+    parts.append("</section>")
+    return "\n".join(parts)
+
+
 def build_lang(lang: str, pieces: list, published_slugs: set) -> None:
     strings = LANGS[lang]
     out_root = ROOT if lang == "ar" else ROOT / lang
@@ -324,6 +441,8 @@ def build_lang(lang: str, pieces: list, published_slugs: set) -> None:
             piece_header(lang, piece)
             + f'\n<article class="piece-body" lang="{lang}">\n{md_to_html(piece["body"])}\n</article>\n'
             + "\n".join(nav)
+            + "\n"
+            + interact_section(lang, piece)
         )
         canonical = piece_path(piece)
         alt = {}
@@ -360,6 +479,8 @@ def build_lang(lang: str, pieces: list, published_slugs: set) -> None:
             + piece_header(lang, latest)
             + f'\n<article class="piece-body" lang="{lang}">\n{md_to_html(latest["body"])}\n</article>'
             + f'\n<div class="center"><a class="big-button" href="book.html">{strings["browse"]}</a></div>'
+            + "\n"
+            + subscribe_section(lang)
         )
     else:
         index_body = (
@@ -391,7 +512,13 @@ def build_lang(lang: str, pieces: list, published_slugs: set) -> None:
             + "</li>"
         )
     if items:
-        book_body = hero(lang) + '\n<ul class="pieces">\n' + "\n".join(items) + "\n</ul>"
+        book_body = (
+            hero(lang)
+            + '\n<ul class="pieces">\n'
+            + "\n".join(items)
+            + "\n</ul>\n"
+            + subscribe_section(lang)
+        )
     else:
         book_body = hero(lang) + f'\n<p class="intro center-text">{strings["empty_book"]}</p>'
     book = render(
@@ -431,6 +558,41 @@ def main() -> None:
         build_lang(lang, translated[lang], published)
 
     build_sitemap(ar_pieces, published)
+    build_feed(ar_pieces)
+
+
+def build_feed(ar_pieces: list) -> None:
+    from datetime import datetime, timezone
+
+    items = []
+    for piece in reversed(ar_pieces[-20:]):
+        link = f"{SITE_URL}/{piece_path(piece)}"
+        year, month, day = (int(part) for part in piece["date"].split("-"))
+        pub = datetime(year, month, day, 8, tzinfo=timezone.utc).strftime(
+            "%a, %d %b %Y %H:%M:%S %z"
+        )
+        items.append(
+            "  <item>\n"
+            f"    <title>{html.escape(piece['title'])}</title>\n"
+            f"    <link>{link}</link>\n"
+            f'    <guid isPermaLink="true">{link}</guid>\n'
+            f"    <pubDate>{pub}</pubDate>\n"
+            f"    <description><![CDATA[{md_to_html(piece['body'])}]]></description>\n"
+            "  </item>"
+        )
+    feed = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<rss version="2.0">\n<channel>\n'
+        f"  <title>{html.escape(LANGS['ar']['site_name'])} — "
+        f"{html.escape(LANGS['ar']['book_title'])}</title>\n"
+        f"  <link>{SITE_URL}/</link>\n"
+        f"  <description>{html.escape(LANGS['ar']['book_intro'])}</description>\n"
+        "  <language>ar</language>\n"
+        + "\n".join(items)
+        + "\n</channel>\n</rss>\n"
+    )
+    (ROOT / "feed.xml").write_text(feed, encoding="utf-8")
+    print("بُني: feed.xml")
 
 
 def sitemap_url(canonical: str, alt: dict, lastmod: str) -> str:

@@ -234,3 +234,68 @@ html[lang="zh"] .book-title,
 html[lang="zh"] .big-button {
   font-family: "Noto Serif SC", "Songti SC", serif;
 }
+
+/* التفاعل: مشاركة وتعليقات واشتراك */
+.interact {
+  margin-top: 2.5rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--rule);
+}
+
+.interact-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.interact-note {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.comment-form,
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  max-width: 30rem;
+  margin: 0 auto 1rem;
+}
+
+.comment-form input,
+.comment-form textarea,
+.subscribe-form input {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.6rem 0.9rem;
+  background: #fffdf7;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  color: var(--ink);
+}
+
+.comment-form input:focus,
+.comment-form textarea:focus,
+.subscribe-form input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 0;
+}
+
+.comment-form button,
+.subscribe-form button {
+  align-self: center;
+  border: 0;
+  cursor: pointer;
+}
+
+.botcheck { display: none; }
+
+.subscribe {
+  margin: 2.5rem 0;
+  padding: 1.5rem 1rem 0.5rem;
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+}
