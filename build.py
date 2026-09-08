@@ -255,7 +255,7 @@ def md_to_html(md: str) -> str:
         elif block.startswith("## "):
             out.append(f"<h2>{md_inline(block[3:])}</h2>")
         else:
-            out.append(f"<p>{md_inline(block)}</p>")
+            out.append(f"<p>{md_inline(block).replace(chr(10), '<br>')}</p>")
     return "\n".join(out)
 
 
