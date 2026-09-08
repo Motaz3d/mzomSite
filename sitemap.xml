@@ -8,7 +8,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/index.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/index.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/index.html"/>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-08</lastmod>
   </url>
   <url>
     <loc>https://motazomarien.com/book.html</loc>
@@ -17,7 +17,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/book.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/book.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/book.html"/>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-08</lastmod>
   </url>
   <url>
     <loc>https://motazomarien.com/pieces/muritaniyya.html</loc>
@@ -36,5 +36,14 @@
     <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/pieces/sadeeqi.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/pieces/sadeeqi.html"/>
     <lastmod>2026-09-07</lastmod>
+  </url>
+  <url>
+    <loc>https://motazomarien.com/pieces/alaa.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/pieces/alaa.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/en/pieces/alaa.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/pieces/alaa.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/pieces/alaa.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/pieces/alaa.html"/>
+    <lastmod>2026-09-08</lastmod>
   </url>
 </urlset>
