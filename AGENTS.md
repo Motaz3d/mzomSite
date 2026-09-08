@@ -11,7 +11,7 @@
 ## Project map
 
 - **Type:** static website hosted on **GitHub Pages** (repo: Motaz3d/mzomSite, branch `main`, path `/`)
-- **Live URL:** **http://motazomarien.com** (يعمل؛ HTTPS قيد إصدار الشهادة — يُفعَّل تلقائيًا، انظر PLAN.md)
+- **Live URL:** **https://motazomarien.com** (HTTPS فعّال منذ 2026-09-08 — شهادة Let's Encrypt صدرت وEnforce HTTPS مفعّل)
 - **Repo visibility:** **public** (required for Pages on the free plan)
 - **Structure:**
   - `content/*.md` — النصوص المنشورة حاليًا على الموقع (الأصل العربي)
@@ -27,7 +27,7 @@
   - `en/ es/ zh/` — نفس البنية مولّدة لكل لغة (index + book + pieces)، مع محوّل لغات في الترويسة ووسوم hreflang
   - المخرجات مولّدة — لا تُحرَّر يدويًا، أعد البناء
 - **Publishing queue:** النشر من الطابور نص واحد يوميًا بجدول (النشر يحتاج جلسة وكيل للترجمة — يُطلب بـ«انشر نص اليوم» في أي جلسة): خ-142 «نزار طه حاج أحمد» يوم 2026-09-09، خ-096 «سراب بسراب بسراب» يوم 2026-09-10، خ-091 «طيرة حيفا» يوم 2026-09-11، خ-162 «روحك تموت» يوم 2026-09-12 (سلسلة «يوميات المهاجر»)، خ-178 «أول يوم في الثورة» يوم 2026-09-13 (سلسلة «ما قبل الرحيل»). عند النشر: `git mv queue/… content/…` + تحديث date + **إضافة ترجماته الثلاث إلى `translations/{en,es,zh}/<slug>.md` بجودة أدبية عالية** + build + push. (نص بلا ترجمات يظهر عربيًا فقط حتى تُضاف.)
-- **HTTPS cert:** pending at GitHub (diagnosed 2026-09-06: everything our side correct; DNS verified; clean remove/re-add done 09-07 20:45; **GitHub support ticket filed 09-07 — waiting on them**, typical fix 1-2 business days). Watcher: **launchd agent `com.motazomarien.httpscheck`** (`~/scripts/https-cert-check/check.sh`, every 30min, **monitor-only since 09-08** — no retriggers; on success enables Enforce HTTPS + self-deletes) — يعمل بلا أي جلسة Kimi مفتوحة (يتطلب أن يكون الماك مستيقظًا).
+- **HTTPS:** **resolved 2026-09-08** — Let's Encrypt cert active (apex+www), Enforce HTTPS on, watcher self-deleted. Details in PLAN.md.
 - **Book being serialized:** «المهاجر — لقطات ومرايا» (الكتاب الأول، خطة `wr/تطوير/خطة-كتاب-المهاجر.md`) — بقرار الكاتب 2026-09-06. قرارات الشكل: النص الأخير على الرئيسية، أزرار كبيرة واضحة، التبحر داخل الكتاب عبر book.html. إيقاع النشر: **طابور مجدول — نص واحد يوميًا** (انظر Publishing queue). الكتب التالية موثقة في `wr/تطوير/الخطة-المتكاملة.md` (رسائل بين، لبن، مقالات) — نبدأ بها بعد انتهاج «المهاجر».
 - **Commands:** بعد إضافة/تعديل ملف في `content/`: `python3 build.py && git add -A && git commit && git push`
 - **Libraries:** none (plain HTML/CSS, Python stdlib build)
