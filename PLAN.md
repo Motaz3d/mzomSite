@@ -36,7 +36,7 @@
 
 ## Done (additions)
 - خ-142 «نزار طه حاج أحمد» published 2026-09-09 (series «وجوه المهاجر», en/es/zh translations).
-- **Pages deploy fixed 2026-09-09:** build_type had silently flipped to `workflow` (likely during the 09-08 HTTPS remove/re-add), so no deploys ran after 99eb13d — yesterday's approvals and خ-142 never went live. PATCH back to `legacy` 404'd via API, so fixed by adding `.github/workflows/deploy.yml` (configure-pages → upload-pages-artifact → deploy-pages on push to main). Deploys now run as Actions on every push.
+- **Pages deploy fixed 2026-09-09:** build_type had silently flipped to `workflow` (likely during the 09-08 HTTPS remove/re-add), so no deploys ran after 99eb13d — yesterday's approvals and خ-142 never went live. PATCH back to `legacy` 404'd via API, so a temporary Actions deploy workflow was added — then the **user re-switched Source to «Deploy from a branch» in Settings ← Pages** (11:04), legacy builds resumed instantly, and the workflow file was removed. Final state: legacy branch deploys, as before. Lesson: if deploys stop, check Settings ← Pages source first.
 - **Comments activated 2026-09-09:** Web3Forms key pasted into `WEB3FORMS_ACCESS_KEY` (build.py:43); comment form now renders under every piece in all 4 languages (submissions → author's Gmail).
 
 ## Next
