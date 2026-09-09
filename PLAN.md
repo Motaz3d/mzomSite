@@ -34,11 +34,16 @@
 ## Done (additions)
 - **HTTPS resolved 2026-09-08:** Let's Encrypt cert issued ~15:52 UTC (covers apex + www, expires 12-07) after the 09-07 support ticket + clean remove/re-add. `https_certificate.state: approved`. **Enforce HTTPS enabled via API 18:55** (`https_enforced: true`, site `built`); https://motazomarien.com serves 200, www→apex 301s correct. Watcher `com.motazomarien.httpscheck` detected success and self-deleted (plist removed, agent unloaded). Apex http→https edge redirect still rolling out (GitHub allows up to 24h after enforcement). **Unblocked follow-ups:** resubmit sitemap in Google Search Console (was "Invalid sitemap address" over broken HTTPS); Mailchimp RSS campaign on `https://motazomarien.com/feed.xml` now fetchable. GitHub support ticket can be closed as resolved.
 
+## Done (additions)
+- خ-142 «نزار طه حاج أحمد» published 2026-09-09 (series «وجوه المهاجر», en/es/zh translations).
+- **Pages deploy fixed 2026-09-09:** build_type had silently flipped to `workflow` (likely during the 09-08 HTTPS remove/re-add), so no deploys ran after 99eb13d — yesterday's approvals and خ-142 never went live. PATCH back to `legacy` 404'd via API, so fixed by adding `.github/workflows/deploy.yml` (configure-pages → upload-pages-artifact → deploy-pages on push to main). Deploys now run as Actions on every push.
+- **Comments activated 2026-09-09:** Web3Forms key pasted into `WEB3FORMS_ACCESS_KEY` (build.py:43); comment form now renders under every piece in all 4 languages (submissions → author's Gmail).
+
 ## Next
 - Daily publishing: cron `01M1V0B9MRNN8JF42DZB7WRJ08` died with the 09-06 morning session — **no live scheduler now**. Publishing needs the agent (literary translation ×3), so it can't be a plain OS timer. خ-103 published 09-07 ✓; خ-150 published 09-08 ✓; خ-142 published 09-09 ✓ (series «وجوه المهاجر», en/es/zh translations added). To publish the day's piece (خ-096 on 09-10, خ-091 on 09-11, خ-162 on 09-12): open any session here and say «انشر نص اليوم».
 - User: cancel all active services at Virtono — support email drafted 2026-09-07; user says Virtono has now been contacted (09-07). Await their confirmation reply; back up anything needed before final termination.
 - User activation steps for the interaction layer (each = paste the value into build.py constants + `python3 build.py` + push — offer to do the rebuild in-session):
-  1. **Comments:** web3forms.com → enter Gmail → copy access key → `WEB3FORMS_ACCESS_KEY`.
+  1. ~~**Comments**~~ — **done 2026-09-09** (Web3Forms key active).
   2. **Daily email:** Mailchimp free account → Audience → Signup forms → Embedded forms → copy form action URL → `NEWSLETTER_FORM_ACTION`; then Campaigns → RSS campaign on `https://motazomarien.com/feed.xml` (daily) — note: Mailchimp fetches the feed over HTTPS, so the RSS campaign works once the cert lands; the subscribe form itself works immediately.
   3. **WhatsApp:** create a Channel in the WhatsApp app (Updates ← Channels ← Create) → copy follow link → `WHATSAPP_CHANNEL_URL`; author posts the day's link there manually.
 - GitHub support ticket re: stuck HTTPS cert — **resolved 2026-09-08** (cert issued, Enforce HTTPS on; see Done). User can close the ticket as resolved.
