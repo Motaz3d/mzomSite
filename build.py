@@ -41,7 +41,7 @@ SITE_URL = "https://motazomarien.com"
 # خدمات التفاعل الخارجية — تُفعَّل بلصق القيمة هنا ثم إعادة البناء (python3 build.py).
 # القسم المقابل يظهر في الموقع فقط بعد لصق قيمته:
 WEB3FORMS_ACCESS_KEY = "84872369-05da-4ba4-a629-c426879bb250"    # تعليقات القراء → بريد الكاتب — المفتاح من web3forms.com (تدخل بريدك فيصلك المفتاح فورًا)
-NEWSLETTER_FORM_ACTION = ""  # نموذج الاشتراك البريدي — رابط النموذج المضمّن من Mailchimp (Audience → Signup forms → Embedded forms)
+NEWSLETTER_FORM_ACTION = "https://motazomarien.us2.list-manage.com/subscribe/post?u=8837b8070f6417c372512ba8c&id=69d8847d9d"  # نموذج الاشتراك البريدي — رابط النموذج المضمّن من Mailchimp (Audience → Signup forms → Embedded forms)
 WHATSAPP_CHANNEL_URL = ""    # رابط قناة واتساب — تُنشأ من تطبيق واتساب (التحديثات ← القنوات ← إنشاء قناة)
 
 LANG_ORDER = ["ar", "en", "es", "zh"]
