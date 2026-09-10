@@ -39,8 +39,11 @@
 - **Pages deploy fixed 2026-09-09:** build_type had silently flipped to `workflow` (likely during the 09-08 HTTPS remove/re-add), so no deploys ran after 99eb13d — yesterday's approvals and خ-142 never went live. PATCH back to `legacy` 404'd via API, so a temporary Actions deploy workflow was added — then the **user re-switched Source to «Deploy from a branch» in Settings ← Pages** (11:04), legacy builds resumed instantly, and the workflow file was removed. Final state: legacy branch deploys, as before. Lesson: if deploys stop, check Settings ← Pages source first.
 - **Comments activated 2026-09-09:** Web3Forms key pasted into `WEB3FORMS_ACCESS_KEY` (build.py:43); comment form now renders under every piece in all 4 languages (submissions → author's Gmail).
 
+## Done (additions)
+- خ-096 «سراب بسراب بسراب» published 2026-09-10 (series «العبور» — new series: en "The Crossing", es "La travesía", zh 渡河; translations: en «Mirage Upon Mirage Upon Mirage», es «Espejismo tras espejismo tras espejismo», zh 《蜃楼复蜃楼又蜃楼》).
+
 ## Next
-- Daily publishing: cron `01M1V0B9MRNN8JF42DZB7WRJ08` died with the 09-06 morning session — **no live scheduler now**. Publishing needs the agent (literary translation ×3), so it can't be a plain OS timer. خ-103 published 09-07 ✓; خ-150 published 09-08 ✓; خ-142 published 09-09 ✓ (series «وجوه المهاجر», en/es/zh translations added). To publish the day's piece (خ-096 on 09-10, خ-091 on 09-11, خ-162 on 09-12): open any session here and say «انشر نص اليوم».
+- Daily publishing: cron `01M1V0B9MRNN8JF42DZB7WRJ08` died with the 09-06 morning session — **no live scheduler now**. Publishing needs the agent (literary translation ×3), so it can't be a plain OS timer. خ-103 published 09-07 ✓; خ-150 published 09-08 ✓; خ-142 published 09-09 ✓; خ-096 published 09-10 ✓ (series «العبور», en/es/zh translations added). To publish the day's piece (خ-091 on 09-11, خ-162 on 09-12): open any session here and say «انشر نص اليوم».
 - User: cancel all active services at Virtono — support email drafted 2026-09-07; user says Virtono has now been contacted (09-07). Await their confirmation reply; back up anything needed before final termination.
 - User activation steps for the interaction layer (each = paste the value into build.py constants + `python3 build.py` + push — offer to do the rebuild in-session):
   1. ~~**Comments**~~ — **done 2026-09-09** (Web3Forms key active).
