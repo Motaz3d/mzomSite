@@ -8,7 +8,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/index.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/index.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/index.html"/>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-12</lastmod>
   </url>
   <url>
     <loc>https://motazomarien.com/book.html</loc>
@@ -17,7 +17,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/book.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/book.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/book.html"/>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-12</lastmod>
   </url>
   <url>
     <loc>https://motazomarien.com/pieces/muritaniyya.html</loc>
@@ -72,5 +72,14 @@
     <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/pieces/tirat-haifa.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/pieces/tirat-haifa.html"/>
     <lastmod>2026-09-11</lastmod>
+  </url>
+  <url>
+    <loc>https://motazomarien.com/pieces/roohuk-tamout.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/pieces/roohuk-tamout.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/en/pieces/roohuk-tamout.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/pieces/roohuk-tamout.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/pieces/roohuk-tamout.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/pieces/roohuk-tamout.html"/>
+    <lastmod>2026-09-12</lastmod>
   </url>
 </urlset>
