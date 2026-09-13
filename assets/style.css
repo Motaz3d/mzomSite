@@ -216,6 +216,11 @@ html[lang="es"] body {
   line-height: 1.8;
 }
 
+html[lang="ru"] body {
+  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+  line-height: 1.8;
+}
+
 html[lang="zh"] body {
   font-family: "Noto Serif SC", "Songti SC", "SimSun", serif;
   line-height: 2;
@@ -226,6 +231,13 @@ html[lang="en"] .piece-header h1, html[lang="es"] .piece-header h1,
 html[lang="en"] .book-title, html[lang="es"] .book-title,
 html[lang="en"] .big-button, html[lang="es"] .big-button {
   font-family: "EB Garamond", Georgia, serif;
+}
+
+html[lang="ru"] .site-name,
+html[lang="ru"] .piece-header h1,
+html[lang="ru"] .book-title,
+html[lang="ru"] .big-button {
+  font-family: "PT Serif", Georgia, serif;
 }
 
 html[lang="zh"] .site-name,

@@ -44,7 +44,7 @@ WEB3FORMS_ACCESS_KEY = "84872369-05da-4ba4-a629-c426879bb250"    # تعليقا�
 NEWSLETTER_FORM_ACTION = "https://motazomarien.us2.list-manage.com/subscribe/post?u=8837b8070f6417c372512ba8c&id=69d8847d9d"  # نموذج الاشتراك البريدي — رابط النموذج المضمّن من Mailchimp (Audience → Signup forms → Embedded forms)
 WHATSAPP_CHANNEL_URL = ""    # رابط قناة واتساب — تُنشأ من تطبيق واتساب (التحديثات ← القنوات ← إنشاء قناة)
 
-LANG_ORDER = ["ar", "en", "es", "zh"]
+LANG_ORDER = ["ar", "en", "es", "zh", "ru"]
 
 LANGS = {
     "ar": {
@@ -210,6 +210,47 @@ LANGS = {
             'family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">'
         ),
     },
+    "ru": {
+        "dir": "ltr",
+        "label": "Русский",
+        "site_name": "Мотаз Омарин",
+        "tagline": "Роман без названия — об отчуждении",
+        "book_title": "Мигрант — кадры и зеркала",
+        "book_intro": (
+            "Очень короткие рассказы, дающие голос боли — от еврейского "
+            "квартала в Дамаске до кафе Люксембурга. Книга появляется здесь "
+            "кадр за кадром, новый текст каждый день."
+        ),
+        "footer": "motazomarien.com — публикуется с продолжением, каждый день новая история",
+        "prev": "← Предыдущий текст",
+        "book_full": "Вся книга",
+        "next": "Следующий текст →",
+        "browse": "Полистать всю книгу →",
+        "piece_word": "Кадр",
+        "index_desc": "Книга «{book}» — публикуется кадр за кадром на сайте {name}",
+        "book_desc": "Указатель опубликованных на сегодня текстов из книги «{book}»",
+        "piece_desc": "{title} — из книги «{book}»",
+        "book_page_title": "Вся книга — {book}",
+        "empty_index": "Первый текст скоро появится — он будет опубликован здесь целиком в день выхода, раньше, чем где-либо ещё.",
+        "empty_book": "Текстов пока нет — первый кадр уже в пути.",
+        "share_wa": "Поделиться текстом в WhatsApp",
+        "comment_title": "Ваш комментарий дойдёт до автора",
+        "comment_note": "Оставьте имя, электронную почту и комментарий — он попадёт прямо в почту автора и не будет опубликован.",
+        "comment_name": "Имя",
+        "comment_email": "Электронная почта",
+        "comment_msg": "Ваш комментарий…",
+        "comment_send": "Отправить",
+        "comment_subject": "Комментарий к: {title}",
+        "news_title": "Получайте текст дня",
+        "news_note": "Подпишитесь, чтобы получать каждый новый текст в день публикации, или следите за каналом в WhatsApp.",
+        "news_button": "Подписаться",
+        "news_email": "Ваша электронная почта",
+        "wa_channel": "Следить за каналом в WhatsApp →",
+        "fonts": (
+            '<link href="https://fonts.googleapis.com/css2?'
+            'family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">'
+        ),
+    },
 }
 
 MONTHS = {
@@ -219,6 +260,8 @@ MONTHS = {
            "July", "August", "September", "October", "November", "December"],
     "es": ["enero", "febrero", "marzo", "abril", "mayo", "junio",
            "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"],
+    "ru": ["января", "февраля", "марта", "апреля", "мая", "июня",
+           "июля", "августа", "сентября", "октября", "ноября", "декабря"],
 }
 
 
@@ -267,6 +310,8 @@ def fmt_date(lang: str, iso: str) -> str:
         return f"{MONTHS['en'][month - 1]} {day}, {year}"
     if lang == "es":
         return f"{day} de {MONTHS['es'][month - 1]} de {year}"
+    if lang == "ru":
+        return f"{day} {MONTHS['ru'][month - 1]} {year}"
     return f"{year}年{month}月{day}日"
 
 
