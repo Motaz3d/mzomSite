@@ -32,5 +32,45 @@
   <footer class="site-footer">
     <p>{{footer}}</p>
   </footer>
+  <script>
+  (function () {
+    var form = document.getElementById('subscribe-form');
+    if (form) {
+      form.setAttribute('target', 'mc_frame');
+      form.addEventListener('submit', function () {
+        var note = document.getElementById('subscribe-thanks');
+        setTimeout(function () {
+          form.hidden = true;
+          if (note) { note.hidden = false; }
+        }, 400);
+      });
+    }
+    var copyButtons = document.querySelectorAll('.copy-link');
+    Array.prototype.forEach.call(copyButtons, function (btn) {
+      btn.hidden = false;
+      btn.addEventListener('click', function () {
+        var label = btn.getAttribute('data-label') || btn.textContent;
+        var done = function () {
+          btn.textContent = btn.getAttribute('data-copied') || label;
+          setTimeout(function () { btn.textContent = label; }, 2000);
+        };
+        var url = btn.getAttribute('data-url');
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(done, function () {});
+        } else {
+          var field = document.createElement('textarea');
+          field.value = url;
+          field.setAttribute('readonly', '');
+          field.style.position = 'absolute';
+          field.style.left = '-9999px';
+          document.body.appendChild(field);
+          field.select();
+          try { document.execCommand('copy'); done(); } catch (err) {}
+          document.body.removeChild(field);
+        }
+      });
+    });
+  })();
+  </script>
 </body>
 </html>

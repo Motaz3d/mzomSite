@@ -56,12 +56,13 @@
 <a class="big-button" href="pieces/roohuk-tamout.html">Next piece →</a>
 </nav>
 <section class="interact">
-<p class="center"><a class="big-button secondary" href="https://wa.me/?text=Tirat%20Haifa%20%E2%80%94%20http%3A//motazomarien.com/en/pieces/tirat-haifa.html" target="_blank" rel="noopener">Share this piece on WhatsApp</a></p>
+<p class="center"><a class="big-button secondary" href="https://wa.me/?text=Tirat%20Haifa%20%E2%80%94%20https%3A//motazomarien.com/en/pieces/tirat-haifa.html" target="_blank" rel="noopener">Share this piece on WhatsApp</a><button type="button" class="big-button secondary copy-link" hidden data-url="https://motazomarien.com/en/pieces/tirat-haifa.html" data-label="Copy link" data-copied="Copied ✓">Copy link</button></p>
 <h2 class="interact-title">Your comment reaches the author</h2>
 <p class="interact-note">Leave your name, email, and comment — it goes straight to the author's inbox; nothing is published publicly.</p>
 <form class="comment-form" action="https://api.web3forms.com/submit" method="POST">
   <input type="hidden" name="access_key" value="84872369-05da-4ba4-a629-c426879bb250">
   <input type="hidden" name="subject" value="Comment on: Tirat Haifa">
+  <input type="hidden" name="redirect" value="https://motazomarien.com/en/thanks.html">
   <input type="text" name="name" placeholder="Name" required>
   <input type="email" name="email" placeholder="Email" required>
   <textarea name="message" rows="4" placeholder="Your comment…" required></textarea>
@@ -73,5 +74,45 @@
   <footer class="site-footer">
     <p>motazomarien.com — published in installments, a story every day</p>
   </footer>
+  <script>
+  (function () {
+    var form = document.getElementById('subscribe-form');
+    if (form) {
+      form.setAttribute('target', 'mc_frame');
+      form.addEventListener('submit', function () {
+        var note = document.getElementById('subscribe-thanks');
+        setTimeout(function () {
+          form.hidden = true;
+          if (note) { note.hidden = false; }
+        }, 400);
+      });
+    }
+    var copyButtons = document.querySelectorAll('.copy-link');
+    Array.prototype.forEach.call(copyButtons, function (btn) {
+      btn.hidden = false;
+      btn.addEventListener('click', function () {
+        var label = btn.getAttribute('data-label') || btn.textContent;
+        var done = function () {
+          btn.textContent = btn.getAttribute('data-copied') || label;
+          setTimeout(function () { btn.textContent = label; }, 2000);
+        };
+        var url = btn.getAttribute('data-url');
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(done, function () {});
+        } else {
+          var field = document.createElement('textarea');
+          field.value = url;
+          field.setAttribute('readonly', '');
+          field.style.position = 'absolute';
+          field.style.left = '-9999px';
+          document.body.appendChild(field);
+          field.select();
+          try { document.execCommand('copy'); done(); } catch (err) {}
+          document.body.removeChild(field);
+        }
+      });
+    });
+  })();
+  </script>
 </body>
 </html>

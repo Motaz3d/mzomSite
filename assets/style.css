@@ -312,3 +312,15 @@ html[lang="zh"] .big-button {
   border: 1px solid var(--rule);
   border-radius: 14px;
 }
+
+/* الطبقة التفاعلية: إخفاء ما يظهره السكربت لاحقًا + تأكيد الاشتراك داخل الصفحة */
+[hidden] { display: none !important; }
+
+.copy-link { cursor: pointer; }
+
+.form-thanks {
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.05rem;
+}

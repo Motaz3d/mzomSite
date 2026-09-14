@@ -57,12 +57,13 @@
 <a class="big-button" href="pieces/alaa.html">Следующий текст →</a>
 </nav>
 <section class="interact">
-<p class="center"><a class="big-button secondary" href="https://wa.me/?text=%D0%A3%20%D0%BC%D0%B5%D0%BD%D1%8F%20%D0%B5%D1%81%D1%82%D1%8C%20%D0%B4%D1%80%D1%83%D0%B3%20%E2%80%94%20http%3A//motazomarien.com/ru/pieces/sadeeqi.html" target="_blank" rel="noopener">Поделиться текстом в WhatsApp</a></p>
+<p class="center"><a class="big-button secondary" href="https://wa.me/?text=%D0%A3%20%D0%BC%D0%B5%D0%BD%D1%8F%20%D0%B5%D1%81%D1%82%D1%8C%20%D0%B4%D1%80%D1%83%D0%B3%20%E2%80%94%20https%3A//motazomarien.com/ru/pieces/sadeeqi.html" target="_blank" rel="noopener">Поделиться текстом в WhatsApp</a><button type="button" class="big-button secondary copy-link" hidden data-url="https://motazomarien.com/ru/pieces/sadeeqi.html" data-label="Скопировать ссылку" data-copied="Скопировано ✓">Скопировать ссылку</button></p>
 <h2 class="interact-title">Ваш комментарий дойдёт до автора</h2>
 <p class="interact-note">Оставьте имя, электронную почту и комментарий — он попадёт прямо в почту автора и не будет опубликован.</p>
 <form class="comment-form" action="https://api.web3forms.com/submit" method="POST">
   <input type="hidden" name="access_key" value="84872369-05da-4ba4-a629-c426879bb250">
   <input type="hidden" name="subject" value="Комментарий к: У меня есть друг">
+  <input type="hidden" name="redirect" value="https://motazomarien.com/ru/thanks.html">
   <input type="text" name="name" placeholder="Имя" required>
   <input type="email" name="email" placeholder="Электронная почта" required>
   <textarea name="message" rows="4" placeholder="Ваш комментарий…" required></textarea>
@@ -74,5 +75,45 @@
   <footer class="site-footer">
     <p>motazomarien.com — публикуется с продолжением, каждый день новая история</p>
   </footer>
+  <script>
+  (function () {
+    var form = document.getElementById('subscribe-form');
+    if (form) {
+      form.setAttribute('target', 'mc_frame');
+      form.addEventListener('submit', function () {
+        var note = document.getElementById('subscribe-thanks');
+        setTimeout(function () {
+          form.hidden = true;
+          if (note) { note.hidden = false; }
+        }, 400);
+      });
+    }
+    var copyButtons = document.querySelectorAll('.copy-link');
+    Array.prototype.forEach.call(copyButtons, function (btn) {
+      btn.hidden = false;
+      btn.addEventListener('click', function () {
+        var label = btn.getAttribute('data-label') || btn.textContent;
+        var done = function () {
+          btn.textContent = btn.getAttribute('data-copied') || label;
+          setTimeout(function () { btn.textContent = label; }, 2000);
+        };
+        var url = btn.getAttribute('data-url');
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(done, function () {});
+        } else {
+          var field = document.createElement('textarea');
+          field.value = url;
+          field.setAttribute('readonly', '');
+          field.style.position = 'absolute';
+          field.style.left = '-9999px';
+          document.body.appendChild(field);
+          field.select();
+          try { document.execCommand('copy'); done(); } catch (err) {}
+          document.body.removeChild(field);
+        }
+      });
+    });
+  })();
+  </script>
 </body>
 </html>

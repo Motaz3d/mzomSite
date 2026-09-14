@@ -325,6 +325,61 @@ def parse_piece(path: Path) -> dict:
     return meta
 
 
+# ─── نصوص الطبقة التفاعلية: تأكيد الاشتراك داخل الصفحة، نسخ الرابط، صفحة الشكر ───
+EXTRA_STRINGS = {
+    "ar": {
+        "subscribe_thanks": "شكرًا لك — وصل اشتراكك بنجاح.",
+        "copy_link": "انسخ الرابط",
+        "copied": "تم النسخ ✓",
+        "thanks_title": "شكرًا لك",
+        "thanks_body": "وصلت رسالتك، وسأقرأها باهتمام.",
+        "thanks_back": "عودة إلى الموقع",
+    },
+    "en": {
+        "subscribe_thanks": "Thank you — your subscription was received.",
+        "copy_link": "Copy link",
+        "copied": "Copied ✓",
+        "thanks_title": "Thank you",
+        "thanks_body": "Your message has arrived, and I'll read it with care.",
+        "thanks_back": "Back to the site",
+    },
+    "es": {
+        "subscribe_thanks": "Gracias — tu suscripción se ha recibido.",
+        "copy_link": "Copiar enlace",
+        "copied": "Copiado ✓",
+        "thanks_title": "Gracias",
+        "thanks_body": "Tu mensaje ha llegado y lo leeré con atención.",
+        "thanks_back": "Volver al sitio",
+    },
+    "zh": {
+        "subscribe_thanks": "谢谢你——订阅已收到。",
+        "copy_link": "复制链接",
+        "copied": "已复制 ✓",
+        "thanks_title": "谢谢你",
+        "thanks_body": "你的留言已经收到，我会用心阅读。",
+        "thanks_back": "返回网站",
+    },
+    "ru": {
+        "subscribe_thanks": "Спасибо — ваша подписка получена.",
+        "copy_link": "Скопировать ссылку",
+        "copied": "Скопировано ✓",
+        "thanks_title": "Спасибо",
+        "thanks_body": "Ваше сообщение получено, я прочту его с вниманием.",
+        "thanks_back": "Вернуться на сайт",
+    },
+    "pt": {
+        "subscribe_thanks": "Obrigado — a tua subscrição foi recebida.",
+        "copy_link": "Copiar ligação",
+        "copied": "Copiado ✓",
+        "thanks_title": "Obrigado",
+        "thanks_body": "A tua mensagem chegou e vou lê-la com atenção.",
+        "thanks_back": "Voltar ao site",
+    },
+}
+for _code, _extra in EXTRA_STRINGS.items():
+    LANGS[_code].update(_extra)
+
+
 def md_inline(text: str) -> str:
     text = html.escape(text, quote=False)
     text = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", text)
@@ -441,19 +496,26 @@ def hero(lang: str) -> str:
     )
 
 
+def piece_url(lang: str, piece: dict) -> str:
+    return f"{SITE_URL}/{lang_prefix(lang)}{piece_path(piece)}"
+
+
 def share_url(lang: str, piece: dict) -> str:
-    # http مؤقتًا حتى تصدر شهادة HTTPS — يتحوّل الرابط تلقائيًا بعد تفعيلها
-    url = f"http://motazomarien.com/{lang_prefix(lang)}{piece_path(piece)}"
-    return f"https://wa.me/?text={quote(piece['title'] + ' — ' + url)}"
+    return f"https://wa.me/?text={quote(piece['title'] + ' — ' + piece_url(lang, piece))}"
 
 
 def interact_section(lang: str, piece: dict) -> str:
     strings = LANGS[lang]
     parts = ['<section class="interact">']
     parts.append(
-        f'<p class="center"><a class="big-button secondary" '
-        f'href="{share_url(lang, piece)}" target="_blank" rel="noopener">'
-        f'{strings["share_wa"]}</a></p>'
+        '<p class="center">'
+        f'<a class="big-button secondary" href="{share_url(lang, piece)}" '
+        f'target="_blank" rel="noopener">{strings["share_wa"]}</a>'
+        f'<button type="button" class="big-button secondary copy-link" hidden '
+        f'data-url="{html.escape(piece_url(lang, piece))}" '
+        f'data-label="{html.escape(strings["copy_link"])}" '
+        f'data-copied="{html.escape(strings["copied"])}">{strings["copy_link"]}</button>'
+        '</p>'
     )
     if WEB3FORMS_ACCESS_KEY:
         subject = strings["comment_subject"].format(title=piece["title"])
@@ -463,6 +525,7 @@ def interact_section(lang: str, piece: dict) -> str:
             '<form class="comment-form" action="https://api.web3forms.com/submit" method="POST">\n'
             f'  <input type="hidden" name="access_key" value="{WEB3FORMS_ACCESS_KEY}">\n'
             f'  <input type="hidden" name="subject" value="{html.escape(subject)}">\n'
+            f'  <input type="hidden" name="redirect" value="{SITE_URL}/{lang_prefix(lang)}thanks.html">\n'
             f'  <input type="text" name="name" placeholder="{strings["comment_name"]}" required>\n'
             f'  <input type="email" name="email" placeholder="{strings["comment_email"]}" required>\n'
             f'  <textarea name="message" rows="4" placeholder="{strings["comment_msg"]}" required></textarea>\n'
@@ -485,10 +548,13 @@ def subscribe_section(lang: str) -> str:
     ]
     if NEWSLETTER_FORM_ACTION:
         parts.append(
-            f'<form class="subscribe-form" action="{NEWSLETTER_FORM_ACTION}" method="post" target="_blank">\n'
+            f'<form class="subscribe-form" id="subscribe-form" action="{NEWSLETTER_FORM_ACTION}" '
+            'method="post" target="_blank">\n'
             f'  <input type="email" name="EMAIL" placeholder="{strings["news_email"]}" required>\n'
             f'  <button type="submit" class="big-button">{strings["news_button"]}</button>\n'
-            "</form>"
+            '</form>\n'
+            f'<iframe name="mc_frame" title="{strings["news_title"]}" style="display:none"></iframe>\n'
+            f'<p class="form-thanks" id="subscribe-thanks" hidden>{strings["subscribe_thanks"]}</p>'
         )
     if WHATSAPP_CHANNEL_URL:
         parts.append(
@@ -618,6 +684,25 @@ def build_lang(lang: str, pieces: list, published_slugs: set) -> None:
     )
     (out_root / "book.html").write_text(book, encoding="utf-8")
     print(f"بُني: {lang_prefix(lang)}book.html")
+
+    thanks_content = (
+        '<section class="hero">'
+        f'<h1 class="book-title">{strings["thanks_title"]}</h1>'
+        f'<p class="intro">{strings["thanks_body"]}</p>'
+        f'<p class="center"><a class="big-button" href="index.html">{strings["thanks_back"]}</a></p>'
+        "</section>"
+    )
+    thanks = render(
+        lang,
+        title=strings["thanks_title"],
+        description=strings["thanks_body"],
+        content_html=thanks_content,
+        root=root,
+        home="index.html",
+        alt=alt_for("thanks.html"),
+    )
+    (out_root / "thanks.html").write_text(thanks, encoding="utf-8")
+    print(f"بُني: {lang_prefix(lang)}thanks.html")
 
 
 def main() -> None:

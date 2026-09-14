@@ -69,12 +69,13 @@
 <a class="big-button" href="pieces/nizar-taha.html">النص التالي ←</a>
 </nav>
 <section class="interact">
-<p class="center"><a class="big-button secondary" href="https://wa.me/?text=%D8%B9%D9%8E%D9%84%D8%A7%D8%A1%D9%8F%20%E2%80%94%20%D8%A7%D9%84%D9%82%D9%8E%D8%AA%D9%92%D9%84%D9%8F%20%D9%88%D8%A7%D8%AD%D9%90%D8%AF%D9%8C%D8%8C%20%D9%88%D9%8E%D8%A7%D9%84%D8%AA%D9%8E%D9%91%D8%B4%D9%8E%D9%81%D9%90%D9%91%D9%8A%20%D8%A7%D8%AB%D9%92%D9%86%D8%A7%D9%86%D9%90%20%E2%80%94%20http%3A//motazomarien.com/pieces/alaa.html" target="_blank" rel="noopener">شارك النص عبر واتساب</a></p>
+<p class="center"><a class="big-button secondary" href="https://wa.me/?text=%D8%B9%D9%8E%D9%84%D8%A7%D8%A1%D9%8F%20%E2%80%94%20%D8%A7%D9%84%D9%82%D9%8E%D8%AA%D9%92%D9%84%D9%8F%20%D9%88%D8%A7%D8%AD%D9%90%D8%AF%D9%8C%D8%8C%20%D9%88%D9%8E%D8%A7%D9%84%D8%AA%D9%8E%D9%91%D8%B4%D9%8E%D9%81%D9%90%D9%91%D9%8A%20%D8%A7%D8%AB%D9%92%D9%86%D8%A7%D9%86%D9%90%20%E2%80%94%20https%3A//motazomarien.com/pieces/alaa.html" target="_blank" rel="noopener">شارك النص عبر واتساب</a><button type="button" class="big-button secondary copy-link" hidden data-url="https://motazomarien.com/pieces/alaa.html" data-label="انسخ الرابط" data-copied="تم النسخ ✓">انسخ الرابط</button></p>
 <h2 class="interact-title">تعليقك يصل إلى الكاتب</h2>
 <p class="interact-note">اترك اسمك وبريدك وتعليقك — يصل مباشرة إلى بريد الكاتب، ولا يُنشر علنًا.</p>
 <form class="comment-form" action="https://api.web3forms.com/submit" method="POST">
   <input type="hidden" name="access_key" value="84872369-05da-4ba4-a629-c426879bb250">
   <input type="hidden" name="subject" value="تعليق على: عَلاءُ — القَتْلُ واحِدٌ، وَالتَّشَفِّي اثْنانِ">
+  <input type="hidden" name="redirect" value="https://motazomarien.com/thanks.html">
   <input type="text" name="name" placeholder="الاسم" required>
   <input type="email" name="email" placeholder="البريد الإلكتروني" required>
   <textarea name="message" rows="4" placeholder="تعليقك…" required></textarea>
@@ -86,5 +87,45 @@
   <footer class="site-footer">
     <p>motazomarien.com — تُنشر النصوص تباعًا، كل يوم قصة</p>
   </footer>
+  <script>
+  (function () {
+    var form = document.getElementById('subscribe-form');
+    if (form) {
+      form.setAttribute('target', 'mc_frame');
+      form.addEventListener('submit', function () {
+        var note = document.getElementById('subscribe-thanks');
+        setTimeout(function () {
+          form.hidden = true;
+          if (note) { note.hidden = false; }
+        }, 400);
+      });
+    }
+    var copyButtons = document.querySelectorAll('.copy-link');
+    Array.prototype.forEach.call(copyButtons, function (btn) {
+      btn.hidden = false;
+      btn.addEventListener('click', function () {
+        var label = btn.getAttribute('data-label') || btn.textContent;
+        var done = function () {
+          btn.textContent = btn.getAttribute('data-copied') || label;
+          setTimeout(function () { btn.textContent = label; }, 2000);
+        };
+        var url = btn.getAttribute('data-url');
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(done, function () {});
+        } else {
+          var field = document.createElement('textarea');
+          field.value = url;
+          field.setAttribute('readonly', '');
+          field.style.position = 'absolute';
+          field.style.left = '-9999px';
+          document.body.appendChild(field);
+          field.select();
+          try { document.execCommand('copy'); done(); } catch (err) {}
+          document.body.removeChild(field);
+        }
+      });
+    });
+  })();
+  </script>
 </body>
 </html>

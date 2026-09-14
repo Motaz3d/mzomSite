@@ -57,12 +57,13 @@
 <a class="big-button" href="pieces/tirat-haifa.html">下一篇 →</a>
 </nav>
 <section class="interact">
-<p class="center"><a class="big-button secondary" href="https://wa.me/?text=%E8%9C%83%E6%A5%BC%E5%A4%8D%E8%9C%83%E6%A5%BC%E5%8F%88%E8%9C%83%E6%A5%BC%20%E2%80%94%20http%3A//motazomarien.com/zh/pieces/sarab.html" target="_blank" rel="noopener">通过 WhatsApp 分享本文</a></p>
+<p class="center"><a class="big-button secondary" href="https://wa.me/?text=%E8%9C%83%E6%A5%BC%E5%A4%8D%E8%9C%83%E6%A5%BC%E5%8F%88%E8%9C%83%E6%A5%BC%20%E2%80%94%20https%3A//motazomarien.com/zh/pieces/sarab.html" target="_blank" rel="noopener">通过 WhatsApp 分享本文</a><button type="button" class="big-button secondary copy-link" hidden data-url="https://motazomarien.com/zh/pieces/sarab.html" data-label="复制链接" data-copied="已复制 ✓">复制链接</button></p>
 <h2 class="interact-title">您的评论将直达作者</h2>
 <p class="interact-note">留下您的姓名、邮箱和评论——评论直接发送到作者邮箱，不会公开发布。</p>
 <form class="comment-form" action="https://api.web3forms.com/submit" method="POST">
   <input type="hidden" name="access_key" value="84872369-05da-4ba4-a629-c426879bb250">
   <input type="hidden" name="subject" value="评论：蜃楼复蜃楼又蜃楼">
+  <input type="hidden" name="redirect" value="https://motazomarien.com/zh/thanks.html">
   <input type="text" name="name" placeholder="姓名" required>
   <input type="email" name="email" placeholder="电子邮箱" required>
   <textarea name="message" rows="4" placeholder="您的评论…" required></textarea>
@@ -74,5 +75,45 @@
   <footer class="site-footer">
     <p>motazomarien.com——逐日连载，每天一个故事</p>
   </footer>
+  <script>
+  (function () {
+    var form = document.getElementById('subscribe-form');
+    if (form) {
+      form.setAttribute('target', 'mc_frame');
+      form.addEventListener('submit', function () {
+        var note = document.getElementById('subscribe-thanks');
+        setTimeout(function () {
+          form.hidden = true;
+          if (note) { note.hidden = false; }
+        }, 400);
+      });
+    }
+    var copyButtons = document.querySelectorAll('.copy-link');
+    Array.prototype.forEach.call(copyButtons, function (btn) {
+      btn.hidden = false;
+      btn.addEventListener('click', function () {
+        var label = btn.getAttribute('data-label') || btn.textContent;
+        var done = function () {
+          btn.textContent = btn.getAttribute('data-copied') || label;
+          setTimeout(function () { btn.textContent = label; }, 2000);
+        };
+        var url = btn.getAttribute('data-url');
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(done, function () {});
+        } else {
+          var field = document.createElement('textarea');
+          field.value = url;
+          field.setAttribute('readonly', '');
+          field.style.position = 'absolute';
+          field.style.left = '-9999px';
+          document.body.appendChild(field);
+          field.select();
+          try { document.execCommand('copy'); done(); } catch (err) {}
+          document.body.removeChild(field);
+        }
+      });
+    });
+  })();
+  </script>
 </body>
 </html>

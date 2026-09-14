@@ -53,14 +53,56 @@
 <section class="subscribe">
 <h2 class="interact-title">每天接收新文章</h2>
 <p class="interact-note">留下邮箱订阅，发表当天即可收到新文章；或关注 WhatsApp 频道。</p>
-<form class="subscribe-form" action="https://motazomarien.us2.list-manage.com/subscribe/post?u=8837b8070f6417c372512ba8c&id=69d8847d9d" method="post" target="_blank">
+<form class="subscribe-form" id="subscribe-form" action="https://motazomarien.us2.list-manage.com/subscribe/post?u=8837b8070f6417c372512ba8c&id=69d8847d9d" method="post" target="_blank">
   <input type="email" name="EMAIL" placeholder="您的邮箱" required>
   <button type="submit" class="big-button">订阅</button>
 </form>
+<iframe name="mc_frame" title="每天接收新文章" style="display:none"></iframe>
+<p class="form-thanks" id="subscribe-thanks" hidden>谢谢你——订阅已收到。</p>
 </section>
   </main>
   <footer class="site-footer">
     <p>motazomarien.com——逐日连载，每天一个故事</p>
   </footer>
+  <script>
+  (function () {
+    var form = document.getElementById('subscribe-form');
+    if (form) {
+      form.setAttribute('target', 'mc_frame');
+      form.addEventListener('submit', function () {
+        var note = document.getElementById('subscribe-thanks');
+        setTimeout(function () {
+          form.hidden = true;
+          if (note) { note.hidden = false; }
+        }, 400);
+      });
+    }
+    var copyButtons = document.querySelectorAll('.copy-link');
+    Array.prototype.forEach.call(copyButtons, function (btn) {
+      btn.hidden = false;
+      btn.addEventListener('click', function () {
+        var label = btn.getAttribute('data-label') || btn.textContent;
+        var done = function () {
+          btn.textContent = btn.getAttribute('data-copied') || label;
+          setTimeout(function () { btn.textContent = label; }, 2000);
+        };
+        var url = btn.getAttribute('data-url');
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(done, function () {});
+        } else {
+          var field = document.createElement('textarea');
+          field.value = url;
+          field.setAttribute('readonly', '');
+          field.style.position = 'absolute';
+          field.style.left = '-9999px';
+          document.body.appendChild(field);
+          field.select();
+          try { document.execCommand('copy'); done(); } catch (err) {}
+          document.body.removeChild(field);
+        }
+      });
+    });
+  })();
+  </script>
 </body>
 </html>
