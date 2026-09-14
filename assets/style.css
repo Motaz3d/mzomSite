@@ -211,7 +211,8 @@ main {
 
 /* خطوط اللغات المترجمة */
 html[lang="en"] body,
-html[lang="es"] body {
+html[lang="es"] body,
+html[lang="pt"] body {
   font-family: "EB Garamond", Georgia, "Times New Roman", serif;
   line-height: 1.8;
 }
@@ -226,10 +227,10 @@ html[lang="zh"] body {
   line-height: 2;
 }
 
-html[lang="en"] .site-name, html[lang="es"] .site-name,
-html[lang="en"] .piece-header h1, html[lang="es"] .piece-header h1,
-html[lang="en"] .book-title, html[lang="es"] .book-title,
-html[lang="en"] .big-button, html[lang="es"] .big-button {
+html[lang="en"] .site-name, html[lang="es"] .site-name, html[lang="pt"] .site-name,
+html[lang="en"] .piece-header h1, html[lang="es"] .piece-header h1, html[lang="pt"] .piece-header h1,
+html[lang="en"] .book-title, html[lang="es"] .book-title, html[lang="pt"] .book-title,
+html[lang="en"] .big-button, html[lang="es"] .big-button, html[lang="pt"] .big-button {
   font-family: "EB Garamond", Georgia, serif;
 }
 

@@ -3,7 +3,7 @@
 
 المصدر:
     content/*.md               — النصوص العربية المنشورة (الأصل)
-    translations/<lang>/*.md   — ترجماتها (en, es, zh) بنفس تنسيق الترويسة ونفس slug.
+    translations/<lang>/*.md   — ترجماتها (en, es, zh, ru, pt) بنفس تنسيق الترويسة ونفس slug.
                                  لا تُعرض الترجمة إلا إذا كان النص العربي منشورًا في content/.
 
 الناتج:
@@ -44,7 +44,7 @@ WEB3FORMS_ACCESS_KEY = "84872369-05da-4ba4-a629-c426879bb250"    # تعليقا�
 NEWSLETTER_FORM_ACTION = "https://motazomarien.us2.list-manage.com/subscribe/post?u=8837b8070f6417c372512ba8c&id=69d8847d9d"  # نموذج الاشتراك البريدي — رابط النموذج المضمّن من Mailchimp (Audience → Signup forms → Embedded forms)
 WHATSAPP_CHANNEL_URL = ""    # رابط قناة واتساب — تُنشأ من تطبيق واتساب (التحديثات ← القنوات ← إنشاء قناة)
 
-LANG_ORDER = ["ar", "en", "es", "zh", "ru"]
+LANG_ORDER = ["ar", "en", "es", "zh", "ru", "pt"]
 
 LANGS = {
     "ar": {
@@ -251,6 +251,47 @@ LANGS = {
             'family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">'
         ),
     },
+    "pt": {
+        "dir": "ltr",
+        "label": "Português",
+        "site_name": "Motaz Omarien",
+        "tagline": "Um romance sem título — sobre a alienação",
+        "book_title": "O Migrante — Instantâneos e Espelhos",
+        "book_intro": (
+            "Relatos muito breves que dão voz à dor — do bairro judeu de "
+            "Damasco aos cafés do Luxemburgo. O livro publica-se aqui "
+            "instantâneo a instantâneo, um texto novo a cada dia."
+        ),
+        "footer": "motazomarien.com — publicado em série, uma história por dia",
+        "prev": "← Texto anterior",
+        "book_full": "O livro completo",
+        "next": "Texto seguinte →",
+        "browse": "Explorar o livro completo →",
+        "piece_word": "Instantâneo",
+        "index_desc": "O livro «{book}» — publicado instantâneo a instantâneo no site de {name}",
+        "book_desc": "Índice dos textos publicados até agora de «{book}»",
+        "piece_desc": "{title} — do livro «{book}»",
+        "book_page_title": "O livro completo — {book}",
+        "empty_index": "O primeiro texto chegará em breve — aparecerá aqui na íntegra no momento em que for publicado, antes de qualquer outro lugar.",
+        "empty_book": "Ainda não há textos publicados — o primeiro instantâneo está a caminho.",
+        "share_wa": "Partilhar este texto no WhatsApp",
+        "comment_title": "O teu comentário chega ao autor",
+        "comment_note": "Deixa o teu nome, e-mail e comentário — chega diretamente à caixa de entrada do autor; nada é publicado publicamente.",
+        "comment_name": "Nome",
+        "comment_email": "E-mail",
+        "comment_msg": "O teu comentário…",
+        "comment_send": "Enviar",
+        "comment_subject": "Comentário sobre: {title}",
+        "news_title": "Recebe o texto do dia",
+        "news_note": "Subscreve com o teu e-mail para receberes cada texto novo no dia da publicação, ou segue o canal do WhatsApp.",
+        "news_button": "Subscrever",
+        "news_email": "O teu e-mail",
+        "wa_channel": "Seguir o canal do WhatsApp →",
+        "fonts": (
+            '<link href="https://fonts.googleapis.com/css2?'
+            'family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">'
+        ),
+    },
 }
 
 MONTHS = {
@@ -262,6 +303,8 @@ MONTHS = {
            "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"],
     "ru": ["января", "февраля", "марта", "апреля", "мая", "июня",
            "июля", "августа", "сентября", "октября", "ноября", "декабря"],
+    "pt": ["janeiro", "fevereiro", "março", "abril", "maio", "junho",
+           "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"],
 }
 
 
@@ -312,6 +355,8 @@ def fmt_date(lang: str, iso: str) -> str:
         return f"{day} de {MONTHS['es'][month - 1]} de {year}"
     if lang == "ru":
         return f"{day} {MONTHS['ru'][month - 1]} {year}"
+    if lang == "pt":
+        return f"{day} de {MONTHS['pt'][month - 1]} de {year}"
     return f"{year}年{month}月{day}日"
 
 
