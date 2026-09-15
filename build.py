@@ -3,7 +3,7 @@
 
 المصدر:
     content/*.md               — النصوص العربية المنشورة (الأصل)
-    translations/<lang>/*.md   — ترجماتها (en, es, zh, ru, pt) بنفس تنسيق الترويسة ونفس slug.
+    translations/<lang>/*.md   — ترجماتها (en, es, zh, ru, pt, de) بنفس تنسيق الترويسة ونفس slug.
                                  لا تُعرض الترجمة إلا إذا كان النص العربي منشورًا في content/.
 
 الناتج:
@@ -44,7 +44,7 @@ WEB3FORMS_ACCESS_KEY = "84872369-05da-4ba4-a629-c426879bb250"    # تعليقا�
 NEWSLETTER_FORM_ACTION = "https://motazomarien.us2.list-manage.com/subscribe/post?u=8837b8070f6417c372512ba8c&id=69d8847d9d"  # نموذج الاشتراك البريدي — رابط النموذج المضمّن من Mailchimp (Audience → Signup forms → Embedded forms)
 WHATSAPP_CHANNEL_URL = ""    # رابط قناة واتساب — تُنشأ من تطبيق واتساب (التحديثات ← القنوات ← إنشاء قناة)
 
-LANG_ORDER = ["ar", "en", "es", "zh", "ru", "pt"]
+LANG_ORDER = ["ar", "en", "es", "zh", "ru", "pt", "de"]
 
 LANGS = {
     "ar": {
@@ -292,6 +292,47 @@ LANGS = {
             'family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">'
         ),
     },
+    "de": {
+        "dir": "ltr",
+        "label": "Deutsch",
+        "site_name": "Motaz Omarien",
+        "tagline": "Ein Roman ohne Titel — über die Entfremdung",
+        "book_title": "Der Migrant — Momentaufnahmen und Spiegel",
+        "book_intro": (
+            "Sehr kurze Geschichten, die dem Schmerz eine Stimme geben — vom jüdischen "
+            "Viertel in Damaskus bis zu den Cafés von Luxemburg. Das Buch erscheint hier "
+            "Momentaufnahme für Momentaufnahme, jeden Tag ein neuer Text."
+        ),
+        "footer": "motazomarien.com — in Fortsetzungen veröffentlicht, jeden Tag eine Geschichte",
+        "prev": "← Vorheriger Text",
+        "book_full": "Das ganze Buch",
+        "next": "Nächster Text →",
+        "browse": "Das ganze Buch durchblättern →",
+        "piece_word": "Momentaufnahme",
+        "index_desc": "Das Buch „{book}“ — Momentaufnahme für Momentaufnahme auf der Seite von {name}",
+        "book_desc": "Verzeichnis der bisher veröffentlichten Texte aus „{book}“",
+        "piece_desc": "{title} — aus dem Buch „{book}“",
+        "book_page_title": "Das ganze Buch — {book}",
+        "empty_index": "Der erste Text erscheint bald — er wird hier vollständig zu sehen sein, sobald er veröffentlicht wird, früher als überall sonst.",
+        "empty_book": "Noch keine Texte veröffentlicht — die erste Momentaufnahme ist unterwegs.",
+        "share_wa": "Diesen Text über WhatsApp teilen",
+        "comment_title": "Dein Kommentar erreicht den Autor",
+        "comment_note": "Hinterlasse deinen Namen, deine E-Mail und deinen Kommentar — er geht direkt in das Postfach des Autors und wird nicht öffentlich veröffentlicht.",
+        "comment_name": "Name",
+        "comment_email": "E-Mail",
+        "comment_msg": "Dein Kommentar…",
+        "comment_send": "Senden",
+        "comment_subject": "Kommentar zu: {title}",
+        "news_title": "Erhalte den Text des Tages",
+        "news_note": "Abonniere mit deiner E-Mail, um jeden neuen Text am Tag seines Erscheinens zu erhalten, oder folge dem WhatsApp-Kanal.",
+        "news_button": "Abonnieren",
+        "news_email": "Deine E-Mail",
+        "wa_channel": "Dem WhatsApp-Kanal folgen →",
+        "fonts": (
+            '<link href="https://fonts.googleapis.com/css2?'
+            'family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">'
+        ),
+    },
 }
 
 MONTHS = {
@@ -305,6 +346,8 @@ MONTHS = {
            "июля", "августа", "сентября", "октября", "ноября", "декабря"],
     "pt": ["janeiro", "fevereiro", "março", "abril", "maio", "junho",
            "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"],
+    "de": ["Januar", "Februar", "März", "April", "Mai", "Juni",
+           "Juli", "August", "September", "Oktober", "November", "Dezember"],
 }
 
 
@@ -375,6 +418,14 @@ EXTRA_STRINGS = {
         "thanks_body": "A tua mensagem chegou e vou lê-la com atenção.",
         "thanks_back": "Voltar ao site",
     },
+    "de": {
+        "subscribe_thanks": "Danke — deine Anmeldung ist eingegangen.",
+        "copy_link": "Link kopieren",
+        "copied": "Kopiert ✓",
+        "thanks_title": "Danke",
+        "thanks_body": "Deine Nachricht ist angekommen, und ich werde sie mit Aufmerksamkeit lesen.",
+        "thanks_back": "Zurück zur Seite",
+    },
 }
 for _code, _extra in EXTRA_STRINGS.items():
     LANGS[_code].update(_extra)
@@ -412,6 +463,8 @@ def fmt_date(lang: str, iso: str) -> str:
         return f"{day} {MONTHS['ru'][month - 1]} {year}"
     if lang == "pt":
         return f"{day} de {MONTHS['pt'][month - 1]} de {year}"
+    if lang == "de":
+        return f"{day}. {MONTHS['de'][month - 1]} {year}"
     return f"{year}年{month}月{day}日"
 
 

@@ -1,0 +1,19 @@
+---
+title: Trugbild um Trugbild um Trugbild
+series: Die Überfahrt
+kh: خ-096
+slug: sarab
+date: 2026-09-10
+---
+
+Eine kurze Geschichte, die der Getäuschte euch an seiner eigenen Stelle vorliest.
+
+Ich erinnere mich noch an den ersten Augenblick, in dem ich meinen Fuß nach Europa setzte. Zwischen der Dritten Welt und der zivilisierten, fortgeschrittenen, erfinderischen, technologischen, befreiten Welt — da sind die Menschenrechte — lag nichts als ein einfacher Fluss. Dieser Fluss war es, der zwei Welten trennte. So sehr, dass ich, als mein Fuß den Boden berührte, am Morgen des folgenden Tages, nach einem kurzen Nickerchen und nachdem die Unruhe der Flussüberquerung sich gelegt hatte, zu mir sagte: Was für ein anderer Himmel! Dann hielt ich ein wenig inne und sagte in mir: Der Himmel ist derselbe Himmel, und die Erde ist dieselbe Erde — aber was ist das?
+
+Vielleicht war das der erste Punkt, an dem der Getäuschte — oder der Betrogene — entlarvt wurde, im allerersten Augenblick des Eintritts nach Europa. Als wäre es eine Geburt. Natürlich: eine Geburt aus dem Kummer, eine Geburt aus dem Schmerz und eine Geburt hinein in das Trugbild.
+
+Dann gingen wir in eine andere Welt über, in eine Welt von innen aus dem Trugbild, wo wir — man kann sagen: Wesen — wie die Betäubten sind, die alles schön sehen; was eine Energie und ein Glück erzeugt, das dich zur Entdeckung und zum Abenteuer treibt, zum Verlangen nach Geld und Frauen, und dazu, in diesem unbezwingbaren System zu sein, in diesem System voller kurzer Röcke und Strandkleider, mit der Freiheit, lange aufzubleiben, und der Freiheit, mit jedem zu schlafen, und jede Frau oder jeden Mann in dein Haus zu bringen, ohne dass dein Nachbar den Mund öffnet oder auch nur eine Lippe rührt.
+
+Und wir stürzten uns in dieses System. Aber — wie man so sagte — es gibt Pflichten und es gibt Verantwortungen. Und nachdem die Zeit vergangen war, entdeckten wir, dass die Verantwortungen, die dem Getäuschten auferlegt werden, — man kann es sagen — drückende Verantwortungen sind, körperlich, seelisch und in jeder Hinsicht. Was hingegen die Verantwortungen betrifft, die dem Täuschenden auferlegt sind, so sind sie von Natur aus Büroverantwortungen, unter einem warmen, üppigen, schönen, ruhigen Dach. Und man kann sagen: Der wesentliche Unterschied — oder der sichtbare Unterschied — ist, dass die finanzielle Macht, die der Täuschende erwirbt, ungefähr dem Doppelten, Dreifachen, Fünffachen, Sechsfachen, Siebenfachen, Achtfachen oder sogar dem Zwölffachen entspricht. Sodass der Täuschende nach zehn Jahren ein Haus kaufen kann; der Getäuschte aber — weder er noch seine Frau noch seine Söhne noch gar seine Enkel — können ein Haus besitzen. Und sie bleiben in jenen elenden Vorstädten und in jenen Terminen, die kein Ende nehmen, von den Arbeitsämtern und der Sozialhilfe, und in dem System, das wir so sehr geliebt haben; das mit einem kurzen Rock begann und in einer endlosen Obdachlosigkeit endete.
+
+Dann fragen dich die Menschen von außerhalb dieser Falle — Verzeihung, Verzeihung — von außerhalb dieses Systems, und sie sagen zu dir: Was hast du hier erreicht? Und du trägst eine höhere Verantwortung als die, die du am Anfang getragen hast; denn nun hast du — welche negativen Seiten dieses Systems es auch gibt, du, als Getäuschter, musst mit ihnen umgehen, und die Anklage wird gegen dich aufgebaut — vielleicht ist das System, da das System ja beinahe, wie man sagen kann, vollkommen ist: niemand kann es zerstören, niemand kann es zerbrechen, und du, als Getäuschter, kannst es nicht weiterentwickeln und nicht zu deiner Seite hin biegen. Gewisse internationale Umstände mögen zum Ende dieses Systems geführt haben, aber du, als Getäuschter — und du bist wirklich ein Teil dieses Systems — kannst es nicht verändern. Ja: In diesem Maße bist du getäuscht. In diesem Maße bist du nicht existent. In diesem Maße bist du nichts als ein Trugbild um ein Trugbild um ein Trugbild.
