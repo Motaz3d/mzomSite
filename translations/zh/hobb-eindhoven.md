@@ -1,6 +1,6 @@
 ---
 title: 来自埃因霍温的爱情故事
-series: 莎尔瓦与爱
+series: 所余
 kh: خ-182
 slug: hobb-eindhoven
 date: 2026-09-17

@@ -1,6 +1,6 @@
 ---
 title: سَلْوَى
-series: سلوى والحب
+series: ما بقي
 kh: خ-180
 slug: salwa
 date: 2026-09-16

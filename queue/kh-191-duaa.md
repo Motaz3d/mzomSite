@@ -1,6 +1,6 @@
 ---
 title: دُعَاء
-series: سلوى والحب
+series: ما بقي
 kh: خ-191
 slug: duaa
 date: 2026-09-21

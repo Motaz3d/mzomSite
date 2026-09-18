@@ -1,6 +1,6 @@
 ---
 title: الخوف
-series: سلوى والحب
+series: ما بقي
 kh: خ-186
 slug: alkhawf
 date: 2026-09-23

@@ -1,6 +1,6 @@
 ---
 title: أَنَا مَخْلُوقٌ مِنْ نَدَمٍ
-series: سلوى والحب
+series: ما بقي
 kh: خ-193
 slug: makhluq-min-nadam
 date: 2026-09-22

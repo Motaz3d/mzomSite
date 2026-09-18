@@ -1,6 +1,6 @@
 ---
 title: سَلْوَى — القَصِيدَةُ
-series: سلوى والحب
+series: ما بقي
 kh: خ-206
 slug: salwa-qasida
 date: 2026-09-19

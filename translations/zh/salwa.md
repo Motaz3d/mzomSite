@@ -1,6 +1,6 @@
 ---
 title: 莎尔瓦
-series: 莎尔瓦与爱
+series: 所余
 kh: خ-180
 slug: salwa
 date: 2026-09-16

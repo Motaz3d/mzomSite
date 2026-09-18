@@ -1,6 +1,6 @@
 ---
 title: قِصَّةُ الحُبِّ مِن آيندهوفن
-series: سلوى والحب
+series: ما بقي
 kh: خ-182
 slug: hobb-eindhoven
 date: 2026-09-17

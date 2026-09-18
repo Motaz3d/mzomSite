@@ -1,6 +1,6 @@
 ---
 title: История любви из Эйндховена
-series: Сальва и любовь
+series: Что осталось
 kh: خ-182
 slug: hobb-eindhoven
 date: 2026-09-17

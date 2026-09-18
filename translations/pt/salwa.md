@@ -1,6 +1,6 @@
 ---
 title: Salwa
-series: Salwa e o amor
+series: O que resta
 kh: خ-180
 slug: salwa
 date: 2026-09-16

@@ -1,6 +1,6 @@
 ---
 title: Salwa
-series: Salwa und die Liebe
+series: Was bleibt
 kh: خ-180
 slug: salwa
 date: 2026-09-16

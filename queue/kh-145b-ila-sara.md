@@ -1,6 +1,6 @@
 ---
 title: إِلَى سَارَة
-series: سلوى والحب
+series: ما بقي
 kh: خ-145ب
 slug: ila-sara
 date: 2026-09-20

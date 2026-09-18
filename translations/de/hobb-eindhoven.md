@@ -1,6 +1,6 @@
 ---
 title: Eine Liebesgeschichte aus Eindhoven
-series: Salwa und die Liebe
+series: Was bleibt
 kh: خ-182
 slug: hobb-eindhoven
 date: 2026-09-17

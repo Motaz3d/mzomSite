@@ -1,6 +1,6 @@
 ---
 title: Сальва
-series: Сальва и любовь
+series: Что осталось
 kh: خ-180
 slug: salwa
 date: 2026-09-16
