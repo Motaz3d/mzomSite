@@ -350,6 +350,16 @@ MONTHS = {
            "Juli", "August", "September", "Oktober", "November", "Dezember"],
 }
 
+# السلاسل (الفصول) — الاسم العربي هو المفتاح القانوني، والـ slug يُستخدم في روابط صفحات السلاسل.
+SERIES_SLUGS = {
+    "الغربة اليومية": "al-ghurba-al-yawmiyya",
+    "العبور": "al-ubur",
+    "وجوه المهاجر": "wujuh-al-muhajir",
+    "ما قبل الرحيل": "ma-qabl-al-rahil",
+    "يوميات المهاجر": "yawmiyat-al-muhajir",
+    "ما بقي": "ma-baqi",
+}
+
 
 def parse_piece(path: Path) -> dict:
     text = path.read_text(encoding="utf-8")
@@ -429,6 +439,40 @@ EXTRA_STRINGS = {
 }
 for _code, _extra in EXTRA_STRINGS.items():
     LANGS[_code].update(_extra)
+
+# نصوص صفحات السلاسل (الفصول)
+SERIES_STRINGS = {
+    "ar": {
+        "series_title": "سلسلة {series}",
+        "series_desc": "نصوص سلسلة «{series}» من كتاب «{book}»",
+    },
+    "en": {
+        "series_title": "Series: {series}",
+        "series_desc": "The pieces of the series “{series}” from the book “{book}”",
+    },
+    "es": {
+        "series_title": "Serie: {series}",
+        "series_desc": "Los textos de la serie «{series}» del libro «{book}»",
+    },
+    "zh": {
+        "series_title": "系列：{series}",
+        "series_desc": "《{book}》中“{series}”系列的作品",
+    },
+    "ru": {
+        "series_title": "Серия: {series}",
+        "series_desc": "Тексты серии «{series}» из книги «{book}»",
+    },
+    "pt": {
+        "series_title": "Série: {series}",
+        "series_desc": "Os textos da série «{series}» do livro «{book}»",
+    },
+    "de": {
+        "series_title": "Reihe: {series}",
+        "series_desc": "Die Texte der Reihe „{series}“ aus dem Buch „{book}“",
+    },
+}
+for _code, _series in SERIES_STRINGS.items():
+    LANGS[_code].update(_series)
 
 
 def md_inline(text: str) -> str:
@@ -524,11 +568,17 @@ def render(lang: str, title: str, description: str, content_html: str,
     )
 
 
-def piece_header(lang: str, piece: dict, num: int) -> str:
+def piece_header(lang: str, piece: dict, num: int, series_prefix: str = "") -> str:
     strings = LANGS[lang]
     parts = ['<header class="piece-header">']
     line = series_line(piece)
-    if line:
+    slug = piece.get("series_slug", "")
+    if line and slug:
+        parts.append(
+            f'<p class="series"><a href="{series_prefix}series/{slug}.html">'
+            f'{html.escape(line)}</a></p>'
+        )
+    elif line:
         parts.append(f'<p class="series">{html.escape(line)}</p>')
     parts.append(f"<h1>{html.escape(piece['title'])}</h1>")
     parts.append(
@@ -618,7 +668,64 @@ def subscribe_section(lang: str) -> str:
     return "\n".join(parts)
 
 
-def build_lang(lang: str, pieces: list, published_slugs: set) -> None:
+def build_series_pages(lang: str, pieces: list, series_langs: dict) -> None:
+    strings = LANGS[lang]
+    out_root = ROOT if lang == "ar" else ROOT / lang
+    series_dir = out_root / "series"
+    series_dir.mkdir(parents=True, exist_ok=True)
+    root = "../" if lang == "ar" else "../../"
+
+    groups = {}
+    for piece in pieces:
+        slug = piece.get("series_slug", "")
+        if not slug:
+            continue
+        groups.setdefault(slug, {"label": piece.get("series", ""), "items": []})
+        groups[slug]["items"].append(piece)
+
+    for slug, group in groups.items():
+        label = group["label"]
+        items = []
+        for piece in group["items"]:
+            items.append(
+                "<li>"
+                f'<a class="piece-title" href="../pieces/{piece["slug"]}.html">'
+                f'{html.escape(piece["title"])}</a>'
+                f'<span class="date">{fmt_date(lang, piece["date"])}</span>'
+                "</li>"
+            )
+        title = strings["series_title"].format(series=label)
+        desc = strings["series_desc"].format(series=label, book=strings["book_title"])
+        body = (
+            '<section class="hero">'
+            f'<h1 class="book-title">{html.escape(title)}</h1>'
+            f'<p class="intro">{html.escape(desc)}</p>'
+            f'<p class="center"><a class="big-button secondary" href="../book.html">'
+            f'{strings["book_full"]}</a></p>'
+            "</section>\n"
+            '<ul class="pieces">\n'
+            + "\n".join(items)
+            + "\n</ul>"
+        )
+        langs_with = series_langs.get(slug, set())
+        alt = {
+            code: (f"series/{slug}.html" if code in langs_with else "index.html")
+            for code in LANG_ORDER
+        }
+        page = render(
+            lang,
+            title=title,
+            description=desc,
+            content_html=body,
+            root=root,
+            home="../index.html",
+            alt=alt,
+        )
+        (series_dir / f"{slug}.html").write_text(page, encoding="utf-8")
+        print(f"بُني: {lang_prefix(lang)}series/{slug}.html")
+
+
+def build_lang(lang: str, pieces: list, published_slugs: set, series_langs: dict) -> None:
     strings = LANGS[lang]
     out_root = ROOT if lang == "ar" else ROOT / lang
     pieces_dir = out_root / "pieces"
@@ -631,19 +738,19 @@ def build_lang(lang: str, pieces: list, published_slugs: set) -> None:
         nav = ['<nav class="piece-nav">']
         if i > 0:
             nav.append(
-                f'<a class="big-button" href="{piece_path(pieces[i - 1])}">{strings["prev"]}</a>'
+                f'<a class="big-button" href="{pieces[i - 1]["slug"]}.html">{strings["prev"]}</a>'
             )
         nav.append(
             f'<a class="big-button secondary" href="../book.html">{strings["book_full"]}</a>'
         )
         if i < len(pieces) - 1:
             nav.append(
-                f'<a class="big-button" href="{piece_path(pieces[i + 1])}">{strings["next"]}</a>'
+                f'<a class="big-button" href="{pieces[i + 1]["slug"]}.html">{strings["next"]}</a>'
             )
         nav.append("</nav>")
 
         body_html = (
-            piece_header(lang, piece, i + 1)
+            piece_header(lang, piece, i + 1, series_prefix=("../" if lang == "ar" else "../../"))
             + f'\n<article class="piece-body" lang="{lang}">\n{md_to_html(piece["body"])}\n</article>\n'
             + "\n".join(nav)
             + "\n"
@@ -709,9 +816,18 @@ def build_lang(lang: str, pieces: list, published_slugs: set) -> None:
     items = []
     for piece in reversed(pieces):
         line = series_line(piece)
+        slug = piece.get("series_slug", "")
+        if line and slug:
+            series_html = (
+                f'<a class="series" href="series/{slug}.html">{html.escape(line)}</a>'
+            )
+        elif line:
+            series_html = f'<span class="series">{html.escape(line)}</span>'
+        else:
+            series_html = ""
         items.append(
             "<li>"
-            + (f'<span class="series">{html.escape(line)}</span>' if line else "")
+            + series_html
             + f'<a class="piece-title" href="{piece_path(piece)}">{html.escape(piece["title"])}</a>'
             + f'<span class="date">{fmt_date(lang, piece["date"])}</span>'
             + "</li>"
@@ -738,6 +854,8 @@ def build_lang(lang: str, pieces: list, published_slugs: set) -> None:
     (out_root / "book.html").write_text(book, encoding="utf-8")
     print(f"بُني: {lang_prefix(lang)}book.html")
 
+    build_series_pages(lang, pieces, series_langs)
+
     thanks_content = (
         '<section class="hero">'
         f'<h1 class="book-title">{strings["thanks_title"]}</h1>'
@@ -763,6 +881,8 @@ def main() -> None:
         (parse_piece(p) for p in CONTENT.glob("*.md")),
         key=lambda m: (m["date"], int(re.search(r"\d+", m["kh"]).group())),
     )
+    for piece in ar_pieces:
+        piece["series_slug"] = SERIES_SLUGS.get(piece.get("series", ""), "")
     ar_slugs = {p["slug"] for p in ar_pieces}
 
     translated = {}   # lang -> قائمة القطع المترجمة بترتيب العربية
@@ -775,13 +895,36 @@ def main() -> None:
                 meta = parse_piece(path)
                 by_slug[meta["slug"]] = meta
         published[lang] = set(by_slug) & ar_slugs
-        translated[lang] = [by_slug[p["slug"]] for p in ar_pieces if p["slug"] in by_slug]
+        lang_pieces = []
+        for p in ar_pieces:
+            if p["slug"] in by_slug:
+                meta = by_slug[p["slug"]]
+                meta["series_slug"] = p["series_slug"]
+                lang_pieces.append(meta)
+        translated[lang] = lang_pieces
 
-    build_lang("ar", ar_pieces, published)
+    series_langs = {}    # slug -> مجموعة اللغات المتوفرة فيها السلسلة
+    series_lastmod = {}  # slug -> أقصى تاريخ نشر
+
+    def collect_series(pieces_list: list, code: str) -> None:
+        for piece in pieces_list:
+            slug = piece.get("series_slug", "")
+            if slug:
+                series_langs.setdefault(slug, set()).add(code)
+
+    collect_series(ar_pieces, "ar")
     for lang in LANG_ORDER[1:]:
-        build_lang(lang, translated[lang], published)
+        collect_series(translated[lang], lang)
+    for piece in ar_pieces:
+        slug = piece["series_slug"]
+        if slug and piece["date"] > series_lastmod.get(slug, ""):
+            series_lastmod[slug] = piece["date"]
 
-    build_sitemap(ar_pieces, published)
+    build_lang("ar", ar_pieces, published, series_langs)
+    for lang in LANG_ORDER[1:]:
+        build_lang(lang, translated[lang], published, series_langs)
+
+    build_sitemap(ar_pieces, published, series_langs, series_lastmod)
     build_feed(ar_pieces)
 
 
@@ -838,12 +981,20 @@ def sitemap_url(canonical: str, alt: dict, lastmod: str) -> str:
     return "\n".join(lines)
 
 
-def build_sitemap(ar_pieces: list, published: dict) -> None:
+def build_sitemap(ar_pieces: list, published: dict, series_langs: dict,
+                  series_lastmod: dict) -> None:
     today = max((p["date"] for p in ar_pieces), default="2026-01-01")
     entries = []
     for canonical in ("index.html", "book.html"):
         alt = {code: canonical for code in LANG_ORDER}
         entries.append(sitemap_url(canonical, alt, today))
+    for slug, langs in series_langs.items():
+        canonical = f"series/{slug}.html"
+        alt = {
+            code: (canonical if code in langs else "index.html")
+            for code in LANG_ORDER
+        }
+        entries.append(sitemap_url(canonical, alt, series_lastmod.get(slug, today)))
     for piece in ar_pieces:
         canonical = piece_path(piece)
         alt = {}
