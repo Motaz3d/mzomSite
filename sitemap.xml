@@ -11,7 +11,7 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/index.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/index.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/index.html"/>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-20</lastmod>
   </url>
   <url>
     <loc>https://motazomarien.com/book.html</loc>
@@ -23,7 +23,7 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/book.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/book.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/book.html"/>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-20</lastmod>
   </url>
   <url>
     <loc>https://motazomarien.com/pieces/muritaniyya.html</loc>
@@ -192,5 +192,17 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/pieces/salwa-qasida.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/pieces/salwa-qasida.html"/>
     <lastmod>2026-09-19</lastmod>
+  </url>
+  <url>
+    <loc>https://motazomarien.com/pieces/ila-sara.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/pieces/ila-sara.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/en/pieces/ila-sara.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/pieces/ila-sara.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/pieces/ila-sara.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/ru/pieces/ila-sara.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/pieces/ila-sara.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/pieces/ila-sara.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/pieces/ila-sara.html"/>
+    <lastmod>2026-09-20</lastmod>
   </url>
 </urlset>
