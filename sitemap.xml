@@ -11,7 +11,7 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/index.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/index.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/index.html"/>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-09-21</lastmod>
   </url>
   <url>
     <loc>https://motazomarien.com/book.html</loc>
@@ -23,7 +23,7 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/book.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/book.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/book.html"/>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-09-21</lastmod>
   </url>
   <url>
     <loc>https://motazomarien.com/series/wujuh-al-muhajir.html</loc>
@@ -95,7 +95,7 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/series/ma-baqi.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/series/ma-baqi.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/series/ma-baqi.html"/>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-09-21</lastmod>
   </url>
   <url>
     <loc>https://motazomarien.com/pieces/muritaniyya.html</loc>
@@ -276,5 +276,17 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/pieces/ila-sara.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/pieces/ila-sara.html"/>
     <lastmod>2026-09-20</lastmod>
+  </url>
+  <url>
+    <loc>https://motazomarien.com/pieces/duaa.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/pieces/duaa.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/en/pieces/duaa.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/pieces/duaa.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/pieces/duaa.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/ru/pieces/duaa.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/pieces/duaa.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/pieces/duaa.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/pieces/duaa.html"/>
+    <lastmod>2026-09-21</lastmod>
   </url>
 </urlset>
