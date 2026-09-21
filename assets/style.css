@@ -206,6 +206,52 @@ main {
   line-height: 1.6;
 }
 
+/* تنقّل الموقع: الكتاب والخدمات */
+.site-nav {
+  margin-top: 0.9rem;
+  font-size: 1.05rem;
+}
+
+.site-nav a {
+  color: var(--accent);
+  text-decoration: none;
+  margin: 0 0.6rem;
+}
+
+.site-nav a:hover { text-decoration: underline; }
+
+/* صفحة الخدمات */
+.services { list-style: none; }
+
+.services li {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.services h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.services p {
+  color: var(--ink-soft);
+  font-size: 1rem;
+  line-height: 1.9;
+  margin-bottom: 0.6rem;
+}
+
+.services .big-button {
+  font-size: 1rem;
+  padding: 0.55rem 1.5rem;
+}
+
+.contact-mail {
+  color: var(--accent);
+  font-weight: 700;
+  direction: ltr;
+}
+
 .langs a {
   color: var(--ink-soft);
   text-decoration: none;

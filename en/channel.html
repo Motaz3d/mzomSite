@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube channel — Motaz Omarien</title>
+  <meta name="description" content="YouTube channel — economics as a social science: documenting people&#x27;s economic life as it is actually lived">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="ar" href="https://motazomarien.com/channel.html">
+  <link rel="alternate" hreflang="en" href="https://motazomarien.com/en/channel.html">
+  <link rel="alternate" hreflang="es" href="https://motazomarien.com/es/channel.html">
+  <link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/channel.html">
+  <link rel="alternate" hreflang="ru" href="https://motazomarien.com/ru/channel.html">
+  <link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/channel.html">
+  <link rel="alternate" hreflang="de" href="https://motazomarien.com/de/channel.html">
+  <link rel="alternate" hreflang="x-default" href="https://motazomarien.com/channel.html">
+  <link rel="icon" type="image/png" href="../assets/brand/monogram.png">
+  <link rel="apple-touch-icon" href="../assets/brand/monogram.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="YouTube channel — Motaz Omarien">
+  <meta property="og:description" content="YouTube channel — economics as a social science: documenting people&#x27;s economic life as it is actually lived">
+  <meta property="og:image" content="https://motazomarien.com/assets/brand/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" type="application/rss+xml" title="RSS — Motaz Omarien" href="https://motazomarien.com/feed.xml">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <img class="site-logo" src="../assets/brand/monogram.png" alt="Motaz Omarien">
+    <a class="site-name" href="index.html">Motaz Omarien</a>
+    <p class="site-tagline">An untitled novel — on estrangement</p>
+    <nav class="site-nav"><a href="../en/book.html">Book</a><a href="../en/services.html">Services</a></nav>
+    <nav class="langs"><a href="../channel.html">العربية</a>
+      <a aria-current="true">English</a>
+      <a href="../es/channel.html">Español</a>
+      <a href="../zh/channel.html">中文</a>
+      <a href="../ru/channel.html">Русский</a>
+      <a href="../pt/channel.html">Português</a>
+      <a href="../de/channel.html">Deutsch</a></nav>
+  </header>
+  <main>
+    <section class="hero"><h1 class="book-title">YouTube channel</h1><p class="intro">Economics as a social science</p></section>
+<article class="piece-body" lang="en">
+<p>The economy is not factories that produce. The economy is life, law, and a way of living.</p>
+<p>A channel documenting people's economic life as it is actually lived: how do goods travel from the port to the street market to cargo to the airplane? How does the worker live, and how does the decision-maker decide? We do not explain the economy in theory — we show it to the eye: a real person, a real place, goods on the move.</p>
+</article>
+<p class="intro center-text">The first episodes are on their way — they will be announced here the moment they launch.</p>
+  </main>
+  <footer class="site-footer">
+    <p>motazomarien.com — published in installments, a story every day</p>
+  </footer>
+  <script>
+  (function () {
+    var form = document.getElementById('subscribe-form');
+    if (form) {
+      form.setAttribute('target', 'mc_frame');
+      form.addEventListener('submit', function () {
+        var note = document.getElementById('subscribe-thanks');
+        setTimeout(function () {
+          form.hidden = true;
+          if (note) { note.hidden = false; }
+        }, 400);
+      });
+    }
+    var copyButtons = document.querySelectorAll('.copy-link');
+    Array.prototype.forEach.call(copyButtons, function (btn) {
+      btn.hidden = false;
+      btn.addEventListener('click', function () {
+        var label = btn.getAttribute('data-label') || btn.textContent;
+        var done = function () {
+          btn.textContent = btn.getAttribute('data-copied') || label;
+          setTimeout(function () { btn.textContent = label; }, 2000);
+        };
+        var url = btn.getAttribute('data-url');
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(done, function () {});
+        } else {
+          var field = document.createElement('textarea');
+          field.value = url;
+          field.setAttribute('readonly', '');
+          field.style.position = 'absolute';
+          field.style.left = '-9999px';
+          document.body.appendChild(field);
+          field.select();
+          try { document.execCommand('copy'); done(); } catch (err) {}
+          document.body.removeChild(field);
+        }
+      });
+    });
+  })();
+  </script>
+</body>
+</html>

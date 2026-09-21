@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Медиация — Мотаз Омарин</title>
+  <meta name="description" content="Медиация в коммерческих и профессиональных вопросах — полная конфиденциальность и беспристрастность">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="ar" href="https://motazomarien.com/mediation.html">
+  <link rel="alternate" hreflang="en" href="https://motazomarien.com/en/mediation.html">
+  <link rel="alternate" hreflang="es" href="https://motazomarien.com/es/mediation.html">
+  <link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/mediation.html">
+  <link rel="alternate" hreflang="ru" href="https://motazomarien.com/ru/mediation.html">
+  <link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/mediation.html">
+  <link rel="alternate" hreflang="de" href="https://motazomarien.com/de/mediation.html">
+  <link rel="alternate" hreflang="x-default" href="https://motazomarien.com/mediation.html">
+  <link rel="icon" type="image/png" href="../assets/brand/monogram.png">
+  <link rel="apple-touch-icon" href="../assets/brand/monogram.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Медиация — Мотаз Омарин">
+  <meta property="og:description" content="Медиация в коммерческих и профессиональных вопросах — полная конфиденциальность и беспристрастность">
+  <meta property="og:image" content="https://motazomarien.com/assets/brand/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" type="application/rss+xml" title="RSS — Мотаз Омарин" href="https://motazomarien.com/feed.xml">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <img class="site-logo" src="../assets/brand/monogram.png" alt="Мотаз Омарин">
+    <a class="site-name" href="index.html">Мотаз Омарин</a>
+    <p class="site-tagline">Роман без названия — об отчуждении</p>
+    <nav class="site-nav"><a href="../ru/book.html">Книга</a><a href="../ru/services.html">Услуги</a></nav>
+    <nav class="langs"><a href="../mediation.html">العربية</a>
+      <a href="../en/mediation.html">English</a>
+      <a href="../es/mediation.html">Español</a>
+      <a href="../zh/mediation.html">中文</a>
+      <a aria-current="true">Русский</a>
+      <a href="../pt/mediation.html">Português</a>
+      <a href="../de/mediation.html">Deutsch</a></nav>
+  </header>
+  <main>
+    <section class="hero"><h1 class="book-title">Медиация</h1><p class="intro">Путь короче, чем спор</p></section>
+<article class="piece-body" lang="ru">
+<p>Медиация привлекает нейтральную сторону, которая выслушивает всех, сближает точки зрения и помогает сторонам прийти к практичному соглашению, сохраняющему права и достоинство каждого.</p>
+<p>Я предлагаю эту услугу в коммерческих и профессиональных вопросах — между партнёрами, между частными лицами и организациями — при полной конфиденциальности и без взятия чьей-либо стороны. Начинается она с отдельной беседы с каждой стороной; если позволяет ситуация, затем мы встречаемся вместе.</p>
+</article>
+<p class="interact-note">Чтобы связаться, напишите краткое описание вашего вопроса на адрес ниже — я отвечу в течение нескольких дней:</p>
+<p class="center"><a class="big-button" href="mailto:motaz@motazomarien.com">Написать мне</a></p>
+<p class="center contact-mail">motaz@motazomarien.com</p>
+  </main>
+  <footer class="site-footer">
+    <p>motazomarien.com — публикуется с продолжением, каждый день новая история</p>
+  </footer>
+  <script>
+  (function () {
+    var form = document.getElementById('subscribe-form');
+    if (form) {
+      form.setAttribute('target', 'mc_frame');
+      form.addEventListener('submit', function () {
+        var note = document.getElementById('subscribe-thanks');
+        setTimeout(function () {
+          form.hidden = true;
+          if (note) { note.hidden = false; }
+        }, 400);
+      });
+    }
+    var copyButtons = document.querySelectorAll('.copy-link');
+    Array.prototype.forEach.call(copyButtons, function (btn) {
+      btn.hidden = false;
+      btn.addEventListener('click', function () {
+        var label = btn.getAttribute('data-label') || btn.textContent;
+        var done = function () {
+          btn.textContent = btn.getAttribute('data-copied') || label;
+          setTimeout(function () { btn.textContent = label; }, 2000);
+        };
+        var url = btn.getAttribute('data-url');
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(done, function () {});
+        } else {
+          var field = document.createElement('textarea');
+          field.value = url;
+          field.setAttribute('readonly', '');
+          field.style.position = 'absolute';
+          field.style.left = '-9999px';
+          document.body.appendChild(field);
+          field.select();
+          try { document.execCommand('copy'); done(); } catch (err) {}
+          document.body.removeChild(field);
+        }
+      });
+    });
+  })();
+  </script>
+</body>
+</html>

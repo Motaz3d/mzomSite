@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>服务 — 穆塔兹·奥马林</title>
+  <meta name="description" content="穆塔兹·奥马林的服务：写作、调解、YouTube 频道，以及 Talaix 与 Talaiz 项目">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="ar" href="https://motazomarien.com/services.html">
+  <link rel="alternate" hreflang="en" href="https://motazomarien.com/en/services.html">
+  <link rel="alternate" hreflang="es" href="https://motazomarien.com/es/services.html">
+  <link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/services.html">
+  <link rel="alternate" hreflang="ru" href="https://motazomarien.com/ru/services.html">
+  <link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/services.html">
+  <link rel="alternate" hreflang="de" href="https://motazomarien.com/de/services.html">
+  <link rel="alternate" hreflang="x-default" href="https://motazomarien.com/services.html">
+  <link rel="icon" type="image/png" href="../assets/brand/monogram.png">
+  <link rel="apple-touch-icon" href="../assets/brand/monogram.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="服务 — 穆塔兹·奥马林">
+  <meta property="og:description" content="穆塔兹·奥马林的服务：写作、调解、YouTube 频道，以及 Talaix 与 Talaiz 项目">
+  <meta property="og:image" content="https://motazomarien.com/assets/brand/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" type="application/rss+xml" title="RSS — 穆塔兹·奥马林" href="https://motazomarien.com/feed.xml">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <img class="site-logo" src="../assets/brand/monogram.png" alt="穆塔兹·奥马林">
+    <a class="site-name" href="index.html">穆塔兹·奥马林</a>
+    <p class="site-tagline">一部无名的小说——关于疏离</p>
+    <nav class="site-nav"><a href="../zh/book.html">全书</a><a href="../zh/services.html">服务</a></nav>
+    <nav class="langs"><a href="../services.html">العربية</a>
+      <a href="../en/services.html">English</a>
+      <a href="../es/services.html">Español</a>
+      <a aria-current="true">中文</a>
+      <a href="../ru/services.html">Русский</a>
+      <a href="../pt/services.html">Português</a>
+      <a href="../de/services.html">Deutsch</a></nav>
+  </header>
+  <main>
+    <section class="hero"><h1 class="book-title">服务</h1><p class="intro">我所提供的一切，汇聚一处：写作、调解、YouTube 频道，以及 Talaix 与 Talaiz 两个项目。</p></section>
+<ul class="services">
+<li><h2>写作</h2><p>极短的故事，诉说深处的伤痛——从大马士革的犹太区到卢森堡的咖啡馆。本书在此逐篇连载，每天一篇新文字。</p><p><a class="big-button secondary" href="book.html">阅读本书 →</a></p></li>
+<li><h2>调解</h2><p>促成各方对话，达成切实可行的共识——涵盖商业与职业事务，全程严格保密。</p><p><a class="big-button secondary" href="mediation.html">服务详情 →</a></p></li>
+<li><h2>YouTube 频道</h2><p>经济学作为一门社会科学——记录人们真实经历的经济生活：从港口到市场，再到决策者。</p><p><a class="big-button secondary" href="channel.html">关于频道 →</a></p></li>
+<li><h2>Talaix</h2><p>为欧盟信息披露提供可审计的气候风险证据：CSRD/ESRS E1、欧盟分类法 DNSH 与 EUDR。</p><p><a class="big-button secondary" href="https://talaix.com" target="_blank" rel="noopener">talaix.com →</a></p></li>
+<li><h2>Talaiz</h2><p>面向 AI 智能体的控制与证据层：每个智能体有身份，每个工具有权限，审计记录完整无缺。</p><p><a class="big-button secondary" href="https://talaiz.com" target="_blank" rel="noopener">talaiz.com →</a></p></li>
+</ul>
+  </main>
+  <footer class="site-footer">
+    <p>motazomarien.com——逐日连载，每天一个故事</p>
+  </footer>
+  <script>
+  (function () {
+    var form = document.getElementById('subscribe-form');
+    if (form) {
+      form.setAttribute('target', 'mc_frame');
+      form.addEventListener('submit', function () {
+        var note = document.getElementById('subscribe-thanks');
+        setTimeout(function () {
+          form.hidden = true;
+          if (note) { note.hidden = false; }
+        }, 400);
+      });
+    }
+    var copyButtons = document.querySelectorAll('.copy-link');
+    Array.prototype.forEach.call(copyButtons, function (btn) {
+      btn.hidden = false;
+      btn.addEventListener('click', function () {
+        var label = btn.getAttribute('data-label') || btn.textContent;
+        var done = function () {
+          btn.textContent = btn.getAttribute('data-copied') || label;
+          setTimeout(function () { btn.textContent = label; }, 2000);
+        };
+        var url = btn.getAttribute('data-url');
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(done, function () {});
+        } else {
+          var field = document.createElement('textarea');
+          field.value = url;
+          field.setAttribute('readonly', '');
+          field.style.position = 'absolute';
+          field.style.left = '-9999px';
+          document.body.appendChild(field);
+          field.select();
+          try { document.execCommand('copy'); done(); } catch (err) {}
+          document.body.removeChild(field);
+        }
+      });
+    });
+  })();
+  </script>
+</body>
+</html>

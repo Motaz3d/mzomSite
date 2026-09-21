@@ -43,6 +43,16 @@ SITE_URL = "https://motazomarien.com"
 WEB3FORMS_ACCESS_KEY = "84872369-05da-4ba4-a629-c426879bb250"    # تعليقات القراء → بريد الكاتب — المفتاح من web3forms.com (تدخل بريدك فيصلك المفتاح فورًا)
 NEWSLETTER_FORM_ACTION = "https://motazomarien.us2.list-manage.com/subscribe/post?u=8837b8070f6417c372512ba8c&id=69d8847d9d"  # نموذج الاشتراك البريدي — رابط النموذج المضمّن من Mailchimp (Audience → Signup forms → Embedded forms)
 WHATSAPP_CHANNEL_URL = ""    # رابط قناة واتساب — تُنشأ من تطبيق واتساب (التحديثات ← القنوات ← إنشاء قناة)
+YOUTUBE_CHANNEL_URL = ""    # رابط قناة يوتيوب — يظهر زر المتابعة في channel.html بعد لصقه هنا
+
+# بطاقات صفحة الخدمات (services.html) — الروابط الداخلية نسبية لجذر اللغة، والخارجية تفتح في تبويب جديد
+HUB_CARDS = [
+    ("writing", "book.html", False),
+    ("mediation", "mediation.html", False),
+    ("youtube", "channel.html", False),
+    ("talaix", "https://talaix.com", True),
+    ("talaiz", "https://talaiz.com", True),
+]
 
 LANG_ORDER = ["ar", "en", "es", "zh", "ru", "pt", "de"]
 
@@ -82,6 +92,49 @@ LANGS = {
         "news_button": "اشترك",
         "news_email": "بريدك الإلكتروني",
         "wa_channel": "تابع قناة واتساب ←",
+        "nav_book": "الكتاب",
+        "nav_services": "الخدمات",
+        "services_title": "الخدمات",
+        "services_intro": "كل ما أقدمه في مكان واحد: الكتابة، الوساطة، قناة يوتيوب، ومشروعا تاليكس وتاليز.",
+        "services_desc": "خدمات معتز عمرين: الكتابة، الوساطة، قناة يوتيوب، ومشروعا تاليكس وتاليز",
+        "svc_writing_title": "الكتابة",
+        "svc_writing_link": "تصفّح الكتاب ←",
+        "svc_mediation_title": "الوساطة",
+        "svc_mediation_desc": "تيسير الحوار بين الأطراف للوصول إلى تفاهم عملي — في المسائل التجارية والمهنية، بسرّية تامة.",
+        "svc_mediation_link": "تفاصيل الخدمة ←",
+        "svc_youtube_title": "قناة يوتيوب",
+        "svc_youtube_desc": "الاقتصاد كعلم اجتماعي — توثيق الحياة الاقتصادية للناس كما تُعاش: من الميناء إلى السوق إلى صانع القرار.",
+        "svc_youtube_link": "عن القناة ←",
+        "svc_talaix_title": "Talaix — تاليكس",
+        "svc_talaix_desc": "أدلة مخاطر مناخية قابلة للتدقيق للإفصاح الأوروبي: CSRD/ESRS E1، التصنيف الأوروبي DNSH، وEUDR.",
+        "svc_talaix_link": "talaix.com ←",
+        "svc_talaiz_title": "Talaiz — تاليز",
+        "svc_talaiz_desc": "طبقة تحكم وإثبات لوكلاء الذكاء الاصطناعي: هوية لكل وكيل، صلاحية لكل أداة، وسجل تدقيق كامل.",
+        "svc_talaiz_link": "talaiz.com ←",
+        "mediation_title": "الوساطة",
+        "mediation_intro": "طريق أقصر من الخصومة",
+        "mediation_body": (
+            "الوساطة طرف محايد يستمع إلى الجميع، ويقرّب وجهات النظر، ويساعد الأطراف "
+            "على الوصول إلى تفاهم عملي يحفظ لكل واحد حقه وكرامته.\n"
+            "أقدّم هذه الخدمة في المسائل التجارية والمهنية — بين الشركاء، وبين الأفراد "
+            "والمؤسسات — بسرّية تامة، ولا أنحاز فيها لطرف دون طرف. تبدأ بجلسة استماع "
+            "لكل طرف على حدة، فإذا صلحت الحال اجتمعنا معًا."
+        ),
+        "mediation_contact": "للتواصل اكتب نبذة قصيرة عن موضوعك إلى العنوان التالي، وأردّ عليك خلال أيام قليلة:",
+        "mediation_button": "راسلني عبر البريد",
+        "mediation_desc": "خدمة الوساطة في المسائل التجارية والمهنية — سرّية تامة وبلا انحياز",
+        "channel_title": "قناة يوتيوب",
+        "channel_intro": "الاقتصاد كعلم اجتماعي",
+        "channel_body": (
+            "الاقتصاد ليس مصانع تنتج. الاقتصاد حياة، وقانون، ونمط عيش.\n"
+            "قناة توثّق الحياة الاقتصادية للناس كما تُعاش فعلاً: كيف تنتقل البضاعة من "
+            "الميناء إلى السوق الشعبي إلى الكارجو إلى الطائرة؟ كيف يعيش العامل؟ وكيف "
+            "يتخذ صاحب القرار قراره؟ لا نشرح الاقتصاد نظريًا — نُريه بالعين: شخص حقيقي، "
+            "مكان حقيقي، بضاعة تتحرك."
+        ),
+        "channel_visit": "تابع القناة على يوتيوب ←",
+        "channel_soon": "الحلقات الأولى في الطريق — تُعلن هنا فور انطلاقها.",
+        "channel_desc": "قناة يوتيوب — الاقتصاد كعلم اجتماعي: توثيق الحياة الاقتصادية للناس كما تُعاش",
         "fonts": (
             '<link href="https://fonts.googleapis.com/css2?'
             "family=Amiri:ital,wght@0,400;0,700;1,400&"
@@ -124,6 +177,52 @@ LANGS = {
         "news_button": "Subscribe",
         "news_email": "Your email",
         "wa_channel": "Follow the WhatsApp channel →",
+        "nav_book": "Book",
+        "nav_services": "Services",
+        "services_title": "Services",
+        "services_intro": "Everything I offer in one place: writing, mediation, the YouTube channel, and the Talaix and Talaiz projects.",
+        "services_desc": "Motaz Omarien's services: writing, mediation, the YouTube channel, and the Talaix and Talaiz projects",
+        "svc_writing_title": "Writing",
+        "svc_writing_link": "Browse the book →",
+        "svc_mediation_title": "Mediation",
+        "svc_mediation_desc": "Facilitating dialogue between parties toward a practical understanding — in commercial and professional matters, in full confidentiality.",
+        "svc_mediation_link": "Service details →",
+        "svc_youtube_title": "YouTube channel",
+        "svc_youtube_desc": "Economics as a social science — documenting people's economic life as it is actually lived: from the port to the market to the decision-maker.",
+        "svc_youtube_link": "About the channel →",
+        "svc_talaix_title": "Talaix",
+        "svc_talaix_desc": "Auditable climate-risk evidence for EU disclosure: CSRD/ESRS E1, EU Taxonomy DNSH, and EUDR.",
+        "svc_talaix_link": "talaix.com →",
+        "svc_talaiz_title": "Talaiz",
+        "svc_talaiz_desc": "A control and evidence layer for AI agents: an identity for every agent, a permission for every tool, and a complete audit trail.",
+        "svc_talaiz_link": "talaiz.com →",
+        "mediation_title": "Mediation",
+        "mediation_intro": "A shorter road than dispute",
+        "mediation_body": (
+            "Mediation brings in a neutral party who listens to everyone, brings viewpoints "
+            "closer, and helps the parties reach a practical understanding that preserves "
+            "each one's rights and dignity.\n"
+            "I offer this service in commercial and professional matters — between partners, "
+            "and between individuals and organizations — in full confidentiality and without "
+            "taking sides. It begins with a private hearing for each party; if the case "
+            "allows, we then meet together."
+        ),
+        "mediation_contact": "To get in touch, write a short note about your matter to the address below, and I will reply within a few days:",
+        "mediation_button": "Write to me",
+        "mediation_desc": "Mediation in commercial and professional matters — fully confidential and impartial",
+        "channel_title": "YouTube channel",
+        "channel_intro": "Economics as a social science",
+        "channel_body": (
+            "The economy is not factories that produce. The economy is life, law, and a way of living.\n"
+            "A channel documenting people's economic life as it is actually lived: how do "
+            "goods travel from the port to the street market to cargo to the airplane? How "
+            "does the worker live, and how does the decision-maker decide? We do not explain "
+            "the economy in theory — we show it to the eye: a real person, a real place, "
+            "goods on the move."
+        ),
+        "channel_visit": "Follow the channel on YouTube →",
+        "channel_soon": "The first episodes are on their way — they will be announced here the moment they launch.",
+        "channel_desc": "YouTube channel — economics as a social science: documenting people's economic life as it is actually lived",
         "fonts": (
             '<link href="https://fonts.googleapis.com/css2?'
             'family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">'
@@ -165,6 +264,52 @@ LANGS = {
         "news_button": "Suscribirme",
         "news_email": "Tu correo electrónico",
         "wa_channel": "Seguir el canal de WhatsApp →",
+        "nav_book": "El libro",
+        "nav_services": "Servicios",
+        "services_title": "Servicios",
+        "services_intro": "Todo lo que ofrezco en un solo lugar: escritura, mediación, el canal de YouTube y los proyectos Talaix y Talaiz.",
+        "services_desc": "Los servicios de Motaz Omarien: escritura, mediación, el canal de YouTube y los proyectos Talaix y Talaiz",
+        "svc_writing_title": "Escritura",
+        "svc_writing_link": "Explorar el libro →",
+        "svc_mediation_title": "Mediación",
+        "svc_mediation_desc": "Facilitar el diálogo entre las partes para llegar a un entendimiento práctico — en asuntos comerciales y profesionales, con total confidencialidad.",
+        "svc_mediation_link": "Detalles del servicio →",
+        "svc_youtube_title": "Canal de YouTube",
+        "svc_youtube_desc": "La economía como ciencia social — documentar la vida económica de la gente tal como se vive: del puerto al mercado y hasta quien toma las decisiones.",
+        "svc_youtube_link": "Sobre el canal →",
+        "svc_talaix_title": "Talaix",
+        "svc_talaix_desc": "Evidencia auditable de riesgo climático para la divulgación europea: CSRD/ESRS E1, Taxonomía UE DNSH y EUDR.",
+        "svc_talaix_link": "talaix.com →",
+        "svc_talaiz_title": "Talaiz",
+        "svc_talaiz_desc": "Una capa de control y evidencia para agentes de IA: identidad para cada agente, permiso para cada herramienta y un registro de auditoría completo.",
+        "svc_talaiz_link": "talaiz.com →",
+        "mediation_title": "Mediación",
+        "mediation_intro": "Un camino más corto que la disputa",
+        "mediation_body": (
+            "La mediación incorpora a un tercero neutral que escucha a todos, acerca los "
+            "puntos de vista y ayuda a las partes a alcanzar un entendimiento práctico que "
+            "preserva los derechos y la dignidad de cada una.\n"
+            "Ofrezco este servicio en asuntos comerciales y profesionales — entre socios, y "
+            "entre personas y organizaciones — con total confidencialidad y sin tomar "
+            "partido. Comienza con una audiencia privada para cada parte; si el caso lo "
+            "permite, nos reunimos después juntos."
+        ),
+        "mediation_contact": "Para contactar, escribe una breve nota sobre tu asunto a la dirección siguiente y responderé en pocos días:",
+        "mediation_button": "Escríbeme",
+        "mediation_desc": "Mediación en asuntos comerciales y profesionales — total confidencialidad e imparcialidad",
+        "channel_title": "Canal de YouTube",
+        "channel_intro": "La economía como ciencia social",
+        "channel_body": (
+            "La economía no son fábricas que producen. La economía es vida, ley y una forma de vivir.\n"
+            "Un canal que documenta la vida económica de la gente tal como se vive "
+            "realmente: ¿cómo viaja la mercancía del puerto al mercado popular, al "
+            "cargamento y al avión? ¿Cómo vive el trabajador y cómo decide quien toma las "
+            "decisiones? No explicamos la economía en teoría — la mostramos a los ojos: "
+            "una persona real, un lugar real, mercancía en movimiento."
+        ),
+        "channel_visit": "Seguir el canal en YouTube →",
+        "channel_soon": "Los primeros episodios están en camino — se anunciarán aquí en cuanto se publiquen.",
+        "channel_desc": "Canal de YouTube — la economía como ciencia social: documentar la vida económica de la gente tal como se vive",
         "fonts": (
             '<link href="https://fonts.googleapis.com/css2?'
             'family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">'
@@ -205,6 +350,47 @@ LANGS = {
         "news_button": "订阅",
         "news_email": "您的邮箱",
         "wa_channel": "关注 WhatsApp 频道 →",
+        "nav_book": "全书",
+        "nav_services": "服务",
+        "services_title": "服务",
+        "services_intro": "我所提供的一切，汇聚一处：写作、调解、YouTube 频道，以及 Talaix 与 Talaiz 两个项目。",
+        "services_desc": "穆塔兹·奥马林的服务：写作、调解、YouTube 频道，以及 Talaix 与 Talaiz 项目",
+        "svc_writing_title": "写作",
+        "svc_writing_link": "阅读本书 →",
+        "svc_mediation_title": "调解",
+        "svc_mediation_desc": "促成各方对话，达成切实可行的共识——涵盖商业与职业事务，全程严格保密。",
+        "svc_mediation_link": "服务详情 →",
+        "svc_youtube_title": "YouTube 频道",
+        "svc_youtube_desc": "经济学作为一门社会科学——记录人们真实经历的经济生活：从港口到市场，再到决策者。",
+        "svc_youtube_link": "关于频道 →",
+        "svc_talaix_title": "Talaix",
+        "svc_talaix_desc": "为欧盟信息披露提供可审计的气候风险证据：CSRD/ESRS E1、欧盟分类法 DNSH 与 EUDR。",
+        "svc_talaix_link": "talaix.com →",
+        "svc_talaiz_title": "Talaiz",
+        "svc_talaiz_desc": "面向 AI 智能体的控制与证据层：每个智能体有身份，每个工具有权限，审计记录完整无缺。",
+        "svc_talaiz_link": "talaiz.com →",
+        "mediation_title": "调解",
+        "mediation_intro": "一条比争端更短的路",
+        "mediation_body": (
+            "调解引入中立的第三方：倾听每一方，拉近彼此观点，帮助各方达成切实可行的共识，"
+            "维护每个人的权利与尊严。\n"
+            "我在商业与职业事务中提供这项服务——合作伙伴之间，个人与机构之间——全程严格保密，"
+            "不偏袒任何一方。先分别单独听取各方陈述，若情况允许，再共同会面。"
+        ),
+        "mediation_contact": "如需联系，请将您事项的简要说明写至以下地址，我会在几天内回复：",
+        "mediation_button": "给我写信",
+        "mediation_desc": "商业与职业事务调解——严格保密，公正无偏",
+        "channel_title": "YouTube 频道",
+        "channel_intro": "经济学作为一门社会科学",
+        "channel_body": (
+            "经济不是生产的工厂。经济是生活，是法律，是一种生活方式。\n"
+            "这个频道记录人们真实经历的经济生活：货物如何从港口到民间市场，到货运，再到飞机？"
+            "工人如何生活？决策者如何做出决定？我们不在理论上讲解经济——而是让它呈现在眼前："
+            "真实的人，真实的地方，流动的货物。"
+        ),
+        "channel_visit": "在 YouTube 上关注频道 →",
+        "channel_soon": "首批节目正在路上——一经推出将在此公布。",
+        "channel_desc": "YouTube 频道——经济学作为一门社会科学：记录人们真实经历的经济生活",
         "fonts": (
             '<link href="https://fonts.googleapis.com/css2?'
             'family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">'
@@ -246,6 +432,52 @@ LANGS = {
         "news_button": "Подписаться",
         "news_email": "Ваша электронная почта",
         "wa_channel": "Следить за каналом в WhatsApp →",
+        "nav_book": "Книга",
+        "nav_services": "Услуги",
+        "services_title": "Услуги",
+        "services_intro": "Всё, что я предлагаю, в одном месте: писательство, медиация, YouTube-канал и проекты Talaix и Talaiz.",
+        "services_desc": "Услуги Мотаза Омарина: писательство, медиация, YouTube-канал и проекты Talaix и Talaiz",
+        "svc_writing_title": "Писательство",
+        "svc_writing_link": "Открыть книгу →",
+        "svc_mediation_title": "Медиация",
+        "svc_mediation_desc": "Помогаю сторонам вести диалог и приходить к практичному соглашению — в коммерческих и профессиональных вопросах, при полной конфиденциальности.",
+        "svc_mediation_link": "Подробнее об услуге →",
+        "svc_youtube_title": "YouTube-канал",
+        "svc_youtube_desc": "Экономика как социальная наука — документирую экономическую жизнь людей такой, какая она есть: от порта до рынка и до того, кто принимает решения.",
+        "svc_youtube_link": "О канале →",
+        "svc_talaix_title": "Talaix",
+        "svc_talaix_desc": "Проверяемые доказательства климатических рисков для европейской отчётности: CSRD/ESRS E1, таксономия ЕС DNSH и EUDR.",
+        "svc_talaix_link": "talaix.com →",
+        "svc_talaiz_title": "Talaiz",
+        "svc_talaiz_desc": "Слой контроля и доказательств для ИИ-агентов: идентичность каждого агента, разрешение на каждый инструмент и полный аудиторский след.",
+        "svc_talaiz_link": "talaiz.com →",
+        "mediation_title": "Медиация",
+        "mediation_intro": "Путь короче, чем спор",
+        "mediation_body": (
+            "Медиация привлекает нейтральную сторону, которая выслушивает всех, сближает "
+            "точки зрения и помогает сторонам прийти к практичному соглашению, сохраняющему "
+            "права и достоинство каждого.\n"
+            "Я предлагаю эту услугу в коммерческих и профессиональных вопросах — между "
+            "партнёрами, между частными лицами и организациями — при полной конфиденциальности "
+            "и без взятия чьей-либо стороны. Начинается она с отдельной беседы с каждой "
+            "стороной; если позволяет ситуация, затем мы встречаемся вместе."
+        ),
+        "mediation_contact": "Чтобы связаться, напишите краткое описание вашего вопроса на адрес ниже — я отвечу в течение нескольких дней:",
+        "mediation_button": "Написать мне",
+        "mediation_desc": "Медиация в коммерческих и профессиональных вопросах — полная конфиденциальность и беспристрастность",
+        "channel_title": "YouTube-канал",
+        "channel_intro": "Экономика как социальная наука",
+        "channel_body": (
+            "Экономика — это не заводы, которые производят. Экономика — это жизнь, закон и образ жизни.\n"
+            "Канал, документирующий экономическую жизнь людей такой, какой её проживают на "
+            "самом деле: как товар попадает из порта на уличный рынок, в грузовой отсек и в "
+            "самолёт? Как живёт рабочий и как принимает решение тот, кто у власти? Мы не "
+            "объясняем экономику в теории — мы показываем её глазу: реальный человек, "
+            "реальное место, товар в движении."
+        ),
+        "channel_visit": "Следить за каналом на YouTube →",
+        "channel_soon": "Первые выпуски уже в пути — о них будет объявлено здесь сразу после выхода.",
+        "channel_desc": "YouTube-канал — экономика как социальная наука: документирование экономической жизни людей такой, какой её проживают",
         "fonts": (
             '<link href="https://fonts.googleapis.com/css2?'
             'family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">'
@@ -287,6 +519,52 @@ LANGS = {
         "news_button": "Subscrever",
         "news_email": "O teu e-mail",
         "wa_channel": "Seguir o canal do WhatsApp →",
+        "nav_book": "O livro",
+        "nav_services": "Serviços",
+        "services_title": "Serviços",
+        "services_intro": "Tudo o que ofereço num só lugar: escrita, mediação, o canal do YouTube e os projetos Talaix e Talaiz.",
+        "services_desc": "Os serviços de Motaz Omarien: escrita, mediação, o canal do YouTube e os projetos Talaix e Talaiz",
+        "svc_writing_title": "Escrita",
+        "svc_writing_link": "Explorar o livro →",
+        "svc_mediation_title": "Mediação",
+        "svc_mediation_desc": "Facilitar o diálogo entre as partes para chegar a um entendimento prático — em assuntos comerciais e profissionais, com total confidencialidade.",
+        "svc_mediation_link": "Detalhes do serviço →",
+        "svc_youtube_title": "Canal do YouTube",
+        "svc_youtube_desc": "A economia como ciência social — documentar a vida económica das pessoas tal como é vivida: do porto ao mercado e até a quem decide.",
+        "svc_youtube_link": "Sobre o canal →",
+        "svc_talaix_title": "Talaix",
+        "svc_talaix_desc": "Evidência auditável de risco climático para a divulgação europeia: CSRD/ESRS E1, Taxonomia UE DNSH e EUDR.",
+        "svc_talaix_link": "talaix.com →",
+        "svc_talaiz_title": "Talaiz",
+        "svc_talaiz_desc": "Uma camada de controlo e evidência para agentes de IA: identidade para cada agente, permissão para cada ferramenta e um registo de auditoria completo.",
+        "svc_talaiz_link": "talaiz.com →",
+        "mediation_title": "Mediação",
+        "mediation_intro": "Um caminho mais curto que a disputa",
+        "mediation_body": (
+            "A mediação traz um terceiro neutro que ouve todos, aproxima os pontos de vista "
+            "e ajuda as partes a chegar a um entendimento prático que preserva os direitos "
+            "e a dignidade de cada uma.\n"
+            "Ofereço este serviço em assuntos comerciais e profissionais — entre sócios, e "
+            "entre pessoas e organizações — com total confidencialidade e sem tomar partido. "
+            "Começa com uma audiência privada para cada parte; se o caso o permitir, "
+            "reunimo-nos depois em conjunto."
+        ),
+        "mediation_contact": "Para contactar, escreve uma breve nota sobre o teu assunto para o endereço abaixo e respondo em poucos dias:",
+        "mediation_button": "Escreve-me",
+        "mediation_desc": "Mediação em assuntos comerciais e profissionais — total confidencialidade e imparcialidade",
+        "channel_title": "Canal do YouTube",
+        "channel_intro": "A economia como ciência social",
+        "channel_body": (
+            "A economia não são fábricas que produzem. A economia é vida, lei e um modo de viver.\n"
+            "Um canal que documenta a vida económica das pessoas tal como é vivida: como "
+            "viajam as mercadorias do porto ao mercado popular, ao cargo e ao avião? Como "
+            "vive o trabalhador e como decide quem toma as decisões? Não explicamos a "
+            "economia em teoria — mostramo-la aos olhos: uma pessoa real, um lugar real, "
+            "mercadorias em movimento."
+        ),
+        "channel_visit": "Seguir o canal no YouTube →",
+        "channel_soon": "Os primeiros episódios estão a caminho — serão anunciados aqui assim que forem lançados.",
+        "channel_desc": "Canal do YouTube — a economia como ciência social: documentar a vida económica das pessoas tal como é vivida",
         "fonts": (
             '<link href="https://fonts.googleapis.com/css2?'
             'family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">'
@@ -328,6 +606,53 @@ LANGS = {
         "news_button": "Abonnieren",
         "news_email": "Deine E-Mail",
         "wa_channel": "Dem WhatsApp-Kanal folgen →",
+        "nav_book": "Das Buch",
+        "nav_services": "Leistungen",
+        "services_title": "Leistungen",
+        "services_intro": "Alles, was ich anbiete, an einem Ort: Schreiben, Mediation, der YouTube-Kanal und die Projekte Talaix und Talaiz.",
+        "services_desc": "Motaz Omariens Leistungen: Schreiben, Mediation, der YouTube-Kanal und die Projekte Talaix und Talaiz",
+        "svc_writing_title": "Schreiben",
+        "svc_writing_link": "Das Buch durchblättern →",
+        "svc_mediation_title": "Mediation",
+        "svc_mediation_desc": "Vermittlung des Dialogs zwischen den Parteien hin zu einer praktischen Einigung — in geschäftlichen und beruflichen Angelegenheiten, unter voller Vertraulichkeit.",
+        "svc_mediation_link": "Details zum Angebot →",
+        "svc_youtube_title": "YouTube-Kanal",
+        "svc_youtube_desc": "Wirtschaft als Sozialwissenschaft — das Wirtschaftsleben der Menschen dokumentiert, wie es wirklich gelebt wird: vom Hafen über den Markt bis zu den Entscheidungsträgern.",
+        "svc_youtube_link": "Über den Kanal →",
+        "svc_talaix_title": "Talaix",
+        "svc_talaix_desc": "Prüfbare Klimarisiko-Nachweise für die EU-Berichtspflicht: CSRD/ESRS E1, EU-Taxonomie DNSH und EUDR.",
+        "svc_talaix_link": "talaix.com →",
+        "svc_talaiz_title": "Talaiz",
+        "svc_talaiz_desc": "Eine Kontroll- und Nachweisschicht für KI-Agenten: Identität für jeden Agenten, Berechtigung für jedes Werkzeug und eine vollständige Prüfkette.",
+        "svc_talaiz_link": "talaiz.com →",
+        "mediation_title": "Mediation",
+        "mediation_intro": "Ein kürzerer Weg als der Streit",
+        "mediation_body": (
+            "Mediation holt eine neutrale Partei hinzu, die alle anhört, die Standpunkte "
+            "einander annähert und den Parteien hilft, eine praktische Einigung zu erreichen, "
+            "die Rechte und Würde eines jeden wahrt.\n"
+            "Ich biete diesen Dienst in geschäftlichen und beruflichen Angelegenheiten an — "
+            "zwischen Partnern sowie zwischen Einzelpersonen und Organisationen — unter "
+            "voller Vertraulichkeit und ohne Partei zu ergreifen. Er beginnt mit einem "
+            "getrennten Anhörungsgespräch für jede Partei; wenn es die Lage erlaubt, kommen "
+            "wir danach gemeinsam zusammen."
+        ),
+        "mediation_contact": "Schreibe zur Kontaktaufnahme eine kurze Notiz über dein Anliegen an die folgende Adresse — ich antworte innerhalb weniger Tage:",
+        "mediation_button": "Schreib mir",
+        "mediation_desc": "Mediation in geschäftlichen und beruflichen Angelegenheiten — vollkommen vertraulich und unparteiisch",
+        "channel_title": "YouTube-Kanal",
+        "channel_intro": "Wirtschaft als Sozialwissenschaft",
+        "channel_body": (
+            "Wirtschaft sind nicht Fabriken, die produzieren. Wirtschaft ist Leben, Gesetz und eine Art zu leben.\n"
+            "Ein Kanal, der das Wirtschaftsleben der Menschen dokumentiert, wie es wirklich "
+            "gelebt wird: Wie reist die Ware vom Hafen zum Volksmarkt, in die Fracht und ins "
+            "Flugzeug? Wie lebt der Arbeiter, und wie entscheidet der Entscheidungsträger? "
+            "Wir erklären die Wirtschaft nicht in der Theorie — wir zeigen sie dem Auge: ein "
+            "echter Mensch, ein echter Ort, Ware in Bewegung."
+        ),
+        "channel_visit": "Den Kanal auf YouTube folgen →",
+        "channel_soon": "Die ersten Folgen sind unterwegs — sie werden hier angekündigt, sobald sie starten.",
+        "channel_desc": "YouTube-Kanal — Wirtschaft als Sozialwissenschaft: das Wirtschaftsleben der Menschen dokumentiert, wie es gelebt wird",
         "fonts": (
             '<link href="https://fonts.googleapis.com/css2?'
             'family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">'
@@ -548,6 +873,15 @@ def alternates(alt: dict) -> str:
     return "\n  ".join(links)
 
 
+def site_nav(lang: str, root: str) -> str:
+    strings = LANGS[lang]
+    base = f"{root}{lang_prefix(lang)}"
+    return (
+        f'<a href="{base}book.html">{strings["nav_book"]}</a>'
+        f'<a href="{base}services.html">{strings["nav_services"]}</a>'
+    )
+
+
 def render(lang: str, title: str, description: str, content_html: str,
            root: str, home: str, alt: dict) -> str:
     strings = LANGS[lang]
@@ -562,6 +896,7 @@ def render(lang: str, title: str, description: str, content_html: str,
         .replace("{{fonts}}", strings["fonts"])
         .replace("{{alternates}}", alternates(alt))
         .replace("{{langs}}", switcher(lang, alt, root))
+        .replace("{{pagenav}}", site_nav(lang, root))
         .replace("{{root}}", root)
         .replace("{{home}}", home)
         .replace("{{content}}", content_html)
@@ -725,6 +1060,76 @@ def build_series_pages(lang: str, pieces: list, series_langs: dict) -> None:
         print(f"بُني: {lang_prefix(lang)}series/{slug}.html")
 
 
+def hub_page(lang: str, out_root: Path, root: str, alt: dict,
+             name: str, title: str, desc: str, body: str) -> None:
+    page = render(lang, title=title, description=desc, content_html=body,
+                  root=root, home="index.html", alt=alt)
+    (out_root / name).write_text(page, encoding="utf-8")
+    print(f"بُني: {lang_prefix(lang)}{name}")
+
+
+def build_hub_pages(lang: str, out_root: Path, root: str, alt_for) -> None:
+    strings = LANGS[lang]
+
+    cards = []
+    for key, href, external in HUB_CARDS:
+        card_title = html.escape(strings["svc_" + key + "_title"])
+        card_link = html.escape(strings["svc_" + key + "_link"])
+        desc = strings["book_intro"] if key == "writing" else strings["svc_" + key + "_desc"]
+        attrs = ' target="_blank" rel="noopener"' if external else ""
+        cards.append(
+            "<li>"
+            f"<h2>{card_title}</h2>"
+            f"<p>{html.escape(desc)}</p>"
+            f'<p><a class="big-button secondary" href="{href}"{attrs}>{card_link}</a></p>'
+            "</li>"
+        )
+    services_body = (
+        '<section class="hero">'
+        f'<h1 class="book-title">{strings["services_title"]}</h1>'
+        f'<p class="intro">{strings["services_intro"]}</p>'
+        "</section>\n"
+        '<ul class="services">\n' + "\n".join(cards) + "\n</ul>"
+    )
+    hub_page(lang, out_root, root, alt_for("services.html"), "services.html",
+             strings["services_title"], strings["services_desc"], services_body)
+
+    paras = "\n".join(f"<p>{p}</p>" for p in strings["mediation_body"].split("\n"))
+    mediation_body = (
+        '<section class="hero">'
+        f'<h1 class="book-title">{strings["mediation_title"]}</h1>'
+        f'<p class="intro">{strings["mediation_intro"]}</p>'
+        "</section>\n"
+        f'<article class="piece-body" lang="{lang}">\n{paras}\n</article>\n'
+        f'<p class="interact-note">{strings["mediation_contact"]}</p>\n'
+        '<p class="center"><a class="big-button" '
+        f'href="mailto:motaz@motazomarien.com">{strings["mediation_button"]}</a></p>\n'
+        '<p class="center contact-mail">motaz@motazomarien.com</p>'
+    )
+    hub_page(lang, out_root, root, alt_for("mediation.html"), "mediation.html",
+             strings["mediation_title"], strings["mediation_desc"], mediation_body)
+
+    paras = "\n".join(f"<p>{p}</p>" for p in strings["channel_body"].split("\n"))
+    if YOUTUBE_CHANNEL_URL:
+        action = (
+            '<p class="center"><a class="big-button" '
+            f'href="{YOUTUBE_CHANNEL_URL}" target="_blank" rel="noopener">'
+            f'{strings["channel_visit"]}</a></p>'
+        )
+    else:
+        action = f'<p class="intro center-text">{strings["channel_soon"]}</p>'
+    channel_body = (
+        '<section class="hero">'
+        f'<h1 class="book-title">{strings["channel_title"]}</h1>'
+        f'<p class="intro">{strings["channel_intro"]}</p>'
+        "</section>\n"
+        f'<article class="piece-body" lang="{lang}">\n{paras}\n</article>\n'
+        + action
+    )
+    hub_page(lang, out_root, root, alt_for("channel.html"), "channel.html",
+             strings["channel_title"], strings["channel_desc"], channel_body)
+
+
 def build_lang(lang: str, pieces: list, published_slugs: set, series_langs: dict) -> None:
     strings = LANGS[lang]
     out_root = ROOT if lang == "ar" else ROOT / lang
@@ -875,6 +1280,8 @@ def build_lang(lang: str, pieces: list, published_slugs: set, series_langs: dict
     (out_root / "thanks.html").write_text(thanks, encoding="utf-8")
     print(f"بُني: {lang_prefix(lang)}thanks.html")
 
+    build_hub_pages(lang, out_root, root, alt_for)
+
 
 def main() -> None:
     ar_pieces = sorted(
@@ -985,7 +1392,8 @@ def build_sitemap(ar_pieces: list, published: dict, series_langs: dict,
                   series_lastmod: dict) -> None:
     today = max((p["date"] for p in ar_pieces), default="2026-01-01")
     entries = []
-    for canonical in ("index.html", "book.html"):
+    for canonical in ("index.html", "book.html",
+                      "services.html", "mediation.html", "channel.html"):
         alt = {code: canonical for code in LANG_ORDER}
         entries.append(sitemap_url(canonical, alt, today))
     for slug, langs in series_langs.items():

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mediación — Motaz Omarien</title>
+  <meta name="description" content="Mediación en asuntos comerciales y profesionales — total confidencialidad e imparcialidad">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="ar" href="https://motazomarien.com/mediation.html">
+  <link rel="alternate" hreflang="en" href="https://motazomarien.com/en/mediation.html">
+  <link rel="alternate" hreflang="es" href="https://motazomarien.com/es/mediation.html">
+  <link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/mediation.html">
+  <link rel="alternate" hreflang="ru" href="https://motazomarien.com/ru/mediation.html">
+  <link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/mediation.html">
+  <link rel="alternate" hreflang="de" href="https://motazomarien.com/de/mediation.html">
+  <link rel="alternate" hreflang="x-default" href="https://motazomarien.com/mediation.html">
+  <link rel="icon" type="image/png" href="../assets/brand/monogram.png">
+  <link rel="apple-touch-icon" href="../assets/brand/monogram.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mediación — Motaz Omarien">
+  <meta property="og:description" content="Mediación en asuntos comerciales y profesionales — total confidencialidad e imparcialidad">
+  <meta property="og:image" content="https://motazomarien.com/assets/brand/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" type="application/rss+xml" title="RSS — Motaz Omarien" href="https://motazomarien.com/feed.xml">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <img class="site-logo" src="../assets/brand/monogram.png" alt="Motaz Omarien">
+    <a class="site-name" href="index.html">Motaz Omarien</a>
+    <p class="site-tagline">Una novela sin título — sobre la alienación</p>
+    <nav class="site-nav"><a href="../es/book.html">El libro</a><a href="../es/services.html">Servicios</a></nav>
+    <nav class="langs"><a href="../mediation.html">العربية</a>
+      <a href="../en/mediation.html">English</a>
+      <a aria-current="true">Español</a>
+      <a href="../zh/mediation.html">中文</a>
+      <a href="../ru/mediation.html">Русский</a>
+      <a href="../pt/mediation.html">Português</a>
+      <a href="../de/mediation.html">Deutsch</a></nav>
+  </header>
+  <main>
+    <section class="hero"><h1 class="book-title">Mediación</h1><p class="intro">Un camino más corto que la disputa</p></section>
+<article class="piece-body" lang="es">
+<p>La mediación incorpora a un tercero neutral que escucha a todos, acerca los puntos de vista y ayuda a las partes a alcanzar un entendimiento práctico que preserva los derechos y la dignidad de cada una.</p>
+<p>Ofrezco este servicio en asuntos comerciales y profesionales — entre socios, y entre personas y organizaciones — con total confidencialidad y sin tomar partido. Comienza con una audiencia privada para cada parte; si el caso lo permite, nos reunimos después juntos.</p>
+</article>
+<p class="interact-note">Para contactar, escribe una breve nota sobre tu asunto a la dirección siguiente y responderé en pocos días:</p>
+<p class="center"><a class="big-button" href="mailto:motaz@motazomarien.com">Escríbeme</a></p>
+<p class="center contact-mail">motaz@motazomarien.com</p>
+  </main>
+  <footer class="site-footer">
+    <p>motazomarien.com — publicación por entregas, una historia cada día</p>
+  </footer>
+  <script>
+  (function () {
+    var form = document.getElementById('subscribe-form');
+    if (form) {
+      form.setAttribute('target', 'mc_frame');
+      form.addEventListener('submit', function () {
+        var note = document.getElementById('subscribe-thanks');
+        setTimeout(function () {
+          form.hidden = true;
+          if (note) { note.hidden = false; }
+        }, 400);
+      });
+    }
+    var copyButtons = document.querySelectorAll('.copy-link');
+    Array.prototype.forEach.call(copyButtons, function (btn) {
+      btn.hidden = false;
+      btn.addEventListener('click', function () {
+        var label = btn.getAttribute('data-label') || btn.textContent;
+        var done = function () {
+          btn.textContent = btn.getAttribute('data-copied') || label;
+          setTimeout(function () { btn.textContent = label; }, 2000);
+        };
+        var url = btn.getAttribute('data-url');
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(done, function () {});
+        } else {
+          var field = document.createElement('textarea');
+          field.value = url;
+          field.setAttribute('readonly', '');
+          field.style.position = 'absolute';
+          field.style.left = '-9999px';
+          document.body.appendChild(field);
+          field.select();
+          try { document.execCommand('copy'); done(); } catch (err) {}
+          document.body.removeChild(field);
+        }
+      });
+    });
+  })();
+  </script>
+</body>
+</html>
