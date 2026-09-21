@@ -1,5 +1,11 @@
 # AGENTS.md — mzomSite
 
+## قاعدة ملزمة: الاستشارة ≠ التنفيذ (توجيه الكاتب 2026-09-21)
+
+- ما يطلبه الكاتب **استشارةً** يبقى استشارة: لا تعديل ملفات، لا `python3 build.py`، لا `git commit`، ولا `git push` إلا بطلب تنفيذ صريح («نفّذ»، «ابنِ»، «احفظ»، «انشر»…).
+- الاستشارة تعني: تحليل وخطة ونصوص مقترحة تُعرض في الجلسة فقط — والتنفيذ يبدأ بعد موافقة صريحة.
+- خلفية: في 2026-09-21 طلب الكاتب استشارة عن توحيد خدماته فنفّذ الوكيل «طبقة الخدمات» كاملة والتزم بها محليًا دون طلب (الالتزام 81d4e39 محلي، غير مدفوع — يُبقى أو يُلغى بقرار الكاتب).
+
 ## Session protocol (automatic)
 
 1. **At the start of every session:** read `PLAN.md` first to know the current state of work. Do not re-inspect or re-verify work that is already marked as done.
