@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>جاري التحويل…</title>
+<script>
+(function () {
+  var p = location.pathname.replace(/^\/+/, "");
+  var m = p.match(/^(en|es|zh|ru|pt|de)\/(.*)$/);
+  if (m) { location.replace("/writing/" + m[1] + "/" + m[2]); return; }
+  if (/^(book\.html|thanks\.html|pieces\/|series\/)/.test(p)) {
+    location.replace("/writing/" + p); return;
+  }
+  if (/^(services\.html|mediation\.html|channel\.html)$/.test(p)) {
+    location.replace("/writing/"); return;
+  }
+})();
+</script>
+</head>
+<body>
+<p style="font-family:system-ui;text-align:center;padding:3rem">
+  جاري التحويل… <a href="/">إن لم يعمل التحويل، اضغط هنا</a>
+</p>
+</body>
+</html>

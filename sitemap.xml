@@ -3,338 +3,352 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://motazomarien.com/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/en/index.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/index.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/index.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/ru/index.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/index.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/index.html"/>
+    <xhtml:link rel="alternate" hreflang="bs" href="https://motazomarien.com/bs.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://motazomarien.com/fr.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/ar.html"/>
     <lastmod>2026-09-22</lastmod>
   </url>
   <url>
-    <loc>https://motazomarien.com/book.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/book.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/en/book.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/book.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/book.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/ru/book.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/book.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/book.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/book.html"/>
+    <loc>https://motazomarien.com/bs.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/index.html"/>
+    <xhtml:link rel="alternate" hreflang="bs" href="https://motazomarien.com/bs.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://motazomarien.com/fr.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/ar.html"/>
     <lastmod>2026-09-22</lastmod>
   </url>
   <url>
-    <loc>https://motazomarien.com/services.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/services.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/en/services.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/services.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/services.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/ru/services.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/services.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/services.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/services.html"/>
+    <loc>https://motazomarien.com/fr.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/index.html"/>
+    <xhtml:link rel="alternate" hreflang="bs" href="https://motazomarien.com/bs.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://motazomarien.com/fr.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/ar.html"/>
     <lastmod>2026-09-22</lastmod>
   </url>
   <url>
-    <loc>https://motazomarien.com/mediation.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/mediation.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/en/mediation.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/mediation.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/mediation.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/ru/mediation.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/mediation.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/mediation.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/mediation.html"/>
+    <loc>https://motazomarien.com/de.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/index.html"/>
+    <xhtml:link rel="alternate" hreflang="bs" href="https://motazomarien.com/bs.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://motazomarien.com/fr.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/ar.html"/>
     <lastmod>2026-09-22</lastmod>
   </url>
   <url>
-    <loc>https://motazomarien.com/channel.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/channel.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/en/channel.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/channel.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/channel.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/ru/channel.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/channel.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/channel.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/channel.html"/>
+    <loc>https://motazomarien.com/ar.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/index.html"/>
+    <xhtml:link rel="alternate" hreflang="bs" href="https://motazomarien.com/bs.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://motazomarien.com/fr.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/ar.html"/>
     <lastmod>2026-09-22</lastmod>
   </url>
   <url>
-    <loc>https://motazomarien.com/series/wujuh-al-muhajir.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/series/wujuh-al-muhajir.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/en/series/wujuh-al-muhajir.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/series/wujuh-al-muhajir.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/series/wujuh-al-muhajir.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/ru/series/wujuh-al-muhajir.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/series/wujuh-al-muhajir.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/series/wujuh-al-muhajir.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/series/wujuh-al-muhajir.html"/>
+    <loc>https://motazomarien.com/writing/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/writing/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/writing/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/writing/es/index.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/writing/zh/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/writing/ru/index.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/writing/pt/index.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/writing/de/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/writing/index.html"/>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://motazomarien.com/writing/book.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/writing/book.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/writing/en/book.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/writing/es/book.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/writing/zh/book.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/writing/ru/book.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/writing/pt/book.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/writing/de/book.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/writing/book.html"/>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://motazomarien.com/writing/series/wujuh-al-muhajir.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/writing/series/wujuh-al-muhajir.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/writing/en/series/wujuh-al-muhajir.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/writing/es/series/wujuh-al-muhajir.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/writing/zh/series/wujuh-al-muhajir.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/writing/ru/series/wujuh-al-muhajir.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/writing/pt/series/wujuh-al-muhajir.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/writing/de/series/wujuh-al-muhajir.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/writing/series/wujuh-al-muhajir.html"/>
     <lastmod>2026-09-09</lastmod>
   </url>
   <url>
-    <loc>https://motazomarien.com/series/ma-qabl-al-rahil.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/series/ma-qabl-al-rahil.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/en/series/ma-qabl-al-rahil.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/series/ma-qabl-al-rahil.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/series/ma-qabl-al-rahil.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/ru/series/ma-qabl-al-rahil.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/series/ma-qabl-al-rahil.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/series/ma-qabl-al-rahil.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/series/ma-qabl-al-rahil.html"/>
+    <loc>https://motazomarien.com/writing/series/ma-qabl-al-rahil.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/writing/series/ma-qabl-al-rahil.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/writing/en/series/ma-qabl-al-rahil.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/writing/es/series/ma-qabl-al-rahil.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/writing/zh/series/ma-qabl-al-rahil.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/writing/ru/series/ma-qabl-al-rahil.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/writing/pt/series/ma-qabl-al-rahil.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/writing/de/series/ma-qabl-al-rahil.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/writing/series/ma-qabl-al-rahil.html"/>
     <lastmod>2026-09-14</lastmod>
   </url>
   <url>
-    <loc>https://motazomarien.com/series/al-ubur.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/series/al-ubur.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/en/series/al-ubur.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/series/al-ubur.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/series/al-ubur.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/ru/series/al-ubur.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/series/al-ubur.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/series/al-ubur.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/series/al-ubur.html"/>
+    <loc>https://motazomarien.com/writing/series/al-ubur.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/writing/series/al-ubur.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/writing/en/series/al-ubur.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/writing/es/series/al-ubur.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/writing/zh/series/al-ubur.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/writing/ru/series/al-ubur.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/writing/pt/series/al-ubur.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/writing/de/series/al-ubur.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/writing/series/al-ubur.html"/>
     <lastmod>2026-09-10</lastmod>
   </url>
   <url>
-    <loc>https://motazomarien.com/series/al-ghurba-al-yawmiyya.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/series/al-ghurba-al-yawmiyya.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/en/series/al-ghurba-al-yawmiyya.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/series/al-ghurba-al-yawmiyya.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/series/al-ghurba-al-yawmiyya.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/ru/series/al-ghurba-al-yawmiyya.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/series/al-ghurba-al-yawmiyya.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/series/al-ghurba-al-yawmiyya.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/series/al-ghurba-al-yawmiyya.html"/>
+    <loc>https://motazomarien.com/writing/series/al-ghurba-al-yawmiyya.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/writing/series/al-ghurba-al-yawmiyya.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/writing/en/series/al-ghurba-al-yawmiyya.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/writing/es/series/al-ghurba-al-yawmiyya.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/writing/zh/series/al-ghurba-al-yawmiyya.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/writing/ru/series/al-ghurba-al-yawmiyya.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/writing/pt/series/al-ghurba-al-yawmiyya.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/writing/de/series/al-ghurba-al-yawmiyya.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/writing/series/al-ghurba-al-yawmiyya.html"/>
     <lastmod>2026-09-11</lastmod>
   </url>
   <url>
-    <loc>https://motazomarien.com/series/yawmiyat-al-muhajir.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/series/yawmiyat-al-muhajir.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/en/series/yawmiyat-al-muhajir.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/series/yawmiyat-al-muhajir.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/series/yawmiyat-al-muhajir.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/ru/series/yawmiyat-al-muhajir.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/series/yawmiyat-al-muhajir.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/series/yawmiyat-al-muhajir.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/series/yawmiyat-al-muhajir.html"/>
+    <loc>https://motazomarien.com/writing/series/yawmiyat-al-muhajir.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/writing/series/yawmiyat-al-muhajir.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/writing/en/series/yawmiyat-al-muhajir.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/writing/es/series/yawmiyat-al-muhajir.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/writing/zh/series/yawmiyat-al-muhajir.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/writing/ru/series/yawmiyat-al-muhajir.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/writing/pt/series/yawmiyat-al-muhajir.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/writing/de/series/yawmiyat-al-muhajir.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/writing/series/yawmiyat-al-muhajir.html"/>
     <lastmod>2026-09-18</lastmod>
   </url>
   <url>
-    <loc>https://motazomarien.com/series/ma-baqi.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/series/ma-baqi.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/en/series/ma-baqi.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/series/ma-baqi.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/series/ma-baqi.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/ru/series/ma-baqi.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/series/ma-baqi.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/series/ma-baqi.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/series/ma-baqi.html"/>
+    <loc>https://motazomarien.com/writing/series/ma-baqi.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/writing/series/ma-baqi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/writing/en/series/ma-baqi.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/writing/es/series/ma-baqi.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/writing/zh/series/ma-baqi.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/writing/ru/series/ma-baqi.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/writing/pt/series/ma-baqi.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/writing/de/series/ma-baqi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/writing/series/ma-baqi.html"/>
     <lastmod>2026-09-22</lastmod>
   </url>
   <url>
-    <loc>https://motazomarien.com/pieces/muritaniyya.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/pieces/muritaniyya.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/en/pieces/muritaniyya.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/pieces/muritaniyya.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/pieces/muritaniyya.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/ru/pieces/muritaniyya.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/pieces/muritaniyya.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/pieces/muritaniyya.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/pieces/muritaniyya.html"/>
+    <loc>https://motazomarien.com/writing/pieces/muritaniyya.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/writing/pieces/muritaniyya.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/writing/en/pieces/muritaniyya.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/writing/es/pieces/muritaniyya.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/writing/zh/pieces/muritaniyya.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/writing/ru/pieces/muritaniyya.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/writing/pt/pieces/muritaniyya.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/writing/de/pieces/muritaniyya.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/writing/pieces/muritaniyya.html"/>
     <lastmod>2026-09-06</lastmod>
   </url>
   <url>
-    <loc>https://motazomarien.com/pieces/sadeeqi.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/pieces/sadeeqi.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/en/pieces/sadeeqi.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/pieces/sadeeqi.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/pieces/sadeeqi.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/ru/pieces/sadeeqi.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/pieces/sadeeqi.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/pieces/sadeeqi.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/pieces/sadeeqi.html"/>
+    <loc>https://motazomarien.com/writing/pieces/sadeeqi.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/writing/pieces/sadeeqi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/writing/en/pieces/sadeeqi.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/writing/es/pieces/sadeeqi.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/writing/zh/pieces/sadeeqi.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/writing/ru/pieces/sadeeqi.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/writing/pt/pieces/sadeeqi.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/writing/de/pieces/sadeeqi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/writing/pieces/sadeeqi.html"/>
     <lastmod>2026-09-07</lastmod>
   </url>
   <url>
-    <loc>https://motazomarien.com/pieces/alaa.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/pieces/alaa.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/en/pieces/alaa.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/pieces/alaa.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/pieces/alaa.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/ru/pieces/alaa.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/pieces/alaa.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/pieces/alaa.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/pieces/alaa.html"/>
+    <loc>https://motazomarien.com/writing/pieces/alaa.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/writing/pieces/alaa.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/writing/en/pieces/alaa.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/writing/es/pieces/alaa.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/writing/zh/pieces/alaa.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/writing/ru/pieces/alaa.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/writing/pt/pieces/alaa.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/writing/de/pieces/alaa.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/writing/pieces/alaa.html"/>
     <lastmod>2026-09-08</lastmod>
   </url>
   <url>
-    <loc>https://motazomarien.com/pieces/nizar-taha.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/pieces/nizar-taha.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/en/pieces/nizar-taha.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/pieces/nizar-taha.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/pieces/nizar-taha.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/ru/pieces/nizar-taha.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/pieces/nizar-taha.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/pieces/nizar-taha.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/pieces/nizar-taha.html"/>
+    <loc>https://motazomarien.com/writing/pieces/nizar-taha.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/writing/pieces/nizar-taha.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/writing/en/pieces/nizar-taha.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/writing/es/pieces/nizar-taha.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/writing/zh/pieces/nizar-taha.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/writing/ru/pieces/nizar-taha.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/writing/pt/pieces/nizar-taha.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/writing/de/pieces/nizar-taha.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/writing/pieces/nizar-taha.html"/>
     <lastmod>2026-09-09</lastmod>
   </url>
   <url>
-    <loc>https://motazomarien.com/pieces/sarab.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/pieces/sarab.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/en/pieces/sarab.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/pieces/sarab.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/pieces/sarab.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/ru/pieces/sarab.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/pieces/sarab.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/pieces/sarab.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/pieces/sarab.html"/>
+    <loc>https://motazomarien.com/writing/pieces/sarab.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/writing/pieces/sarab.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/writing/en/pieces/sarab.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/writing/es/pieces/sarab.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/writing/zh/pieces/sarab.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/writing/ru/pieces/sarab.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/writing/pt/pieces/sarab.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/writing/de/pieces/sarab.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/writing/pieces/sarab.html"/>
     <lastmod>2026-09-10</lastmod>
   </url>
   <url>
-    <loc>https://motazomarien.com/pieces/tirat-haifa.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/pieces/tirat-haifa.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/en/pieces/tirat-haifa.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/pieces/tirat-haifa.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/pieces/tirat-haifa.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/ru/pieces/tirat-haifa.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/pieces/tirat-haifa.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/pieces/tirat-haifa.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/pieces/tirat-haifa.html"/>
+    <loc>https://motazomarien.com/writing/pieces/tirat-haifa.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/writing/pieces/tirat-haifa.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/writing/en/pieces/tirat-haifa.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/writing/es/pieces/tirat-haifa.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/writing/zh/pieces/tirat-haifa.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/writing/ru/pieces/tirat-haifa.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/writing/pt/pieces/tirat-haifa.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/writing/de/pieces/tirat-haifa.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/writing/pieces/tirat-haifa.html"/>
     <lastmod>2026-09-11</lastmod>
   </url>
   <url>
-    <loc>https://motazomarien.com/pieces/roohuk-tamout.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/pieces/roohuk-tamout.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/en/pieces/roohuk-tamout.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/pieces/roohuk-tamout.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/pieces/roohuk-tamout.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/ru/pieces/roohuk-tamout.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/pieces/roohuk-tamout.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/pieces/roohuk-tamout.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/pieces/roohuk-tamout.html"/>
+    <loc>https://motazomarien.com/writing/pieces/roohuk-tamout.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/writing/pieces/roohuk-tamout.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/writing/en/pieces/roohuk-tamout.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/writing/es/pieces/roohuk-tamout.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/writing/zh/pieces/roohuk-tamout.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/writing/ru/pieces/roohuk-tamout.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/writing/pt/pieces/roohuk-tamout.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/writing/de/pieces/roohuk-tamout.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/writing/pieces/roohuk-tamout.html"/>
     <lastmod>2026-09-12</lastmod>
   </url>
   <url>
-    <loc>https://motazomarien.com/pieces/awwal-yawm-thawra.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/pieces/awwal-yawm-thawra.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/en/pieces/awwal-yawm-thawra.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/pieces/awwal-yawm-thawra.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/pieces/awwal-yawm-thawra.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/ru/pieces/awwal-yawm-thawra.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/pieces/awwal-yawm-thawra.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/pieces/awwal-yawm-thawra.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/pieces/awwal-yawm-thawra.html"/>
+    <loc>https://motazomarien.com/writing/pieces/awwal-yawm-thawra.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/writing/pieces/awwal-yawm-thawra.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/writing/en/pieces/awwal-yawm-thawra.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/writing/es/pieces/awwal-yawm-thawra.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/writing/zh/pieces/awwal-yawm-thawra.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/writing/ru/pieces/awwal-yawm-thawra.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/writing/pt/pieces/awwal-yawm-thawra.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/writing/de/pieces/awwal-yawm-thawra.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/writing/pieces/awwal-yawm-thawra.html"/>
     <lastmod>2026-09-13</lastmod>
   </url>
   <url>
-    <loc>https://motazomarien.com/pieces/khudh-huwwiyyatak.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/pieces/khudh-huwwiyyatak.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/en/pieces/khudh-huwwiyyatak.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/pieces/khudh-huwwiyyatak.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/pieces/khudh-huwwiyyatak.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/ru/pieces/khudh-huwwiyyatak.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/pieces/khudh-huwwiyyatak.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/pieces/khudh-huwwiyyatak.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/pieces/khudh-huwwiyyatak.html"/>
+    <loc>https://motazomarien.com/writing/pieces/khudh-huwwiyyatak.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/writing/pieces/khudh-huwwiyyatak.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/writing/en/pieces/khudh-huwwiyyatak.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/writing/es/pieces/khudh-huwwiyyatak.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/writing/zh/pieces/khudh-huwwiyyatak.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/writing/ru/pieces/khudh-huwwiyyatak.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/writing/pt/pieces/khudh-huwwiyyatak.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/writing/de/pieces/khudh-huwwiyyatak.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/writing/pieces/khudh-huwwiyyatak.html"/>
     <lastmod>2026-09-14</lastmod>
   </url>
   <url>
-    <loc>https://motazomarien.com/pieces/lujo-finlanda.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/pieces/lujo-finlanda.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/en/pieces/lujo-finlanda.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/pieces/lujo-finlanda.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/pieces/lujo-finlanda.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/ru/pieces/lujo-finlanda.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/pieces/lujo-finlanda.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/pieces/lujo-finlanda.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/pieces/lujo-finlanda.html"/>
+    <loc>https://motazomarien.com/writing/pieces/lujo-finlanda.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/writing/pieces/lujo-finlanda.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/writing/en/pieces/lujo-finlanda.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/writing/es/pieces/lujo-finlanda.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/writing/zh/pieces/lujo-finlanda.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/writing/ru/pieces/lujo-finlanda.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/writing/pt/pieces/lujo-finlanda.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/writing/de/pieces/lujo-finlanda.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/writing/pieces/lujo-finlanda.html"/>
     <lastmod>2026-09-15</lastmod>
   </url>
   <url>
-    <loc>https://motazomarien.com/pieces/salwa.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/pieces/salwa.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/en/pieces/salwa.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/pieces/salwa.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/pieces/salwa.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/ru/pieces/salwa.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/pieces/salwa.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/pieces/salwa.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/pieces/salwa.html"/>
+    <loc>https://motazomarien.com/writing/pieces/salwa.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/writing/pieces/salwa.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/writing/en/pieces/salwa.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/writing/es/pieces/salwa.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/writing/zh/pieces/salwa.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/writing/ru/pieces/salwa.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/writing/pt/pieces/salwa.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/writing/de/pieces/salwa.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/writing/pieces/salwa.html"/>
     <lastmod>2026-09-16</lastmod>
   </url>
   <url>
-    <loc>https://motazomarien.com/pieces/hobb-eindhoven.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/pieces/hobb-eindhoven.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/en/pieces/hobb-eindhoven.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/pieces/hobb-eindhoven.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/pieces/hobb-eindhoven.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/ru/pieces/hobb-eindhoven.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/pieces/hobb-eindhoven.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/pieces/hobb-eindhoven.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/pieces/hobb-eindhoven.html"/>
+    <loc>https://motazomarien.com/writing/pieces/hobb-eindhoven.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/writing/pieces/hobb-eindhoven.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/writing/en/pieces/hobb-eindhoven.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/writing/es/pieces/hobb-eindhoven.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/writing/zh/pieces/hobb-eindhoven.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/writing/ru/pieces/hobb-eindhoven.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/writing/pt/pieces/hobb-eindhoven.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/writing/de/pieces/hobb-eindhoven.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/writing/pieces/hobb-eindhoven.html"/>
     <lastmod>2026-09-17</lastmod>
   </url>
   <url>
-    <loc>https://motazomarien.com/pieces/al-muhajir.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/pieces/al-muhajir.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/en/pieces/al-muhajir.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/pieces/al-muhajir.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/pieces/al-muhajir.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/ru/pieces/al-muhajir.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/pieces/al-muhajir.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/pieces/al-muhajir.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/pieces/al-muhajir.html"/>
+    <loc>https://motazomarien.com/writing/pieces/al-muhajir.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/writing/pieces/al-muhajir.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/writing/en/pieces/al-muhajir.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/writing/es/pieces/al-muhajir.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/writing/zh/pieces/al-muhajir.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/writing/ru/pieces/al-muhajir.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/writing/pt/pieces/al-muhajir.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/writing/de/pieces/al-muhajir.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/writing/pieces/al-muhajir.html"/>
     <lastmod>2026-09-18</lastmod>
   </url>
   <url>
-    <loc>https://motazomarien.com/pieces/salwa-qasida.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/pieces/salwa-qasida.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/en/pieces/salwa-qasida.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/pieces/salwa-qasida.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/pieces/salwa-qasida.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/ru/pieces/salwa-qasida.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/pieces/salwa-qasida.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/pieces/salwa-qasida.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/pieces/salwa-qasida.html"/>
+    <loc>https://motazomarien.com/writing/pieces/salwa-qasida.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/writing/pieces/salwa-qasida.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/writing/en/pieces/salwa-qasida.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/writing/es/pieces/salwa-qasida.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/writing/zh/pieces/salwa-qasida.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/writing/ru/pieces/salwa-qasida.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/writing/pt/pieces/salwa-qasida.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/writing/de/pieces/salwa-qasida.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/writing/pieces/salwa-qasida.html"/>
     <lastmod>2026-09-19</lastmod>
   </url>
   <url>
-    <loc>https://motazomarien.com/pieces/ila-sara.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/pieces/ila-sara.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/en/pieces/ila-sara.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/pieces/ila-sara.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/pieces/ila-sara.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/ru/pieces/ila-sara.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/pieces/ila-sara.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/pieces/ila-sara.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/pieces/ila-sara.html"/>
+    <loc>https://motazomarien.com/writing/pieces/ila-sara.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/writing/pieces/ila-sara.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/writing/en/pieces/ila-sara.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/writing/es/pieces/ila-sara.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/writing/zh/pieces/ila-sara.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/writing/ru/pieces/ila-sara.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/writing/pt/pieces/ila-sara.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/writing/de/pieces/ila-sara.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/writing/pieces/ila-sara.html"/>
     <lastmod>2026-09-20</lastmod>
   </url>
   <url>
-    <loc>https://motazomarien.com/pieces/duaa.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/pieces/duaa.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/en/pieces/duaa.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/pieces/duaa.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/pieces/duaa.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/ru/pieces/duaa.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/pieces/duaa.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/pieces/duaa.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/pieces/duaa.html"/>
+    <loc>https://motazomarien.com/writing/pieces/duaa.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/writing/pieces/duaa.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/writing/en/pieces/duaa.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/writing/es/pieces/duaa.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/writing/zh/pieces/duaa.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/writing/ru/pieces/duaa.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/writing/pt/pieces/duaa.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/writing/de/pieces/duaa.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/writing/pieces/duaa.html"/>
     <lastmod>2026-09-21</lastmod>
   </url>
   <url>
-    <loc>https://motazomarien.com/pieces/makhluq-min-nadam.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/pieces/makhluq-min-nadam.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/en/pieces/makhluq-min-nadam.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/es/pieces/makhluq-min-nadam.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/zh/pieces/makhluq-min-nadam.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/ru/pieces/makhluq-min-nadam.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/pt/pieces/makhluq-min-nadam.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de/pieces/makhluq-min-nadam.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/pieces/makhluq-min-nadam.html"/>
+    <loc>https://motazomarien.com/writing/pieces/makhluq-min-nadam.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/writing/pieces/makhluq-min-nadam.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/writing/en/pieces/makhluq-min-nadam.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/writing/es/pieces/makhluq-min-nadam.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/writing/zh/pieces/makhluq-min-nadam.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/writing/ru/pieces/makhluq-min-nadam.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/writing/pt/pieces/makhluq-min-nadam.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/writing/de/pieces/makhluq-min-nadam.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/writing/pieces/makhluq-min-nadam.html"/>
     <lastmod>2026-09-22</lastmod>
   </url>
 </urlset>

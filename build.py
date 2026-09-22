@@ -34,6 +34,13 @@ from urllib.parse import quote
 ROOT = Path(__file__).parent
 CONTENT = ROOT / "content"
 TRANSLATIONS = ROOT / "translations"
+WRITING = ROOT / "writing"
+WRITING_PREFIX = "writing/"
+NAV_HOME = {"ar": "الرئيسية", "en": "Home", "es": "Inicio", "zh": "首页",
+            "ru": "Главная", "pt": "Início", "de": "Startseite"}
+GAMES_ORDER = ["en", "bs", "fr", "de", "ar"]
+GAMES_FILES = {"en": "index.html", "bs": "bs.html", "fr": "fr.html",
+               "de": "de.html", "ar": "ar.html"}
 TEMPLATE = (ROOT / "templates" / "base.html").read_text(encoding="utf-8")
 
 SITE_URL = "https://motazomarien.com"
@@ -864,26 +871,26 @@ def switcher(lang: str, alt: dict, root: str) -> str:
 
 def alternates(alt: dict) -> str:
     links = [
-        f'<link rel="alternate" hreflang="{code}" href="{SITE_URL}/{lang_prefix(code)}{path}">'
+        f'<link rel="alternate" hreflang="{code}" href="{SITE_URL}/{WRITING_PREFIX}{lang_prefix(code)}{path}">'
         for code, path in alt.items()
     ]
     links.append(
-        f'<link rel="alternate" hreflang="x-default" href="{SITE_URL}/{alt["ar"]}">'
+        f'<link rel="alternate" hreflang="x-default" href="{SITE_URL}/{WRITING_PREFIX}{alt["ar"]}">'
     )
     return "\n  ".join(links)
 
 
-def site_nav(lang: str, root: str) -> str:
+def site_nav(lang: str, root: str, wroot: str) -> str:
     strings = LANGS[lang]
-    base = f"{root}{lang_prefix(lang)}"
+    base = f"{wroot}{lang_prefix(lang)}"
     return (
+        f'<a href="{root}index.html">↩ {NAV_HOME[lang]}</a>'
         f'<a href="{base}book.html">{strings["nav_book"]}</a>'
-        f'<a href="{base}services.html">{strings["nav_services"]}</a>'
     )
 
 
 def render(lang: str, title: str, description: str, content_html: str,
-           root: str, home: str, alt: dict) -> str:
+           root: str, home: str, alt: dict, wroot: str = "") -> str:
     strings = LANGS[lang]
     return (
         TEMPLATE.replace("{{lang}}", lang)
@@ -895,8 +902,8 @@ def render(lang: str, title: str, description: str, content_html: str,
         .replace("{{footer}}", strings["footer"])
         .replace("{{fonts}}", strings["fonts"])
         .replace("{{alternates}}", alternates(alt))
-        .replace("{{langs}}", switcher(lang, alt, root))
-        .replace("{{pagenav}}", site_nav(lang, root))
+        .replace("{{langs}}", switcher(lang, alt, wroot))
+        .replace("{{pagenav}}", site_nav(lang, root, wroot))
         .replace("{{root}}", root)
         .replace("{{home}}", home)
         .replace("{{content}}", content_html)
@@ -935,7 +942,7 @@ def hero(lang: str) -> str:
 
 
 def piece_url(lang: str, piece: dict) -> str:
-    return f"{SITE_URL}/{lang_prefix(lang)}{piece_path(piece)}"
+    return f"{SITE_URL}/{WRITING_PREFIX}{lang_prefix(lang)}{piece_path(piece)}"
 
 
 def share_url(lang: str, piece: dict) -> str:
@@ -963,7 +970,7 @@ def interact_section(lang: str, piece: dict) -> str:
             '<form class="comment-form" action="https://api.web3forms.com/submit" method="POST">\n'
             f'  <input type="hidden" name="access_key" value="{WEB3FORMS_ACCESS_KEY}">\n'
             f'  <input type="hidden" name="subject" value="{html.escape(subject)}">\n'
-            f'  <input type="hidden" name="redirect" value="{SITE_URL}/{lang_prefix(lang)}thanks.html">\n'
+            f'  <input type="hidden" name="redirect" value="{SITE_URL}/{WRITING_PREFIX}{lang_prefix(lang)}thanks.html">\n'
             f'  <input type="text" name="name" placeholder="{strings["comment_name"]}" required>\n'
             f'  <input type="email" name="email" placeholder="{strings["comment_email"]}" required>\n'
             f'  <textarea name="message" rows="4" placeholder="{strings["comment_msg"]}" required></textarea>\n'
@@ -1005,10 +1012,11 @@ def subscribe_section(lang: str) -> str:
 
 def build_series_pages(lang: str, pieces: list, series_langs: dict) -> None:
     strings = LANGS[lang]
-    out_root = ROOT if lang == "ar" else ROOT / lang
+    out_root = WRITING if lang == "ar" else WRITING / lang
     series_dir = out_root / "series"
     series_dir.mkdir(parents=True, exist_ok=True)
-    root = "../" if lang == "ar" else "../../"
+    wroot = "../" if lang == "ar" else "../../"
+    root = "../" + wroot
 
     groups = {}
     for piece in pieces:
@@ -1055,84 +1063,15 @@ def build_series_pages(lang: str, pieces: list, series_langs: dict) -> None:
             root=root,
             home="../index.html",
             alt=alt,
+            wroot=wroot,
         )
         (series_dir / f"{slug}.html").write_text(page, encoding="utf-8")
         print(f"بُني: {lang_prefix(lang)}series/{slug}.html")
 
 
-def hub_page(lang: str, out_root: Path, root: str, alt: dict,
-             name: str, title: str, desc: str, body: str) -> None:
-    page = render(lang, title=title, description=desc, content_html=body,
-                  root=root, home="index.html", alt=alt)
-    (out_root / name).write_text(page, encoding="utf-8")
-    print(f"بُني: {lang_prefix(lang)}{name}")
-
-
-def build_hub_pages(lang: str, out_root: Path, root: str, alt_for) -> None:
-    strings = LANGS[lang]
-
-    cards = []
-    for key, href, external in HUB_CARDS:
-        card_title = html.escape(strings["svc_" + key + "_title"])
-        card_link = html.escape(strings["svc_" + key + "_link"])
-        desc = strings["book_intro"] if key == "writing" else strings["svc_" + key + "_desc"]
-        attrs = ' target="_blank" rel="noopener"' if external else ""
-        cards.append(
-            "<li>"
-            f"<h2>{card_title}</h2>"
-            f"<p>{html.escape(desc)}</p>"
-            f'<p><a class="big-button secondary" href="{href}"{attrs}>{card_link}</a></p>'
-            "</li>"
-        )
-    services_body = (
-        '<section class="hero">'
-        f'<h1 class="book-title">{strings["services_title"]}</h1>'
-        f'<p class="intro">{strings["services_intro"]}</p>'
-        "</section>\n"
-        '<ul class="services">\n' + "\n".join(cards) + "\n</ul>"
-    )
-    hub_page(lang, out_root, root, alt_for("services.html"), "services.html",
-             strings["services_title"], strings["services_desc"], services_body)
-
-    paras = "\n".join(f"<p>{p}</p>" for p in strings["mediation_body"].split("\n"))
-    mediation_body = (
-        '<section class="hero">'
-        f'<h1 class="book-title">{strings["mediation_title"]}</h1>'
-        f'<p class="intro">{strings["mediation_intro"]}</p>'
-        "</section>\n"
-        f'<article class="piece-body" lang="{lang}">\n{paras}\n</article>\n'
-        f'<p class="interact-note">{strings["mediation_contact"]}</p>\n'
-        '<p class="center"><a class="big-button" '
-        f'href="mailto:motaz@motazomarien.com">{strings["mediation_button"]}</a></p>\n'
-        '<p class="center contact-mail">motaz@motazomarien.com</p>'
-    )
-    hub_page(lang, out_root, root, alt_for("mediation.html"), "mediation.html",
-             strings["mediation_title"], strings["mediation_desc"], mediation_body)
-
-    paras = "\n".join(f"<p>{p}</p>" for p in strings["channel_body"].split("\n"))
-    if YOUTUBE_CHANNEL_URL:
-        action = (
-            '<p class="center"><a class="big-button" '
-            f'href="{YOUTUBE_CHANNEL_URL}" target="_blank" rel="noopener">'
-            f'{strings["channel_visit"]}</a></p>'
-        )
-    else:
-        action = f'<p class="intro center-text">{strings["channel_soon"]}</p>'
-    channel_body = (
-        '<section class="hero">'
-        f'<h1 class="book-title">{strings["channel_title"]}</h1>'
-        f'<p class="intro">{strings["channel_intro"]}</p>'
-        "</section>\n"
-        f'<article class="piece-body" lang="{lang}">\n{paras}\n</article>\n'
-        + action
-    )
-    hub_page(lang, out_root, root, alt_for("channel.html"), "channel.html",
-             strings["channel_title"], strings["channel_desc"], channel_body)
-
-
 def build_lang(lang: str, pieces: list, published_slugs: set, series_langs: dict) -> None:
     strings = LANGS[lang]
-    out_root = ROOT if lang == "ar" else ROOT / lang
+    out_root = WRITING if lang == "ar" else WRITING / lang
     pieces_dir = out_root / "pieces"
     pieces_dir.mkdir(parents=True, exist_ok=True)
 
@@ -1173,7 +1112,8 @@ def build_lang(lang: str, pieces: list, published_slugs: set, series_langs: dict
             title=(line + " — " if line else "") + piece["title"],
             book=strings["book_title"],
         )
-        root = "../" if lang == "ar" else "../../"
+        wroot = "../" if lang == "ar" else "../../"
+        root = "../" + wroot
         page = render(
             lang,
             title=piece["title"],
@@ -1182,12 +1122,14 @@ def build_lang(lang: str, pieces: list, published_slugs: set, series_langs: dict
             root=root,
             home="../index.html",
             alt=alt,
+            wroot=wroot,
         )
         out = pieces_dir / f"{piece['slug']}.html"
         out.write_text(page, encoding="utf-8")
         print(f"بُني: {lang_prefix(lang)}{canonical}")
 
-    root = "" if lang == "ar" else "../"
+    wroot = "" if lang == "ar" else "../"
+    root = "../" + wroot
     if pieces:
         latest = pieces[-1]
         index_body = (
@@ -1214,6 +1156,7 @@ def build_lang(lang: str, pieces: list, published_slugs: set, series_langs: dict
         root=root,
         home="index.html",
         alt=alt_for("index.html"),
+        wroot=wroot,
     )
     (out_root / "index.html").write_text(index, encoding="utf-8")
     print(f"بُني: {lang_prefix(lang)}index.html")
@@ -1255,6 +1198,7 @@ def build_lang(lang: str, pieces: list, published_slugs: set, series_langs: dict
         root=root,
         home="index.html",
         alt=alt_for("book.html"),
+        wroot=wroot,
     )
     (out_root / "book.html").write_text(book, encoding="utf-8")
     print(f"بُني: {lang_prefix(lang)}book.html")
@@ -1276,11 +1220,11 @@ def build_lang(lang: str, pieces: list, published_slugs: set, series_langs: dict
         root=root,
         home="index.html",
         alt=alt_for("thanks.html"),
+        wroot=wroot,
     )
     (out_root / "thanks.html").write_text(thanks, encoding="utf-8")
     print(f"بُني: {lang_prefix(lang)}thanks.html")
 
-    build_hub_pages(lang, out_root, root, alt_for)
 
 
 def main() -> None:
@@ -1340,7 +1284,7 @@ def build_feed(ar_pieces: list) -> None:
 
     items = []
     for piece in reversed(ar_pieces[-20:]):
-        link = f"{SITE_URL}/{piece_path(piece)}"
+        link = f"{SITE_URL}/{WRITING_PREFIX}{piece_path(piece)}"
         year, month, day = (int(part) for part in piece["date"].split("-"))
         pub = datetime(year, month, day, 8, tzinfo=timezone.utc).strftime(
             "%a, %d %b %Y %H:%M:%S %z"
@@ -1377,7 +1321,7 @@ def sitemap_url(canonical: str, alt: dict, lastmod: str) -> str:
     for code, path in alt.items():
         lines.append(
             f'    <xhtml:link rel="alternate" hreflang="{code}" '
-            f'href="{SITE_URL}/{lang_prefix(code)}{html.escape(path)}"/>'
+            f'href="{SITE_URL}/{html.escape(path)}"/>'
         )
     lines.append(
         f'    <xhtml:link rel="alternate" hreflang="x-default" '
@@ -1392,24 +1336,34 @@ def build_sitemap(ar_pieces: list, published: dict, series_langs: dict,
                   series_lastmod: dict) -> None:
     today = max((p["date"] for p in ar_pieces), default="2026-01-01")
     entries = []
-    for canonical in ("index.html", "book.html",
-                      "services.html", "mediation.html", "channel.html"):
-        alt = {code: canonical for code in LANG_ORDER}
-        entries.append(sitemap_url(canonical, alt, today))
+
+    # جناح الألعاب (جذر الموقع)
+    games_alt = {code: GAMES_FILES[code] for code in GAMES_ORDER}
+    for code in GAMES_ORDER:
+        entries.append(sitemap_url(GAMES_FILES[code], games_alt, today))
+
+    # جناح الكتابة (تحت /writing/)
+    def wpath(code: str, path: str) -> str:
+        return f"{WRITING_PREFIX}{lang_prefix(code)}{path}"
+
+    for canonical in ("index.html", "book.html"):
+        alt = {code: wpath(code, canonical) for code in LANG_ORDER}
+        entries.append(sitemap_url(wpath("ar", canonical), alt, today))
     for slug, langs in series_langs.items():
         canonical = f"series/{slug}.html"
         alt = {
-            code: (canonical if code in langs else "index.html")
+            code: wpath(code, canonical if code in langs else "index.html")
             for code in LANG_ORDER
         }
-        entries.append(sitemap_url(canonical, alt, series_lastmod.get(slug, today)))
+        entries.append(sitemap_url(wpath("ar", canonical), alt,
+                                   series_lastmod.get(slug, today)))
     for piece in ar_pieces:
         canonical = piece_path(piece)
         alt = {}
         for code in LANG_ORDER:
             if code == "ar" or piece["slug"] in published.get(code, set()):
-                alt[code] = canonical
-        entries.append(sitemap_url(canonical, alt, piece["date"]))
+                alt[code] = wpath(code, canonical)
+        entries.append(sitemap_url(wpath("ar", canonical), alt, piece["date"]))
     sitemap = (
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n'
