@@ -1,5 +1,5 @@
 ---
-title: الخوف
+title: الخَوْف
 series: ما بقي
 kh: خ-186
 slug: alkhawf
