@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Build your site — websites &amp; software by Motaz OMARIEN</title>
+<meta name="description" content="Websites, web apps and data pipelines built end to end: fast static sites, multilingual publishing, AI-agent integration, Earth-observation data and compliance-ready reporting.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/games.css">
+<style>
+/* ===== صفحة الخدمات — أنماط خاصة ===== */
+body.games .section-title { font-family:var(--sans); font-weight:800; font-size:1.3rem;
+                            margin:2.4rem 0 .7rem; }
+.cap-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(19rem,1fr)); gap:.9rem; margin:0; }
+.cap-list > div { background:#fff; border:1px solid var(--g-line); border-radius:var(--radius);
+                  padding:.9rem 1.1rem; }
+.cap-list dt { font-weight:800; color:var(--g-accent); font-size:.92rem; margin-bottom:.2rem; }
+.cap-list dd { margin:0; color:var(--g-ink-soft); font-size:.92rem; }
+.stats { display:flex; gap:1.6rem; flex-wrap:wrap; margin:1rem 0 0; }
+.stats div { text-align:center; }
+.stats b { display:block; font-size:1.7rem; color:var(--g-accent); line-height:1.2; }
+.stats span { color:var(--g-ink-soft); font-size:.85rem; }
+.product-img .dom { display:block; font-size:.85rem; letter-spacing:.04em; color:var(--g-ink-soft);
+                    margin-top:.3rem; direction:ltr; }
+</style>
+</head>
+<body class="games">
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html"><span class="mark">M</span> Motaz OMARIEN</a>
+    <div class="header-end">
+      <a class="svc-link active" href="web.html" aria-current="page">Build your site</a>
+      <a class="writing-link" href="writing/index.html" dir="rtl" lang="ar" title="Writing (in Arabic)">الكتابة</a>
+    </div>
+  </div>
+</header>
+
+<div class="lang-bar">
+  <div class="lang-bar-inner">
+    <span class="lang-bar-label">🌐 <span>Language</span></span>
+    <nav class="lang-list">
+      <a href="index.html"><span class="flag">🇬🇧</span> English</a>
+      <a href="bs.html"><span class="flag">🇧🇦</span> Bosanski</a>
+      <a href="fr.html"><span class="flag">🇫🇷</span> Français</a>
+      <a href="de.html"><span class="flag">🇩🇪</span> Deutsch</a>
+      <a href="ar.html"><span class="flag">🇸🇦</span> العربية</a>
+    </nav>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <section class="hero games-hero">
+    <p class="kicker">Web development services</p>
+    <h1>I build websites and software <span class="paint">end to end</span></h1>
+    <p class="lead">From the first line of code to a live, fast, multilingual site. Hand-built — no page builders, no bloated frameworks, nothing you cannot walk away with.</p>
+    <div class="chips">
+      <span>🌍 Multilingual &amp; RTL</span>
+      <span>🐍 Python &amp; web apps</span>
+      <span>🛰️ Data &amp; Earth observation</span>
+      <span>🔒 Security-minded</span>
+      <span>📄 Compliance-ready</span>
+      <span>🚀 Deployed &amp; indexed</span>
+    </div>
+  </section>
+
+  <h2 class="section-title">What I build</h2>
+  <ul class="cards">
+    <li>
+      <h2>Fast static websites</h2>
+      <p>Hand-written HTML and CSS driven by a custom generator: instant loads, no database to babysit, nothing to patch every month. Content in, finished site out — in one command.</p>
+    </li>
+    <li>
+      <h2>Multilingual publishing</h2>
+      <p>A site that speaks to every market: many languages from one source, right-to-left and left-to-right typography, <code>hreflang</code>, per-language SEO and a language switcher that actually works.</p>
+    </li>
+    <li>
+      <h2>Web apps &amp; SaaS</h2>
+      <p>Product-grade web applications: accounts, subscriptions, billing, admin views, background processing — and the boring parts done properly.</p>
+    </li>
+    <li>
+      <h2>AI agent integration</h2>
+      <p>Connecting AI agents to real systems safely: tool gateways, per-tool authorization, human approval steps and audit trails.</p>
+    </li>
+    <li>
+      <h2>Data pipelines &amp; geospatial</h2>
+      <p>Turning raw satellite and open Earth-observation data into numbers a business can act on — and into documents a regulator accepts.</p>
+    </li>
+    <li>
+      <h2>Security &amp; compliance</h2>
+      <p>Outbound-only connectivity, tamper-evident logs, redaction, and reporting built for EU disclosure rules (CSRD/ESRS E1, EU Taxonomy, EUDR).</p>
+    </li>
+  </ul>
+
+  <h2 class="section-title">Selected work</h2>
+  <section class="product-grid">
+
+    <article class="product">
+      <div class="product-img"><span><span class="glyph">🛰️</span>Climate-risk evidence from satellite data<span class="dom">talaix.com</span></span></div>
+      <div class="product-body">
+        <h2>Talaix — climate-risk compliance</h2>
+        <p class="desc">A service that turns satellite and open Earth-observation data into traceable physical-risk packs for EU disclosure. Every figure carries its source, its date and its confidence. The engine is open source (EUPL-1.2). Built in Luxembourg.</p>
+        <div class="tags"><span>Earth observation</span><span>CSRD / ESRS E1</span><span>EUDR</span><span>Traceable PDF</span><span>Open source</span></div>
+        <a class="buy" href="https://talaix.com" target="_blank" rel="noopener">Visit talaix.com →</a>
+      </div>
+    </article>
+
+    <article class="product">
+      <div class="product-img"><span><span class="glyph">🔐</span>Secure access for AI agents<span class="dom">talaiz.com</span></span></div>
+      <div class="product-body">
+        <h2>Talaiz — the agent gateway</h2>
+        <p class="desc">A gateway that connects AI agents to internal databases, APIs and tools without opening a single inbound port. One outbound tunnel, per-tool authorization, human approvals, tamper-evident audit records. Source-available (BUSL 1.1) and self-hostable.</p>
+        <div class="tags"><span>MCP</span><span>Outbound-only</span><span>Per-tool authorization</span><span>Audit trail</span><span>Self-hosted</span></div>
+        <a class="buy" href="https://talaiz.com" target="_blank" rel="noopener">Visit talaiz.com →</a>
+      </div>
+    </article>
+
+    <article class="product">
+      <div class="product-img"><span><span class="glyph">📚</span>A hand-built multilingual publishing platform<span class="dom">motazomarien.com</span></span></div>
+      <div class="product-body">
+        <h2>This website</h2>
+        <p class="desc">Seven languages published from a single Arabic source, by a static generator written in pure Python — no framework, no CMS. Automatic sitemap and RSS feed, right-to-left typography, and a build that produces the whole site in one command.</p>
+        <div class="tags"><span>Python</span><span>7 languages</span><span>RTL / LTR</span><span>SEO</span><span>RSS</span></div>
+        <div class="stats">
+          <div><b>210</b><span>pages built</span></div>
+          <div><b>7</b><span>languages</span></div>
+          <div><b>0</b><span>broken internal links</span></div>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <h2 class="section-title">How I work</h2>
+  <section class="rationale">
+    <ol>
+      <li><b>One command builds the whole site</b> — content in, finished site out; no manual page editing.</li>
+      <li><b>You own plain files</b> — no page builders, no heavy frameworks, no vendor lock-in.</li>
+      <li><b>Fast by default</b> — static pages, minimal assets, no tracking bloat.</li>
+      <li><b>Multilingual from day one</b> — languages are part of the architecture, not bolted on later.</li>
+      <li><b>Security and auditability designed in</b> — not patched on after the first incident.</li>
+      <li><b>Honest scope</b> — I tell you what a project really takes before you commit.</li>
+    </ol>
+  </section>
+
+  <h2 class="section-title">Technical capabilities</h2>
+  <dl class="cap-list">
+    <div><dt>Languages &amp; web</dt><dd>Python · HTML · CSS · vanilla JavaScript · SQL</dd></div>
+    <div><dt>Publishing</dt><dd>Custom static-site generators · Markdown pipelines · RSS/Atom · sitemaps · hreflang · SEO</dd></div>
+    <div><dt>Web apps</dt><dd>Authentication · subscriptions &amp; billing · REST APIs · background jobs · admin dashboards</dd></div>
+    <div><dt>Data</dt><dd>Satellite &amp; Earth-observation processing · geospatial indexing · PDF report generation · XBRL</dd></div>
+    <div><dt>AI integration</dt><dd>MCP tool gateways · agent authorization · human-in-the-loop approvals · audit logs</dd></div>
+    <div><dt>Operations</dt><dd>Linux · GitHub Pages &amp; self-hosting · build automation · DNS &amp; email (SPF, DKIM, DMARC)</dd></div>
+    <div><dt>Compliance</dt><dd>CSRD / ESRS E1 · EU Taxonomy DNSH · EUDR evidence packs</dd></div>
+    <div><dt>Licensing</dt><dd>EUPL-1.2 · BUSL 1.1 · open-source and source-available models</dd></div>
+  </dl>
+
+  <section class="contact" id="contact">
+    <h2>Tell me what you need</h2>
+    <p>A website, a web app, an integration, or a data pipeline — write to me and I will tell you honestly what it takes.</p>
+    <a class="mail" href="mailto:motazomarien@gmail.com?subject=Website%20project">motazomarien@gmail.com</a>
+  </section>
+
+</div>
+
+<footer class="site-footer">
+  <a class="back" href="index.html">← Wooden games</a>
+  <p>Motaz OMARIEN — websites &amp; software · motazomarien@gmail.com</p>
+</footer>
+</body>
+</html>
