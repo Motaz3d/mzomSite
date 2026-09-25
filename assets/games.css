@@ -184,12 +184,15 @@ body.games .to-start { color:var(--g-ink-soft); }
 .writing-link { font-family:var(--serif); font-size:.98rem; color:var(--g-ink-soft); text-decoration:none; border-bottom:1px dotted var(--g-line); }
 .writing-link:hover { color:var(--g-ink); }
 
-/* ---------- زرّ الخدمات الصغير في طرف الترويسة ---------- */
-.svc-link { display:inline-flex; align-items:center; text-decoration:none; font-weight:700;
-            font-size:.9rem; color:#fff; background:var(--g-accent);
-            border-radius:999px; padding:.3rem .95rem; }
-.svc-link:hover { filter:brightness(1.08); }
-.svc-link.active { box-shadow:inset 0 0 0 2px rgba(255,255,255,.55); }
+/* ---------- رابط الخدمات في طرف الترويسة: نصّ بخطّ تحته، بلا حبّة ---------- */
+.svc-link { text-decoration:none; font-family:var(--sans); font-weight:700; font-size:.95rem;
+            color:var(--g-ink); padding-bottom:2px; border-bottom:1.5px solid var(--g-accent);
+            transition:color .18s ease; }
+.svc-link::after { content:"↗"; font-size:.78em; margin-inline-start:.3em; color:var(--g-accent);
+                   display:inline-block; transition:transform .18s ease; }
+.svc-link:hover { color:var(--g-accent); }
+.svc-link:hover::after { transform:translate(2px, -2px); }
+.svc-link.active { color:var(--g-accent); }
 
 /* ---------- شريط اللغات الكبير ---------- */
 .lang-bar { border-bottom:1px solid var(--g-line); background:#fff; }
