@@ -188,6 +188,9 @@ body.games .to-start { color:var(--g-ink-soft); }
 .svc-link { text-decoration:none; font-family:var(--sans); font-weight:700; font-size:.95rem;
             color:var(--g-ink); padding-bottom:2px; border-bottom:1.5px solid var(--g-accent);
             transition:color .18s ease; }
+/* يقع بعد الاسم في الطرف الآخر من الترويسة، يفصله عنه خطّ رفيع */
+.header-inner > .svc-link { border-inline-start:1px solid var(--g-line);
+                            padding-inline-start:1.1rem; }
 .svc-link::after { content:"↗"; font-size:.78em; margin-inline-start:.3em; color:var(--g-accent);
                    display:inline-block; transition:transform .18s ease; }
 .svc-link:hover { color:var(--g-accent); }
