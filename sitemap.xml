@@ -9,7 +9,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/ar.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/ar.html"/>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
     <loc>https://motazomarien.com/bs.html</loc>
@@ -19,7 +19,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/ar.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/ar.html"/>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
     <loc>https://motazomarien.com/fr.html</loc>
@@ -29,7 +29,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/ar.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/ar.html"/>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
     <loc>https://motazomarien.com/de.html</loc>
@@ -39,7 +39,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/ar.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/ar.html"/>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
     <loc>https://motazomarien.com/ar.html</loc>
@@ -49,7 +49,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/de.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/ar.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/ar.html"/>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
     <loc>https://motazomarien.com/writing/index.html</loc>
@@ -61,7 +61,7 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/writing/pt/index.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/writing/de/index.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/writing/index.html"/>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
     <loc>https://motazomarien.com/writing/book.html</loc>
@@ -73,7 +73,7 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/writing/pt/book.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/writing/de/book.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/writing/book.html"/>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
     <loc>https://motazomarien.com/writing/series/wujuh-al-muhajir.html</loc>
@@ -109,7 +109,7 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/writing/pt/series/al-ubur.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/writing/de/series/al-ubur.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/writing/series/al-ubur.html"/>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
     <loc>https://motazomarien.com/writing/series/al-ghurba-al-yawmiyya.html</loc>
@@ -374,5 +374,17 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/writing/de/pieces/al-aalam-bi-uyun-muhajir.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/writing/pieces/al-aalam-bi-uyun-muhajir.html"/>
     <lastmod>2026-09-24</lastmod>
+  </url>
+  <url>
+    <loc>https://motazomarien.com/writing/pieces/rawdat-atfal-fi-al-bas.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://motazomarien.com/writing/pieces/rawdat-atfal-fi-al-bas.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motazomarien.com/writing/en/pieces/rawdat-atfal-fi-al-bas.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://motazomarien.com/writing/es/pieces/rawdat-atfal-fi-al-bas.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://motazomarien.com/writing/zh/pieces/rawdat-atfal-fi-al-bas.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://motazomarien.com/writing/ru/pieces/rawdat-atfal-fi-al-bas.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://motazomarien.com/writing/pt/pieces/rawdat-atfal-fi-al-bas.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://motazomarien.com/writing/de/pieces/rawdat-atfal-fi-al-bas.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motazomarien.com/writing/pieces/rawdat-atfal-fi-al-bas.html"/>
+    <lastmod>2026-09-25</lastmod>
   </url>
 </urlset>
