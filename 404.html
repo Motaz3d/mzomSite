@@ -1,27 +1,26 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex">
-<title>جاري التحويل…</title>
+<title>Page not found — Motaz OMARIEN</title>
+<link rel="stylesheet" href="/assets/games.css">
 <script>
 (function () {
   var p = location.pathname.replace(/^\/+/, "");
-  var m = p.match(/^(en|es|zh|ru|pt|de)\/(.*)$/);
-  if (m) { location.replace("/writing/" + m[1] + "/" + m[2]); return; }
-  if (/^(book\.html|thanks\.html|pieces\/|series\/)/.test(p)) {
-    location.replace("/writing/" + p); return;
-  }
-  if (/^(services\.html|mediation\.html|channel\.html)$/.test(p)) {
-    location.replace("/writing/"); return;
+  /* مسارات قديمة (جناح الكتابة الذي أُزيل) → الرئيسية */
+  if (/^(writing\/|book\.html|thanks\.html|pieces\/|series\/|services\.html|mediation\.html|channel\.html|(en|es|zh|ru|pt|de)\/)/.test(p)) {
+    location.replace("/");
   }
 })();
 </script>
 </head>
-<body>
-<p style="font-family:system-ui;text-align:center;padding:3rem">
-  جاري التحويل… <a href="/">إن لم يعمل التحويل، اضغط هنا</a>
-</p>
+<body class="games">
+<div class="wrap" style="text-align:center; padding: 4rem 1.25rem;">
+  <h1>Page not found</h1>
+  <p class="lead">The page you asked for does not exist — or it has moved.</p>
+  <p style="margin-top: 1.6rem;"><a class="buy" href="/">← Back to the homepage</a></p>
+</div>
 </body>
 </html>

@@ -134,6 +134,7 @@ body.games h1, body.games h2, body.games h3 { font-family: var(--sans); font-wei
 .product-body .desc { margin: 0; color: var(--g-ink-soft); font-size: .95rem; }
 .tags { display: flex; gap: .4rem; flex-wrap: wrap; margin: .2rem 0; }
 .tags span { font-size: .76rem; color: var(--g-accent); border: 1px solid rgba(30,107,82,.3); border-radius: 999px; padding: .05rem .65rem; }
+.price { margin: .5rem 0 0; font-family: var(--sans); font-weight: 800; font-size: 1.45rem; color: var(--g-ink); }
 .buy { margin-top: auto; display: inline-flex; align-items: center; justify-content: center; gap: .4rem;
   text-decoration: none; background: var(--g-accent); color: #fff; font-weight: 700;
   border-radius: 999px; padding: .55rem 1.3rem; }
@@ -174,15 +175,13 @@ body.chooser { background:#fff; font-family:var(--sans); min-height:100vh; displ
 .to-start { margin-inline-start:auto; font-weight:700; color:var(--ink-soft); text-decoration:none; font-size:.92rem; }
 body.games .to-start { color:var(--g-ink-soft); }
 
-/* ---------- مبدّل اللغات + رابط الكتابة في الطرف ---------- */
+/* ---------- مبدّل اللغات في الطرف ---------- */
 .header-end { margin-inline-start:auto; display:flex; align-items:center; gap:1rem; flex-wrap:wrap; }
 .lang-switch { display:flex; gap:.3rem; align-items:center; flex-wrap:wrap; }
 .lang-switch a, .lang-switch .soon { font-size:.8rem; font-weight:700; padding:.12rem .6rem; border-radius:999px; text-decoration:none; letter-spacing:.04em; }
 .lang-switch a { color:var(--g-ink-soft); border:1px solid var(--g-line); }
 .lang-switch a.active { background:var(--g-accent); color:#fff; border-color:var(--g-accent); }
 .lang-switch .soon { color:#bcbcb4; border:1px dashed var(--g-line); }
-.writing-link { font-family:var(--serif); font-size:.98rem; color:var(--g-ink-soft); text-decoration:none; border-bottom:1px dotted var(--g-line); }
-.writing-link:hover { color:var(--g-ink); }
 
 /* ---------- رابط الخدمات في طرف الترويسة: نصّ بخطّ تحته، بلا حبّة ---------- */
 .svc-link { text-decoration:none; font-family:var(--sans); font-weight:700; font-size:.95rem;
