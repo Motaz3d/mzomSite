@@ -81,6 +81,11 @@ body.games h1, body.games h2, body.games h3 { font-family: var(--sans); font-wei
 .buy { margin-top: auto; display: inline-flex; align-items: center; justify-content: center; gap: .4rem;
   text-decoration: none; background: var(--g-accent); color: #fff; font-weight: 700;
   border-radius: 999px; padding: .55rem 1.3rem; }
+.buy.secondary { background: transparent; color: var(--g-accent); border: 1.5px solid var(--g-accent); }
+.buy.secondary:hover { background: rgba(30,107,82,.08); }
+.ship { margin: .1rem 0 0; font-size: .82rem; color: var(--g-ink-soft); }
+.actions { margin-top: auto; display: flex; flex-direction: column; gap: .5rem; }
+.actions .buy { margin-top: 0; }
 
 /* ---------- بطاقة التواصل ---------- */
 .contact { margin-top: 2.4rem; background: #fff; border: 1px solid var(--g-line); border-radius: var(--radius); padding: 1.5rem 1.6rem; text-align: center; }
