@@ -92,6 +92,7 @@ body.games h1, body.games h2, body.games h3 { font-family: var(--sans); font-wei
 .contact h2 { margin: 0 0 .3rem; font-size: 1.25rem; }
 .contact p { margin: 0 0 .6rem; color: var(--g-ink-soft); }
 .contact .mail { font-size: 1.4rem; font-weight: 800; color: var(--g-accent); text-decoration: none; direction: ltr; display: inline-block; }
+.contact .bundle { color: var(--g-accent); font-weight: 800; font-size: 1.05rem; }
 
 /* الهاتف وواتساب */
 .contact-actions { display: flex; gap: .6rem; justify-content: center; flex-wrap: wrap; margin-top: .7rem; }
