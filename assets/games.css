@@ -72,6 +72,10 @@ body.games h1, body.games h2, body.games h3 { font-family: var(--sans); font-wei
   background: linear-gradient(135deg, #ecece6, #fbfbfa); border-bottom: 1px solid var(--g-line);
   color: #9a9a90; font-size: 1rem; }
 .product-img .glyph { font-size: 2.4rem; display: block; margin-bottom: .4rem; }
+/* ---------- فيديو المنتج (يوتيوب) ---------- */
+.product-media { margin: 0; border-bottom: 1px solid var(--g-line); background: #000; }
+.product-media iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; }
+.product-media figcaption { background: #fff; color: var(--g-ink-soft); font-size: .82rem; font-weight: 600; padding: .55rem 1.3rem; }
 .product-body { padding: 1.2rem 1.3rem 1.4rem; display: flex; flex-direction: column; gap: .5rem; flex: 1; }
 .product-body h2 { margin: 0; font-size: 1.35rem; }
 .product-body .desc { margin: 0; color: var(--g-ink-soft); font-size: .95rem; }
