@@ -98,6 +98,11 @@ body.games h1, body.games h2, body.games h3 { font-family: var(--sans); font-wei
 .contact .mail { font-size: 1.4rem; font-weight: 800; color: var(--g-accent); text-decoration: none; direction: ltr; display: inline-block; }
 .contact .bundle { color: var(--g-accent); font-weight: 800; font-size: 1.05rem; }
 
+/* ---------- زر الحزمة (اللعبتان معًا) ---------- */
+.bundle-box { display: flex; flex-direction: column; align-items: center; gap: .55rem; margin: .9rem 0 .3rem; }
+.bundle-box .bundle { margin: 0; }
+.bundle-box .buy { margin-top: 0; }
+
 /* الهاتف وواتساب */
 .contact-actions { display: flex; gap: .6rem; justify-content: center; flex-wrap: wrap; margin-top: .7rem; }
 .contact-actions a { display: inline-flex; align-items: center; gap: .45rem; text-decoration: none; font-weight: 700; border-radius: 999px; padding: .45rem 1.15rem; font-size: .98rem; }
